@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="ATchuruku">
+<listeners>
+<listener class-name="org.uncommons.reportng.HTMLReporter" />
+<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+  <test name="ATwuliu">
+  	  <groups>  
+         <run>  
+            <include name="Common"/>  
+            <exclude name="..." />  
+         </run>  
+      </groups> 
+    <classes>
+      <class name="com.hx.ATwuliu.exetest.BusinessManage"/>
+    </classes>
+  </test> <!-- HXAutomation -->
+-</suite> <!-- Default Suite -->
