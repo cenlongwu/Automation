@@ -28,20 +28,18 @@ public class BusinessManage {
 
     //读取CSV测试数据
     @DataProvider(name="loginInfo")
-//        public Object[][] loginInfo() {
-//        return new Object[][]{
-//                {"德清出入库管理系统", "zhongxinku", "123456"}
-//        };
-//    }
-    public static Object[][] getData() throws IOException {
-        return getTestData("E:\\ATchuruku\\testdata\\BusinessManage.csv");
+        public Object[][] loginInfo() {
+        return new Object[][]{
+                {"德清出入库管理系统", "zhongxinku", "123456"}
+        };
     }
+//    public static Object[][] getData() throws IOException {
+//        return getTestData("E:\\ATchuruku\\testdata\\BusinessManage.csv");
+//    }
 
     @Test(priority = 1, groups = {"Common"}, dataProvider = "loginInfo")
     public void login(String ExpectedTitle,String username, String password) {
-        Actions.delay(10000);
-        Actions.assertTitle(ExpectedTitle);
-        commonPage.login(username, password);
+        commonPage.login(ExpectedTitle,username, password);
     }
 
 }

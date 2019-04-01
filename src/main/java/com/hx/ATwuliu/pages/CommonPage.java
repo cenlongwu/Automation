@@ -3,10 +3,8 @@ package com.hx.ATwuliu.pages;
 import com.hx.ATwuliu.util.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Reporter;
-import org.testng.Assert;
-import org.testng.asserts.Assertion;
 //import org.junit.Assert.*;
 
 
@@ -24,7 +22,7 @@ public class CommonPage extends Actions{
     @FindBy(id="password")
     private WebElement Ipt_password;  //密码输入框
 
-    @FindBy(className = "ant-btn ant-btn-primary ant-btn-lg ant-btn-block")
+    @FindBy(tagName = "button")
     private WebElement Btn_login;     //登录按钮
 
 
@@ -33,10 +31,13 @@ public class CommonPage extends Actions{
 
     /*************************************************************************************/
     //封装完可执行的方法
-    public void login(String username,String password) {
-        Ipt_usename.sendKeys();
-        Ipt_password.sendKeys();
-        Btn_login.submit();
+    public void login(String ExpectedTitle,String username,String password) {
+        wait.until(ExpectedConditions.elementToBeClickable(Ipt_usename));
+        Actions.assertTitle(ExpectedTitle);
+        waitForPageLoad();
+        Ipt_usename.sendKeys(username);
+        Ipt_password.sendKeys(password);
+        Btn_login.click();
     }
 
 

@@ -1,6 +1,7 @@
 package com.hx.ATwuliu.util;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -11,6 +12,8 @@ import org.testng.Reporter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.function.Function;
+
 import static com.hx.ATwuliu.util.InitPre.driver;
 
 /**
@@ -21,13 +24,33 @@ public class Actions {
 
 
     //生成wait，供page页使用
-    public WebDriverWait wait = new WebDriverWait(driver, 8);
+    public WebDriverWait wait = new WebDriverWait(driver, 10);
 
 
 
     public static String timestamp;   //时间戳
 
 //----------------------封装方法----------------------
+    /**
+     * 方法：页面跳转，等待直到JS:document.readyState=complete
+     * 说明：有页面跳转的时候直接用waitForPageLoad()
+     * 编写人：吴岑龙
+     */
+    public Function<WebDriver, Boolean> isPageLoaded() {
+        return new Function<WebDriver, Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                JavascriptExecutor je = (JavascriptExecutor) driver;
+                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+            }
+        };
+    }
+
+    public void waitForPageLoad() {
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(isPageLoaded());
+    }
+
     /**
      * 方法：在下拉框中选择一个值
      * 说明：第一个参数为select对象，第二个参数是要选择的值
