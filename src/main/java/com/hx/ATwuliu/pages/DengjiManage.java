@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
  */
 public class DengjiManage extends Actions {
     /*************************************************************************************/
-    //页面控件
+    //页面控件哈哈哈哈哈
 
     /*登记管理页面*/
     @FindBy(id="noticeNum")
