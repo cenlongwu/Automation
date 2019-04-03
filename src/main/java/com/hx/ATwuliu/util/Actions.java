@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.function.Function;
+import com.hx.ATwuliu.pages.*;
 
 import static com.hx.ATwuliu.util.InitPre.driver;
 
@@ -100,6 +101,10 @@ public class Actions {
          je.executeScript("arguments[0].scrollIntoView(true);", element);
      }
 
+     public static void setAttrByJS(WebElement webElement,String attr,String value){
+         JavascriptExecutor je = (JavascriptExecutor) driver;
+         je.executeScript("webElement.attr =value");
+     }
 
 //------------------断言和验证方法--------------------------
     /**
