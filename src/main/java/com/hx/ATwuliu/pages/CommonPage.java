@@ -31,9 +31,9 @@ public class CommonPage extends Actions{
 
     /*************************************************************************************/
     //封装完可执行的方法
-    public void login(String ExpectedTitle,String username,String password) {
+    public void login(String expectedTitle,String username,String password) {
         wait.until(ExpectedConditions.elementToBeClickable(Ipt_usename));
-        Actions.assertTitle(ExpectedTitle);
+        Actions.assertTitle(expectedTitle);
         waitForPageLoad();
         Ipt_usename.sendKeys(username);
         Ipt_password.sendKeys(password);

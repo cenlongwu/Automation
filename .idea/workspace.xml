@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50a0a18a-a1a5-40c6-98e7-64979cd6de9e" name="Default" comment="4月2号早上，提交代码    --吴岑龙">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../ATchuruku/.idea/encodings.xml" />
+    <list default="true" id="50a0a18a-a1a5-40c6-98e7-64979cd6de9e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ATchuruku/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPage.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPage.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../ATchuruku/out/" />
     <ignored path="$PROJECT_DIR$/../ATchuruku/target/" />
@@ -18,15 +21,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BusinessManage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BusinessManage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-114">
-              <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+            <state relative-caret-position="200">
+              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#669#670#0" expanded="true" />
-                <element signature="e#717#718#0" expanded="true" />
+                <element signature="e#740#741#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+                <element signature="e#1469#1470#0" expanded="true" />
+                <element signature="e#1527#1528#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,8 +70,8 @@
       <file leaf-file-name="Actions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+            <state relative-caret-position="133">
+              <caret line="103" column="19" lean-forward="false" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,8 +94,8 @@
       <file leaf-file-name="InitPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="162">
+              <caret line="11" column="99" lean-forward="false" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,8 +106,8 @@
       <file leaf-file-name="CommonPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="219">
+              <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChurukudanPinZheng.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChurukudanPinZheng.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="256">
+              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,6 +143,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../ATchuruku" />
   </component>
   <component name="GradleLocalSettings">
@@ -150,14 +156,14 @@
       <list>
         <option value="$PROJECT_DIR$/../ATchuruku/pom.xml" />
         <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExcelRead.java" />
-        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPage.java" />
         <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/CSVRead.java" />
         <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPre.java" />
-        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java" />
         <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/Findbys.java" />
+        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java" />
+        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPage.java" />
+        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java" />
         <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java" />
         <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java" />
-        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java" />
       </list>
     </option>
   </component>
@@ -741,7 +747,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553844885743</updated>
-      <workItem from="1553844887129" duration="29125000" />
+      <workItem from="1553844887129" duration="36313000" />
     </task>
     <task id="LOCAL-00001" summary="新建粮储项目">
       <created>1554081092143</created>
@@ -785,7 +791,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554170602554</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="4月3号早上，提交代码    --吴岑龙">
+      <created>1554253693869</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1554253693869</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -821,7 +834,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29125000" />
+    <option name="totallyTimeSpent" value="36313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -867,7 +880,8 @@
     <MESSAGE value="新建粮储项目" />
     <MESSAGE value="改dataprovider，CSV中文乱码" />
     <MESSAGE value="4月2号早上，提交代码    --吴岑龙" />
-    <option name="LAST_COMMIT_MESSAGE" value="4月2号早上，提交代码    --吴岑龙" />
+    <MESSAGE value="4月3号早上，提交代码    --吴岑龙" />
+    <option name="LAST_COMMIT_MESSAGE" value="4月3号早上，提交代码    --吴岑龙" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -920,48 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/PlanManage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -986,10 +958,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="99" lean-forward="false" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="219">
+          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="103" column="19" lean-forward="false" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -998,10 +1000,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="256">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#1469#1470#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
           </folding>
         </state>
       </provider>

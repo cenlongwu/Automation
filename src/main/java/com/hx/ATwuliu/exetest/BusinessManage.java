@@ -20,6 +20,7 @@ public class BusinessManage {
 
     public InitPage initPage = new InitPage();
     CommonPage commonPage = initPage.commonPage;
+    ChurukudanPinZheng churukudanPinZheng=initPage.churukudanPinZheng;
 
     @BeforeTest
     public void beforeTest() {
@@ -38,8 +39,13 @@ public class BusinessManage {
 //    }
 
     @Test(priority = 1, groups = {"Common"}, dataProvider = "loginInfo")
-    public void login(String ExpectedTitle,String username, String password) {
-        commonPage.login(ExpectedTitle,username, password);
+    public void login(String expectedTitle,String username, String password) {
+        commonPage.login(expectedTitle,username, password);
+    }
+
+    @Test(priority = 2, groups = {"Common"}, dataProvider = "loginInfo")
+            public void rukuTongzhishuTest(){
+            ChurukudanPinZheng.addRukutongzhishu();
     }
 
 }

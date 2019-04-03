@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class InitPage extends InitPre{
 
     public CommonPage commonPage=PageFactory.initElements(driver,CommonPage.class);
-//    public PaasHomePage paasHomePage=PageFactory.initElements(driver,PaasHomePage.class);
+    public ChurukudanPinZheng churukudanPinZheng=PageFactory.initElements(driver,ChurukudanPinZheng.class);
 //    public ImageRepoPage imageRepoPage=PageFactory.initElements(driver,ImageRepoPage.class);
 //    public CreateAppPage createAppPage=PageFactory.initElements(driver,CreateAppPage.class);
 //    public VerifyResultPage verifyResultPage=PageFactory.initElements(driver,VerifyResultPage.class);
