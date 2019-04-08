@@ -12,6 +12,7 @@ import org.testng.Reporter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.concurrent.Callable;
 import java.util.function.Function;
 import com.hx.ATwuliu.pages.*;
 
@@ -158,5 +159,39 @@ public class Actions {
         ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
         driver.switchTo().window(tabs.get(0));
         driver.get(newURL);
+    }
+
+    /**
+     * 方法：判断功能目录的打开与否
+     * 说明：参数为
+     * 编写人：钱舒颖
+     */
+    public void accessL3Page(WebElement Common_L1, WebElement Common_L2, WebElement Common_L3){
+        wait.until(ExpectedConditions.elementToBeClickable(Common_L1));
+        String isExpanded_L01, isExpanded_L02;
+        isExpanded_L01 = Common_L1.getAttribute("aria-expanded");
+        System.out.println(isExpanded_L01);
+        if(isExpanded_L01.equals("false")){
+            //点击L01
+            Common_L1.click();
+            //点击L02
+            Common_L2.click();
+            //点击L03
+            Common_L3.click();
+        }
+        else {
+            isExpanded_L02 = Common_L2.getAttribute("aria-expanded");
+            System.out.println(isExpanded_L02);
+            if (isExpanded_L02.equals("false")){
+                //点击L02
+                Common_L2.click();
+                //点击L03
+                Common_L3.click();
+            }
+            else {
+                //点击L03
+                Common_L3.click();
+            }
+        }
     }
 }
