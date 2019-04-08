@@ -9,11 +9,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/Actions.class" afterPath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/Actions.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/InitPage.class" afterPath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/InitPage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/InitPre.class" afterPath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/InitPre.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ATchuruku/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPre.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPre.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../ATchuruku/out/" />
     <ignored path="$PROJECT_DIR$/../ATchuruku/target/" />
@@ -776,7 +771,7 @@
       <option name="presentableId" value="Default" />
       <updated>1553844885743</updated>
       <workItem from="1553844887129" duration="53398000" />
-      <workItem from="1554684345370" duration="717000" />
+      <workItem from="1554684345370" duration="892000" />
     </task>
     <task id="LOCAL-00001" summary="新建粮储项目">
       <created>1554081092143</created>
@@ -827,7 +822,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554253693869</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="4月8号早上，提交代码    --吴岑龙">
+      <created>1554685258498</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1554685258498</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -863,7 +865,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54115000" />
+    <option name="totallyTimeSpent" value="54290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -910,7 +912,8 @@
     <MESSAGE value="改dataprovider，CSV中文乱码" />
     <MESSAGE value="4月2号早上，提交代码    --吴岑龙" />
     <MESSAGE value="4月3号早上，提交代码    --吴岑龙" />
-    <option name="LAST_COMMIT_MESSAGE" value="4月3号早上，提交代码    --吴岑龙" />
+    <MESSAGE value="4月8号早上，提交代码    --吴岑龙" />
+    <option name="LAST_COMMIT_MESSAGE" value="4月8号早上，提交代码    --吴岑龙" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
