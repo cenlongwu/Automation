@@ -43,9 +43,16 @@ public class BusinessManage {
         commonPage.login(expectedTitle,username, password);
     }
 
-    @Test(priority = 2, groups = {"Common"}, dataProvider = "loginInfo")
-            public void rukuTongzhishuTest(){
-            ChurukudanPinZheng.addRukutongzhishu();
+    @DataProvider(name="ChurukuTongzhishu")
+    public Object[][] churkuTongzhishu() {
+        return new Object[][]{
+                {"德清出入库管理系统", "zhongxinku", "123456"}
+        };
+    }
+    @Test(priority = 2, groups = {"Common"})
+    public void rukuTongzhishuTest(){
+        commonPage.accessCHURUKU();
+        churukudanPinZheng.addRukutongzhishu();
     }
 
 }

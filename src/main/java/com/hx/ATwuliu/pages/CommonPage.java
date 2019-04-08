@@ -383,6 +383,11 @@ public class CommonPage extends Actions{
         Btn_login.click();
     }
 
+    public void accessCHURUKU(){
+        Div_L1_YewuGuanli.click();
+        Div_L2_ChurukudanPingzheng.click();
+        Li_L3_RukuTongzhishu.click();
+    }
 
 
     /*************************************************************************************/
