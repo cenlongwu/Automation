@@ -20,11 +20,11 @@ public class DengjiManage extends Actions {
     @FindBy(xpath = "//div[@class=\"index_carWrap-2oN3Y\"]/div[2]/div ")
     private WebElement Div_Chukudengji;     //出库登记制卡
 
-    @FindBy(xpath = "//span[@class=\"ant-form-item-children\"]/input[@id=\"icCardNum\"]")
-    private WebElement Ipt_QueryIdcardnum;     //卡号输入框
+    @FindBy(id="icCardNum")
+    private WebElement Ipt_QueryIdcardnum;     //卡号输入框-可复用
 
-    @FindBy(xpath = "//span[@class=\"ant-form-item-children\"]/input[@id=\"plateNumber\"]")
-    private WebElement Ipt_Platenum;     //车牌号输入框
+    @FindBy(id="plateNumber")
+    private WebElement Ipt_Platenum;     //车牌号输入框-可复用
 
     @FindBy(xpath = "//span[@class=\"ant-form-item-children\"]/button[span=\"查 询\"]")
     private WebElement Btn_Query;     //查询按钮
@@ -54,6 +54,23 @@ public class DengjiManage extends Actions {
     @FindBy(xpath = "//div[@class=\"page-control center\"]/button[span=\"保 存\"]")
     private WebElement Btn_Save;     //保存按钮
 
+    /***********************
+     /*调度管理页面*/
+
+   /* @FindBy(id="icCardNum")
+    private WebElement Ipt_QueryIdcardnum;     //卡号输入框-可复用
+
+    @FindBy(id="plateNumber")
+    private WebElement Ipt_Platenum;     //车牌号输入框-可复用*/
+
+    @FindBy(id="driverName")
+    private WebElement Ipt_Drivername;     //车牌号输入框
+
+  /*  @FindBy(xpath = "//span[@class=\"ant-form-item-children\"]/button[span=\"查 询\"]")
+    private WebElement Btn_Query;     //查询按钮 -可复用
+
+    @FindBy(xpath = "//span[@class=\"ant-form-item-children\"]/button[span=\"重 置\"]")
+    private WebElement Btn_Reset;     //重置按钮   -可复用*/
 
 
 
