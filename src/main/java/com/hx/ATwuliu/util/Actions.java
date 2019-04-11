@@ -26,7 +26,7 @@ public class Actions {
 
 
     //生成wait，供page页使用
-    public WebDriverWait wait = new WebDriverWait(driver, 10);
+    public WebDriverWait wait = new WebDriverWait(driver, 8);
 
 
 

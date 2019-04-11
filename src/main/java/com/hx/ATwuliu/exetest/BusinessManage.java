@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.lang.*;
 import com.hx.ATwuliu.util.*;
 import com.hx.ATwuliu.pages.*;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
 //import org.junit.Before;
 import org.testng.Assert;
@@ -43,9 +44,17 @@ public class BusinessManage {
         commonPage.login(expectedTitle,username, password);
     }
 
-    @Test(priority = 2, groups = {"Common"}, dataProvider = "loginInfo")
-            public void rukuTongzhishuTest(){
-            ChurukudanPinZheng.addRukutongzhishu();
+    @DataProvider(name="ChurukuTongzhishu")
+    public Object[][] churkuTongzhishu() {
+        return new Object[][]{
+                {"海绵宝宝", "混合小麦", "100","0p4-保中一"}
+        };
+    }
+    @Test(priority = 2, groups = {"Common"},dataProvider = "ChurukuTongzhishu")
+    public void rukuTongzhishuTest(String customerName,String Pinzhong,String Amount,String Cangwei){
+        commonPage.accessL3Rukutongzhishu();
+        churukudanPinZheng.addRukutongzhishu( customerName, Pinzhong, Amount, Cangwei);
+        churukudanPinZheng.SubmitRukutongzhishu();
     }
 
 }
