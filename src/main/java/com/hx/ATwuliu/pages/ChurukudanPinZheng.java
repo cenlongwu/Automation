@@ -108,12 +108,6 @@ public class ChurukudanPinZheng extends Actions {
 
 
 
-
-    @FindBy(id = "noticeName")
-    private WebElement Ipt_DanjuMingcheng;
-
-
-
     /*************************************************************************************/
     //封装完可执行的方法
 
@@ -168,18 +162,6 @@ public class ChurukudanPinZheng extends Actions {
         }
     }
 
-    public void test(){
-        //点击新增，点击客户，选择客户，点击确定
-        Btn_Add.click();
-        Ipt_Customer.click();
-        Ipt_CustomerName.sendKeys("海绵宝宝");
-        Btn_CustomerQuery.click();
-        delay(2000);
-        RBtn_Customer.click();
-        safeClick(Btn_ConfirmCustomer);
-        //点击单据名称输入框，输入信息
-        safeSendkeys(Ipt_DanjuMingcheng, "单据名称test");
-    }
 
 
     /*************************************************************************************/
