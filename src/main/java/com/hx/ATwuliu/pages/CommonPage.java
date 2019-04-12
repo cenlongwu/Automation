@@ -383,8 +383,16 @@ public class CommonPage extends Actions{
         Btn_login.click();
     }
 
-    public void accessL3Rukutongzhishu(){
+    public void accessL3Rukutongzhishu(){   //进入入库通知书页面
         accessL3Page( Div_L1_YewuGuanli,  Div_L2_ChurukudanPingzheng,  Li_L3_RukuTongzhishu);
+    }
+
+    public void accessL3Chukutongzhishu(){   //进入出库通知书页面
+        accessL3Page( Div_L1_YewuGuanli,  Div_L2_ChurukudanPingzheng,  Li_L3_ChukuTongzhishu);
+    }
+
+    public void accessL3Chukutihuodan(){   //进入出库提货单页面
+        accessL3Page( Div_L1_YewuGuanli,  Div_L2_ChurukudanPingzheng,  Li_L3_ChukuTihuodan);
     }
 
 

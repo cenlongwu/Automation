@@ -44,17 +44,43 @@ public class BusinessManage {
         commonPage.login(expectedTitle,username, password);
     }
 
-    @DataProvider(name="ChurukuTongzhishu")
-    public Object[][] churkuTongzhishu() {
+    @DataProvider(name="RukuTongzhishu")
+    public Object[][] rukuTongzhishu() {
         return new Object[][]{
                 {"海绵宝宝", "混合小麦", "100","0p4-保中一"}
         };
     }
-    @Test(priority = 2, groups = {"Common"},dataProvider = "ChurukuTongzhishu")
+    @Test(priority = 2, groups = {"Common"},dataProvider = "RukuTongzhishu")
     public void rukuTongzhishuTest(String customerName,String Pinzhong,String Amount,String Cangwei){
         commonPage.accessL3Rukutongzhishu();
         churukudanPinZheng.addRukutongzhishu( customerName, Pinzhong, Amount, Cangwei);
         churukudanPinZheng.SubmitRukutongzhishu();
     }
 
+    @DataProvider(name="ChukuTongzhishu")
+    public Object[][] churkuTongzhishu() {
+        return new Object[][]{
+                {"海绵宝宝", "混合小麦", "101","0p4-保中一"}
+        };
+    }
+    @Test(priority = 3, groups = {"Common"},dataProvider = "ChukuTongzhishu")
+    public void chukuTongzhishuTest(String customerName,String Pinzhong,String Amount,String Cangwei){
+        commonPage.accessL3Chukutongzhishu();
+        churukudanPinZheng.addRukutongzhishu( customerName, Pinzhong, Amount, Cangwei);
+        churukudanPinZheng.SubmitRukutongzhishu();
+    }
+
+
+    @DataProvider(name="Chukutihuodan")
+    public Object[][] chukutihuodan() {
+        return new Object[][]{
+                {"海绵宝宝", "混合小麦", "102","0p4-保中一"}
+        };
+    }
+    @Test(priority = 4, groups = {"Common"},dataProvider = "Chukutihuodan")
+    public void chukutihuodanTest(String customerName,String Pinzhong,String Amount,String Cangwei){
+        commonPage.accessL3Chukutihuodan();
+        churukudanPinZheng.addRukutongzhishu( customerName, Pinzhong, Amount, Cangwei);
+        churukudanPinZheng.SubmitRukutongzhishu();
+    }
 }
