@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 /**
- * Created by Administrator on 2019/3/29.
+ * Created by Administrator on 2019/3/29.11
  */
 public class CommonPage extends Actions{
     /*************************************************************************************/
