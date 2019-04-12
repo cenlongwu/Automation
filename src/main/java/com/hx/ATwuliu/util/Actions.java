@@ -212,11 +212,12 @@ public class Actions {
      */
     public void safeClick(WebElement webElement){
         int error = 0;
-        wait.until(ExpectedConditions.visibilityOf(webElement));
-        wait.until(ExpectedConditions.elementToBeClickable(webElement));
+
         for(int i=0;i<3;i++){
             try{
                 error = 0;
+                wait.until(ExpectedConditions.visibilityOf(webElement));
+                wait.until(ExpectedConditions.elementToBeClickable(webElement));
                 webElement.click();
             }
             catch (StaleElementReferenceException e1){
@@ -239,10 +240,11 @@ public class Actions {
      */
     public void safeSendkeys(WebElement webElement, String value){
         int error = 0;
-        wait.until(ExpectedConditions.visibilityOf(webElement));
-        wait.until(ExpectedConditions.elementToBeClickable(webElement));
+
         for(int i=0;i<3;i++){
             try{
+                wait.until(ExpectedConditions.visibilityOf(webElement));
+                wait.until(ExpectedConditions.elementToBeClickable(webElement));
                 System.out.println("-------------------");
                 error = 0;
                 webElement.click();

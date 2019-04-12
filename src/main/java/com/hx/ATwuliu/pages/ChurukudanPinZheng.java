@@ -23,8 +23,10 @@ public class ChurukudanPinZheng extends Actions {
     //页面控件
 
     /*入库通知书页面*/
-    @FindBy(id="noticeNum")
+    //@FindBy(id="noticeNum")
+    @FindBy(xpath = "//input[@id=\"noticeNum\" and @placeholder=\"请输入\"]")
     private WebElement Ipt_TongzhishuNum;    //通知书编号输入框
+
 
     @FindBy(xpath = "//*[@id=\"app\"]//button[span=\"查 询\"]")
     private WebElement Btn_Query;     //查询按钮
@@ -47,12 +49,12 @@ public class ChurukudanPinZheng extends Actions {
     @FindBy(xpath = "//*[@id=\"app\"]//div[@class=\"ant-btn-group\"]/button[span=\"完 成\"]")
     private WebElement Btn_Complete;     //完成按钮
 
-    @FindBy(xpath = "//div[@class=\"ant-spin-nested-loading\"]//tr[1]/td[1]")
+    @FindBy(xpath = "//div[@class=\"ant-spin-nested-loading\"]//tr[1]/td[1]//input[@type=\"radio\"]")
     private WebElement RBtn_ChooseTongzhishu;     //单选通知书编号
 
     /*入库通知书页面--新增*/
-    @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//input[@type=\"text\" and @id=\"noticeNum\"]")
-    private WebElement Ipt_DTongzhishuNum;     //通知书编号输入框(自动生成通知书编号)
+    @FindBy(xpath = "//input[@id=\"noticeNum\" and starts-with(@value,\"ZX_\")]")
+    private WebElement Ipt_ZidongTongzhishuNum;     //通知书编号输入框(自动生成通知书编号)
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]/div/form//span[@id=\"businessDate\"]/div/input")
     private WebElement Ipt_AddBusinessDate;     //业务日期输入框
@@ -129,50 +131,59 @@ public class ChurukudanPinZheng extends Actions {
     /*************************************************************************************/
     //封装完可执行的方法
 
-    private static String TongzhishuBianhao;
+    private String TongzhishuBianhao;
 
 
 
     public String addRukutongzhishu(String customerName,String Pinzhong,String Amount,String Cangwei){
         Btn_Add.click();   //进入新增入库通知书页面
-        this.TongzhishuBianhao=Ipt_DTongzhishuNum.getText();    //获取新建通知书编号
-        Reporter.log("新增的入库通知书编号为："+TongzhishuBianhao);
-        wait.until(ExpectedConditions.elementToBeClickable(Ipt_Customer));  //选择客户
-        Ipt_Customer.click();
-        wait.until(ExpectedConditions.elementToBeClickable(Ipt_CustomerName));
-        Ipt_CustomerName.sendKeys(customerName);
-        Btn_CustomerQuery.click();
-        //wait.until(ExpectedConditions.elementToBeClickable(RBtn_Customer));
         delay(2000);
+        this.TongzhishuBianhao=null;
+        this.TongzhishuBianhao=Ipt_ZidongTongzhishuNum.getAttribute("value");    //获取新建通知书编号
+        Reporter.log("新增的入库通知书编号为："+TongzhishuBianhao);
+        System.out.println(this.TongzhishuBianhao);
+        //wait.until(ExpectedConditions.elementToBeClickable(Ipt_Customer));  //选择客户
+        //Ipt_Customer.click();
+        safeClick(Ipt_Customer);
+        //wait.until(ExpectedConditions.elementToBeClickable(Ipt_CustomerName));
+        //Ipt_CustomerName.sendKeys(customerName);
+        safeSendkeys(Ipt_CustomerName,customerName);  //搜索框输入客户名
+        Btn_CustomerQuery.click();
+        delay(1500);
         RBtn_Customer.click();
         Btn_ConfirmCustomer.click();
-        //wait.until(ExpectedConditions.elementToBeClickable(Ipt_PinZhong));  //选择品种
-        delay(1000);
-        Ipt_PinZhong.click();
-        //wait.until(ExpectedConditions.elementToBeClickable(Ipt_PinZhongName));
-        delay(2000);
+        delay(1500);
+        //Ipt_PinZhong.click();   //选择品种
+        safeClick(Ipt_PinZhong);   //选择品种
+        delay(1500);
         Ipt_PinZhongName.sendKeys(Pinzhong);
         Btn_PinZhongQuery.click();
         delay(2000);
         RBtn_Pinzhong.click();
+        //safeClick(RBtn_Pinzhong);
         Btn_ConfirmPinzhong.click();
-        wait.until(ExpectedConditions.elementToBeClickable(Ipt_Amount));  //输入数量
-        Ipt_Amount.sendKeys(Amount);
-        wait.until(ExpectedConditions.elementToBeClickable(Ipt_CangWei));  //输入、选择数量
-        Ipt_CangWei.sendKeys(Cangwei);
-        wait.until(ExpectedConditions.elementToBeClickable(Li_CangWei));
-        Li_CangWei.click();
-        Btn_Confirm.click();    //点击确认保存
+        //wait.until(ExpectedConditions.elementToBeClickable(Ipt_Amount));  //输入数量
+        //Ipt_Amount.sendKeys(Amount);
+        safeSendkeys(Ipt_Amount,Amount);
+        //wait.until(ExpectedConditions.elementToBeClickable(Ipt_CangWei));  //输入、选择数量
+       // Ipt_CangWei.sendKeys(Cangwei);
+        safeSendkeys(Ipt_CangWei,Cangwei);
+        //wait.until(ExpectedConditions.elementToBeClickable(Li_CangWei));
+        //Li_CangWei.click();
+        safeClick(Li_CangWei);
+        safeClick(Btn_Confirm);  //点击确认保存
     return this.TongzhishuBianhao;
     }
 
     public void SubmitRukutongzhishu(){
         try{
-            wait.until(ExpectedConditions.visibilityOf(Ipt_TongzhishuNum));    //输入并查找通知书编号
-            Ipt_TongzhishuNum.sendKeys(this.TongzhishuBianhao);
-            Btn_Query.click();
-            RBtn_ChooseTongzhishu.click();    //选中搜到的通知书编号
-            Btn_Submit.click();
+            delay(1000);
+            safeSendkeys(Ipt_TongzhishuNum,this.TongzhishuBianhao); //输入并查找通知书编号
+            safeClick(Btn_Query);
+            //safeClick(RBtn_ChooseTongzhishu);  //选中搜到的通知书编号
+            delay(1000);
+            RBtn_ChooseTongzhishu.click();
+            safeClick(Btn_Submit);
         }catch(StaleElementReferenceException eo){
             Reporter.log("出现StaleElementReferenceException错误");
         }catch (NoSuchElementException e1){

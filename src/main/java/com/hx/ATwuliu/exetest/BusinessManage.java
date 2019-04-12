@@ -55,6 +55,7 @@ public class BusinessManage {
         commonPage.accessL3Rukutongzhishu();
         churukudanPinZheng.addRukutongzhishu( customerName, Pinzhong, Amount, Cangwei);
         churukudanPinZheng.SubmitRukutongzhishu();
+        commonPage.closeCurrentTab();
     }
 
     @DataProvider(name="ChukuTongzhishu")
@@ -68,6 +69,7 @@ public class BusinessManage {
         commonPage.accessL3Chukutongzhishu();
         churukudanPinZheng.addRukutongzhishu( customerName, Pinzhong, Amount, Cangwei);
         churukudanPinZheng.SubmitRukutongzhishu();
+        commonPage.closeCurrentTab();
     }
 
 
@@ -82,5 +84,6 @@ public class BusinessManage {
         commonPage.accessL3Chukutihuodan();
         churukudanPinZheng.addRukutongzhishu( customerName, Pinzhong, Amount, Cangwei);
         churukudanPinZheng.SubmitRukutongzhishu();
+        commonPage.closeCurrentTab();
     }
 }

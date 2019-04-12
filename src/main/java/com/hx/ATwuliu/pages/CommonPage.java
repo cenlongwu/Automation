@@ -378,12 +378,14 @@ public class CommonPage extends Actions{
     /*************************************************************************************/
     //封装完可执行的方法
     public void login(String expectedTitle,String username,String password) {
-        wait.until(ExpectedConditions.elementToBeClickable(Ipt_usename));
-        Actions.assertTitle(expectedTitle);
         waitForPageLoad();
-        Ipt_usename.sendKeys(username);
+        safeSendkeys(Ipt_usename,username);
         Ipt_password.sendKeys(password);
+        assertTitle(expectedTitle);
         Btn_login.click();
+    }
+    public void closeCurrentTab(){    //关闭当前标签页
+        safeClick(I_close);
     }
 
     public void accessL3Rukutongzhishu(){   //进入入库通知书页面
