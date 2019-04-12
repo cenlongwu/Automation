@@ -233,7 +233,7 @@ public class Actions {
     }
 
 
-    /**
+    /*
      * 方法：安全点击按钮，异常处理，循环重试
      * 说明：参数为弹出框页面按钮
      * 编写人：钱舒颖、黄蕾
@@ -261,7 +261,7 @@ public class Actions {
     }
 
     /**
-     * 方法：输入框安全输入数据，异常处理，循环重试
+     * 方法：进行输入框安全输入数据，异常处理，循环重试
      * 说明：参数为页面输入框
      * 编写人：钱舒颖、黄蕾
      */
@@ -280,12 +280,12 @@ public class Actions {
             catch (StaleElementReferenceException  e1){
                 error = 1;
                 Reporter.log("输入框输入数据失败");
-              //  System.out.println("StaleElementReferenceException error");
+                System.out.println("StaleElementReferenceException error");
             }
             catch (Exception e2){
                 error = 1;
                 Reporter.log("输入框输入数据失败");
-              //  System.out.println("Exception error");
+                System.out.println("Exception error");
             }finally {
                 System.out.println("finally-error = " + error);
                 if (error == 0) break;

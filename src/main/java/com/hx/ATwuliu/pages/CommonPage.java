@@ -391,8 +391,9 @@ public class CommonPage extends Actions{
     }
 
 
-    /*************************************************************************************/
-    /**********仅供测试************/
+    /******************************/
+    /***********仅供测试************/
+    /******************************/
     public void test(){
         accessL3Page(Div_L1_YewuGuanli, Div_L2_ChurukudanPingzheng, Li_L3_RukuTongzhishu);
         accessL3Page(Div_L1_YewuGuanli, Div_L2_ChurukudanPingzheng, Li_L3_ChukuTongzhishu);
