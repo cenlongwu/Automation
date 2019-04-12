@@ -368,6 +368,9 @@ public class CommonPage extends Actions{
     @FindBy(className = "ant-layout-sider-trigger")
     private WebElement Div_SidePullFrame;  //侧拉框按键
 
+    @FindBy(xpath = "//div[@class=\"ant-tabs-nav ant-tabs-nav-animated\"]/div/div[@aria-selected=\"true\"]/div/i")
+    private WebElement I_close;  //当前页面关闭按键
+
 
     /*************************************************************************************/
 

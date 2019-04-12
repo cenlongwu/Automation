@@ -1,8 +1,6 @@
 package com.hx.ATwuliu.util;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -162,8 +160,8 @@ public class Actions {
     }
 
     /**
-     * 方法：判断功能目录的打开与否
-     * 说明：参数为
+     * 方法：通过aria-expanded属性的值判断三级功能目录的打开与否，true为打开，false为关闭
+     * 说明：参数为页面目录
      * 编写人：钱舒颖
      */
     public void accessL3Page(WebElement Common_L1, WebElement Common_L2, WebElement Common_L3){
@@ -185,12 +183,84 @@ public class Actions {
             if (isExpanded_L02.equals("false")){
                 //点击L02
                 Common_L2.click();
+                delay(1000);
                 //点击L03
                 Common_L3.click();
             }
             else {
                 //点击L03
                 Common_L3.click();
+            }
+        }
+    }
+
+
+    /**
+     * 方法：通过aria-selected属性判断是否为当前页面，true是，false否，关闭当前页面
+     * 说明：参数为“X”按钮
+     * 编写人：钱舒颖
+     */
+    public void closeCurrentedPage(WebElement webElement){
+        webElement.click();
+    }
+
+
+    /*
+     * 方法：安全点击按钮，异常处理，循环重试
+     * 说明：参数为弹出框页面按钮
+     * 编写人：钱舒颖、黄蕾
+     */
+    public void safeClick(WebElement webElement){
+        int error = 0;
+        wait.until(ExpectedConditions.visibilityOf(webElement));
+        wait.until(ExpectedConditions.elementToBeClickable(webElement));
+        for(int i=0;i<3;i++){
+            try{
+                error = 0;
+                webElement.click();
+            }
+            catch (StaleElementReferenceException e1){
+                error = 1;
+                Reporter.log("按钮点击失败");
+            }
+            catch (NoSuchElementException e2){
+                error = 1;
+                Reporter.log("按钮点击失败");
+            }finally {
+                if (error == 0) break;
+            }
+        }
+    }
+
+    /**
+     * 方法：进行输入框安全输入数据，异常处理，循环重试
+     * 说明：参数为页面输入框
+     * 编写人：钱舒颖、黄蕾
+     */
+    public void safeSendkeys(WebElement webElement, String value){
+        int error = 0;
+        wait.until(ExpectedConditions.visibilityOf(webElement));
+        wait.until(ExpectedConditions.elementToBeClickable(webElement));
+        for(int i=0;i<3;i++){
+            try{
+                System.out.println("-------------------");
+                error = 0;
+                webElement.click();
+                webElement.sendKeys(value);
+                System.out.println("try-error = " + error);
+            }
+            catch (StaleElementReferenceException e1){
+                error = 1;
+                Reporter.log("输入框输入数据失败");
+                System.out.println("StaleElementReferenceException error");
+            }
+            catch (NoSuchElementException e2){
+                error = 1;
+                Reporter.log("输入框输入数据失败");
+                System.out.println("Exception error");
+            }finally {
+                //System.out.println("finally-error = " + error);
+                if (error == 0) break;
             }
         }
     }
