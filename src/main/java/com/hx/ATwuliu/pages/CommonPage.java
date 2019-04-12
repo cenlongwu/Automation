@@ -368,6 +368,9 @@ public class CommonPage extends Actions{
     @FindBy(className = "ant-layout-sider-trigger")
     private WebElement Div_SidePullFrame;  //侧拉框按键
 
+    @FindBy(xpath = "//div[@class=\"ant-tabs-nav ant-tabs-nav-animated\"]/div/div[@aria-selected=\"true\"]/div/i")
+    private WebElement I_close;  //当前页面关闭按键
+
 
     /*************************************************************************************/
 
@@ -389,7 +392,14 @@ public class CommonPage extends Actions{
 
 
     /*************************************************************************************/
-
+    /**********仅供测试************/
+    public void test(){
+        accessL3Page(Div_L1_YewuGuanli, Div_L2_ChurukudanPingzheng, Li_L3_RukuTongzhishu);
+        accessL3Page(Div_L1_YewuGuanli, Div_L2_ChurukudanPingzheng, Li_L3_ChukuTongzhishu);
+        accessL3Page(Div_L1_YewuGuanli, Div_L2_JihuaGuanli, Li_L3_GouxiaoJihua);
+        closeCurrentedPage(I_close);
+        accessL3Page(Div_L1_YewuGuanli, Div_L2_ChurukudanPingzheng, Li_L3_RukuTongzhishu);
+    }
 
 
 }

@@ -55,12 +55,36 @@ public class Actions {
     }
 
     /**
+     * 方法：判断想要选择的数据对应的WebElement对象，返回数据类型为WebElement
+     * 说明：第一个参数为select对象，第二个参数是要选择的值,第三个参数为要选择的值的对象
+     * 编写人：
+     */
+    /*
+    public WebElement judgeWebElement(String value){
+
+    }
+    */
+
+
+    /**
      * 方法：在下拉框中选择一个值
-     * 说明：第一个参数为select对象，第二个参数是要选择的值
+     * 说明：第一个参数为select对象，第二个参数是要选择的值,第三个参数为要选择的值的对象
      * 编写人：吴岑龙
      */
-    public void select_DropdownBox(WebElement Sel_element, String selectValue){
+    public void select_DropdownBox(WebElement Sel_element, String selectValue, WebElement Sel_Value){
         wait.until(ExpectedConditions.elementToBeClickable(Sel_element));
+        Sel_element.click();
+        String currentSelectedText = Sel_element.getText();
+        if (selectValue.equals(currentSelectedText) ){
+            Reporter.log("当前Select已选中待选值 "+selectValue+"，不必作选择操作");}
+        else {
+            //选择selectValue对应的Sel_value对象控件
+            Sel_Value.click();
+            Reporter.log("已选中"+selectValue);
+
+        }
+        //
+        /*
         Select select = new Select(Sel_element);
         String currentSelectedText;
         currentSelectedText=select.getFirstSelectedOption().getText();
@@ -71,6 +95,7 @@ public class Actions {
             Reporter.log("已选中"+selectValue);
 
         }
+        */
     }
 
     /**
@@ -211,7 +236,7 @@ public class Actions {
     /**
      * 方法：安全点击按钮，异常处理，循环重试
      * 说明：参数为弹出框页面按钮
-     * 编写人：钱舒颖
+     * 编写人：钱舒颖、黄蕾
      */
     public void safeClick(WebElement webElement){
         int error = 0;
@@ -238,7 +263,7 @@ public class Actions {
     /**
      * 方法：输入框安全输入数据，异常处理，循环重试
      * 说明：参数为页面输入框
-     * 编写人：钱舒颖
+     * 编写人：钱舒颖、黄蕾
      */
     public void safeSendkeys(WebElement webElement, String value){
         int error = 0;
@@ -255,10 +280,12 @@ public class Actions {
             catch (StaleElementReferenceException  e1){
                 error = 1;
                 Reporter.log("输入框输入数据失败");
+              //  System.out.println("StaleElementReferenceException error");
             }
             catch (Exception e2){
                 error = 1;
                 Reporter.log("输入框输入数据失败");
+              //  System.out.println("Exception error");
             }finally {
                 System.out.println("finally-error = " + error);
                 if (error == 0) break;

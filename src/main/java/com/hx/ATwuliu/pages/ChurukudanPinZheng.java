@@ -110,8 +110,24 @@ public class ChurukudanPinZheng extends Actions {
 
 
     @FindBy(id = "noticeName")
-    private WebElement Ipt_DanjuMingcheng;
+    private WebElement Ipt_DanjuMingcheng;      //单据名称输入框
 
+    @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]/div/form/div/div[2]/div/div[2]/div[3]/div[2]//span/div/div")
+    private WebElement Div_Dengji;      //等级下拉框
+
+    /*等级下拉框数据*/
+    @FindBy(xpath = "//div[@id='41ddd663-4b5e-4632-8215-c7c29a7d31cc']/ul/li[text()='一等']")
+    private WebElement SJ_01;
+    @FindBy(xpath = "//div[@id='41ddd663-4b5e-4632-8215-c7c29a7d31cc']/ul/li[text()='二等']")
+    private WebElement SJ_02;
+    @FindBy(xpath = "//div[@id='41ddd663-4b5e-4632-8215-c7c29a7d31cc']/ul/li[text()='三等']")
+    private WebElement SJ_03;
+    @FindBy(xpath = "//div[@id='41ddd663-4b5e-4632-8215-c7c29a7d31cc']/ul/li[text()='四等']")
+    private WebElement SJ_04;
+    @FindBy(xpath = "//div[@id='41ddd663-4b5e-4632-8215-c7c29a7d31cc']/ul/li[text()='五等']")
+    private WebElement SJ_05;
+    @FindBy(xpath = "//div[@id='41ddd663-4b5e-4632-8215-c7c29a7d31cc']/ul/li[text()='等外']")
+    private WebElement SJ_06;
 
 
     /*************************************************************************************/
@@ -168,6 +184,7 @@ public class ChurukudanPinZheng extends Actions {
         }
     }
 
+    /**********仅供测试************/
     public void test(){
         //点击新增，点击客户，选择客户，点击确定
         Btn_Add.click();
@@ -179,6 +196,11 @@ public class ChurukudanPinZheng extends Actions {
         safeClick(Btn_ConfirmCustomer);
         //点击单据名称输入框，输入信息
         safeSendkeys(Ipt_DanjuMingcheng, "单据名称test");
+        //选择下拉框等级
+        String value = "四等";
+        //判断想要选择的数据对应的WebElement对象，返回数据类型为WebElement
+        WebElement result;
+      //  select_DropdownBox(Div_Dengji, value, result);
     }
 
 
