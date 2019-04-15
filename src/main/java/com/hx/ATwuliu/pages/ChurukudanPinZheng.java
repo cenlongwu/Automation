@@ -1,16 +1,11 @@
 package com.hx.ATwuliu.pages;
 
-import com.hx.ATwuliu.util.*;
-import org.openqa.selenium.JavascriptExecutor;
+import com.hx.ATwuliu.util.Actions;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindAll;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Reporter;
-
-import static com.hx.ATwuliu.util.InitPre.driver;
+//import org.testng.Reporter;
 //import org.junit.Assert.*;
 
 /**
@@ -140,7 +135,7 @@ public class ChurukudanPinZheng extends Actions {
         delay(2000);
         this.TongzhishuBianhao=null;
         this.TongzhishuBianhao=Ipt_ZidongTongzhishuNum.getAttribute("value");    //获取新建通知书编号
-        Reporter.log("新增的入库通知书编号为："+TongzhishuBianhao);
+        //Reporter.log("新增的入库通知书编号为："+TongzhishuBianhao);
         System.out.println(this.TongzhishuBianhao);
         //wait.until(ExpectedConditions.elementToBeClickable(Ipt_Customer));  //选择客户
         //Ipt_Customer.click();
@@ -185,9 +180,9 @@ public class ChurukudanPinZheng extends Actions {
             RBtn_ChooseTongzhishu.click();
             safeClick(Btn_Submit);
         }catch(StaleElementReferenceException eo){
-            Reporter.log("出现StaleElementReferenceException错误");
+          // Reporter.log("出现StaleElementReferenceException错误");
         }catch (NoSuchElementException e1){
-            Reporter.log("出现NoSuchElementException错误");
+           // Reporter.log("出现NoSuchElementException错误");
         }
     }
     /******************************/

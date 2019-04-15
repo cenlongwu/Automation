@@ -2,18 +2,18 @@
 
 <suite name="ATchuruku">
 <listeners>
-<listener class-name="org.uncommons.reportng.HTMLReporter" />
-<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	<!--listener class-name="com.hx.ATwuliu.util.ExtentTestNGIReporterListener" /-->
+	<listener class-name="com.hx.ATwuliu.util.ExtentTestNGITestListener" />
 </listeners>
   <test name="ATwuliu">
   	  <groups>  
          <run>  
-            <include name="Common"/>  
+            <include name="Common1"/>  
             <exclude name="..." />  
          </run>  
       </groups> 
     <classes>
       <class name="com.hx.ATwuliu.exetest.BusinessManage"/>
-    </classes>
+	</classes>
   </test> <!-- HXAutomation -->
 -</suite> <!-- Default Suite -->

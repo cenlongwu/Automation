@@ -11,7 +11,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.Callable;
-import java.util.function.Function;
 import com.hx.ATwuliu.pages.*;
 
 import static com.hx.ATwuliu.util.InitPre.driver;
@@ -34,22 +33,22 @@ public class Actions {
     /**
      * 方法：页面跳转，等待直到JS:document.readyState=complete
      * 说明：有页面跳转的时候直接用waitForPageLoad()
-     * 编写人：吴岑龙
-     */
-    public Function<WebDriver, Boolean> isPageLoaded() {
-        return new Function<WebDriver, Boolean>() {
-            @Override
-            public Boolean apply(WebDriver driver) {
-                JavascriptExecutor je = (JavascriptExecutor) driver;
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
-            }
-        };
-    }
-
-    public void waitForPageLoad() {
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(isPageLoaded());
-    }
+//     * 编写人：吴岑龙
+//     */
+//    public Function<WebDriver, Boolean> isPageLoaded() {
+//        return new Function<WebDriver, Boolean>() {
+//            @Override
+//            public Boolean apply(WebDriver driver) {
+//                JavascriptExecutor je = (JavascriptExecutor) driver;
+//                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+//            }
+//        };
+//    }
+//
+//    public void waitForPageLoad() {
+//        WebDriverWait wait = new WebDriverWait(driver, 20);
+//        wait.until(isPageLoaded());
+//    }
 
     /**
      * 方法：在下拉框中选择一个值

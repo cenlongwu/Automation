@@ -39,7 +39,7 @@ public class BusinessManage {
 //        return getTestData("E:\\ATchuruku\\testdata\\BusinessManage.csv");
 //    }
 
-    @Test(priority = 1, groups = {"Common"}, dataProvider = "loginInfo")
+    @Test(priority = 1, groups = {"Common1"}, dataProvider = "loginInfo")
     public void login(String expectedTitle,String username, String password) {
         commonPage.login(expectedTitle,username, password);
     }

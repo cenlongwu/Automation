@@ -34,5 +34,7 @@ public class InitPre {
         driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //隐式等待10秒
         driver.navigate().to(URL);
+
+
     }
 }
