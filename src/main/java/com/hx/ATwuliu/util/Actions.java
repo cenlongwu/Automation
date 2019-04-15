@@ -12,9 +12,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.function.Function;
 
-import com.hx.ATwuliu.pages.*;
-
 import static com.hx.ATwuliu.util.InitPre.driver;
+
 
 /**
  * Created by Administrator on 2018/5/4.

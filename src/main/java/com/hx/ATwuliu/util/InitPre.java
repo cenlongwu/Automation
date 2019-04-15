@@ -20,19 +20,22 @@ public class InitPre {
 
     public InitPre() {
         if (driver == null) {
-        String chromePath = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
-        String chromeDriverPath = "E:\\ATchuruku\\chromedriver.exe";
+            String chromePath = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
+            String chromeDriverPath = "E:\\ATchuruku\\chromedriver.exe";
 //        String IEPath="C:\\Program Files\\Internet Explorer\\iexplore.exe";
 //        String IEDriverPath="D:\\HXAutomation\\IEDriverServer.exe";
-        System.setProperty("webdriver.chrome.driver",chromeDriverPath);
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--start-maximized");
-        chromeOptions.addArguments("--ignore-certificate-errors");
-        chromeOptions.addArguments("disable-infobars");
-        chromeOptions.addArguments();
-        driver = new ChromeDriver(chromeOptions);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //隐式等待10秒
-        driver.navigate().to(URL);
+            System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--start-maximized");
+            chromeOptions.addArguments("--ignore-certificate-errors");
+            chromeOptions.addArguments("disable-infobars");
+            chromeOptions.addArguments();
+            driver = new ChromeDriver(chromeOptions);
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //隐式等待10秒
+            driver.navigate().to(URL);
         }
     }
+
+
+
 }
