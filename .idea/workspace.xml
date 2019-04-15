@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50a0a18a-a1a5-40c6-98e7-64979cd6de9e" name="Default" comment="4月12号下午，提交代码    --吴岑龙">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGIReporterListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGITestListener.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/libraries/Maven__com_google_inject_guice_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/libraries/Maven__org_testng_testng_6_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/libraries/Maven__velocity_velocity_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/libraries/Maven__velocity_velocity_dep_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/libraries/lib.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/lib/reportng-2.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExcelRead.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/Actions$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/ExcelRead.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/exetest/BusinessManage.class" afterPath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/exetest/BusinessManage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/pages/ChurukudanPinZheng.class" afterPath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/pages/ChurukudanPinZheng.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/pages/CommonPage.class" afterPath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/pages/CommonPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/Actions.class" afterPath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/Actions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/InitPre.class" afterPath="$PROJECT_DIR$/../ATchuruku/target/classes/com/hx/ATwuliu/util/InitPre.class" />
+    <list default="true" id="50a0a18a-a1a5-40c6-98e7-64979cd6de9e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ATchuruku/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/ATchuruku.iml" afterPath="$PROJECT_DIR$/../ATchuruku/ATchuruku.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/pom.xml" afterPath="$PROJECT_DIR$/../ATchuruku/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPre.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPre.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGIReporterListener.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGIReporterListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGITestListener.java" afterPath="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGITestListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATchuruku/testng.xml" afterPath="$PROJECT_DIR$/../ATchuruku/testng.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../ATchuruku/out/" />
@@ -46,12 +24,15 @@
   <component name="ExportTestResults" outputFolder="$PROJECT_DIR$/../ATchuruku" userTempatePath="" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BusinessManage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BusinessManage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1051">
-              <caret line="88" column="1" lean-forward="false" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="272">
+              <caret line="82" column="39" lean-forward="true" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+              <folding>
+                <element signature="e#926#927#0" expanded="true" />
+                <element signature="e#955#956#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,8 +40,8 @@
       <file leaf-file-name="ExtentTestNGITestListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGITestListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state relative-caret-position="-114">
+              <caret line="68" column="53" lean-forward="false" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -71,7 +52,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1555311020522" expanded="true" signature="11889:12095" ph="{...}" />
+                <marker date="1555311020522" expanded="true" signature="11889:12107" ph="..." />
+                <marker date="1555311020522" expanded="true" signature="12249:12262" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,7 +66,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-114">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1555307192953" expanded="true" signature="12035:12390" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,9 +76,12 @@
       <file leaf-file-name="ExtentTestNGIReporterListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGIReporterListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1765">
-              <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="59" />
-              <folding />
+            <state relative-caret-position="875">
+              <caret line="166" column="18" lean-forward="false" selection-start-line="166" selection-start-column="18" selection-end-line="166" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6180#6193#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,31 +96,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestListener.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.1.5/extentreports-3.1.5-sources.jar!/com/aventstack/extentreports/TestListener.java">
+      <file leaf-file-name="ChurukudanPinZheng.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state relative-caret-position="87">
+              <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtentTest.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.1.5/extentreports-3.1.5-sources.jar!/com/aventstack/extentreports/ExtentTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+            <state relative-caret-position="106">
+              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="383" column="16" lean-forward="false" selection-start-line="383" selection-start-column="16" selection-end-line="383" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -139,7 +131,7 @@
       <file leaf-file-name="ExtentManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="-38">
               <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -170,6 +162,12 @@
       <find>确定</find>
       <find>wait</find>
       <find>saveScreenshot</find>
+      <find>Report</find>
+      <find>debug</find>
+      <find>load</find>
+      <find>status</find>
+      <find>pass</find>
+      <find>ed</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,15 +188,15 @@
         <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPage.java" />
         <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/AA.java" />
         <option value="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar!/org/openqa/selenium/WebElement.class" />
-        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java" />
         <option value="$PROJECT_DIR$/../ATchuruku/pom.xml" />
-        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java" />
-        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java" />
-        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java" />
         <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentManager.java" />
         <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/InitPre.java" />
-        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGIReporterListener.java" />
+        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java" />
+        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java" />
         <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGITestListener.java" />
+        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java" />
+        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGIReporterListener.java" />
+        <option value="$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java" />
       </list>
     </option>
   </component>
@@ -507,7 +505,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.47465438" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ATchuruku/lib/xmlbeans-3.0.2.jar!/" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -923,7 +921,7 @@
       <workItem from="1555030079574" duration="3312000" />
       <workItem from="1555034155329" duration="284000" />
       <workItem from="1555034445927" duration="23653000" />
-      <workItem from="1555296179197" duration="1655000" />
+      <workItem from="1555296179197" duration="8003000" />
     </task>
     <task id="LOCAL-00001" summary="新建粮储项目">
       <created>1554081092143</created>
@@ -1023,46 +1021,54 @@
       <option name="project" value="LOCAL" />
       <updated>1555055516280</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="4月15号上午，提交代码：&#10;改动：改用新的监听器，输入测试Report&#10;&#10;--吴岑龙">
+      <created>1555297953495</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1555297953495</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="E__ATchuruku_testng_xml - 2019.04.12 at 17h 11m 53s.xml">
-      <configuration name="E:/ATchuruku/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTestNG - 2019.04.12 at 17h 15m 33s.xml">
+    <history-entry file="RunTestNG - 2019.04.15 at 14h 19m 40s.xml">
       <configuration name="RunTestNG" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTestNG - 2019.04.12 at 17h 21m 52s.xml">
+    <history-entry file="RunTestNG - 2019.04.15 at 14h 20m 02s.xml">
       <configuration name="RunTestNG" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTestNG - 2019.04.15 at 10h 14m 56s.xml">
+    <history-entry file="RunTestNG - 2019.04.15 at 14h 20m 23s.xml">
       <configuration name="RunTestNG" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTestNG - 2019.04.15 at 10h 16m 57s.xml">
+    <history-entry file="RunTestNG - 2019.04.15 at 14h 22m 31s.xml">
       <configuration name="RunTestNG" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTestNG - 2019.04.15 at 10h 28m 13s.xml">
+    <history-entry file="RunTestNG - 2019.04.15 at 14h 44m 28s.xml">
       <configuration name="RunTestNG" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTestNG - 2019.04.15 at 10h 36m 02s.xml">
+    <history-entry file="RunTestNG - 2019.04.15 at 14h 44m 52s.xml">
       <configuration name="RunTestNG" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTestNG - 2019.04.15 at 10h 43m 26s.xml">
+    <history-entry file="RunTestNG - 2019.04.15 at 14h 45m 43s.xml">
       <configuration name="RunTestNG" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTestNG - 2019.04.15 at 10h 53m 59s.xml">
+    <history-entry file="RunTestNG - 2019.04.15 at 14h 46m 48s.xml">
       <configuration name="RunTestNG" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTestNG - 2019.04.15 at 10h 55m 24s.xml">
+    <history-entry file="RunTestNG - 2019.04.15 at 14h 48m 59s.xml">
+      <configuration name="RunTestNG" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTestNG - 2019.04.15 at 14h 50m 20s.xml">
       <configuration name="RunTestNG" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115389000" />
+    <option name="totallyTimeSpent" value="121737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1079,7 +1085,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3214826" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3214826" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1110,7 +1116,8 @@
     <MESSAGE value="4月10号下午，提交代码    --吴岑龙" />
     <MESSAGE value="4月12号上午，提交代码    --吴岑龙" />
     <MESSAGE value="4月12号下午，提交代码    --吴岑龙" />
-    <option name="LAST_COMMIT_MESSAGE" value="4月12号下午，提交代码    --吴岑龙" />
+    <MESSAGE value="4月15号上午，提交代码：&#10;改动：改用新的监听器，输入测试Report&#10;&#10;--吴岑龙" />
+    <option name="LAST_COMMIT_MESSAGE" value="4月15号上午，提交代码：&#10;改动：改用新的监听器，输入测试Report&#10;&#10;--吴岑龙" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1141,7 +1148,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#955#956#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1201,7 +1211,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
           <caret line="51" column="43" lean-forward="false" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
-          <folding />
+          <folding>
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#955#956#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1366,22 +1379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7144">
-          <caret line="380" column="10" lean-forward="false" selection-start-line="380" selection-start-column="10" selection-end-line="380" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3382">
-          <caret line="182" column="11" lean-forward="false" selection-start-line="182" selection-start-column="11" selection-end-line="182" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/ExtentTest.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
@@ -1394,7 +1391,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1402,7 +1401,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3630#3631#0" expanded="false" />
+            <element signature="e#3687#3688#0" expanded="false" />
+            <element signature="e#9593#9594#0" expanded="false" />
+            <element signature="e#9638#9639#0" expanded="false" />
+            <element signature="e#9950#9951#0" expanded="false" />
+            <element signature="e#10003#10004#0" expanded="false" />
+            <element signature="e#11282#11283#0" expanded="false" />
+            <element signature="e#11338#11339#0" expanded="false" />
+            <element signature="e#14021#14022#0" expanded="false" />
+            <element signature="e#14064#14065#0" expanded="false" />
+            <element signature="e#14917#14918#0" expanded="false" />
+            <element signature="e#14959#14960#0" expanded="false" />
+            <element signature="e#15866#15867#0" expanded="false" />
+            <element signature="e#15902#15903#0" expanded="false" />
+            <element signature="e#17146#17147#0" expanded="false" />
+            <element signature="e#17188#17189#0" expanded="false" />
+            <element signature="e#18097#18098#0" expanded="false" />
+            <element signature="e#18133#18134#0" expanded="false" />
+            <element signature="e#19198#19199#0" expanded="false" />
+            <element signature="e#19240#19241#0" expanded="false" />
+            <element signature="e#20148#20149#0" expanded="false" />
+            <element signature="e#20184#20185#0" expanded="false" />
+            <element signature="e#23381#23382#0" expanded="false" />
+            <element signature="e#23426#23427#0" expanded="false" />
+            <element signature="e#24352#24353#0" expanded="false" />
+            <element signature="e#24391#24392#0" expanded="false" />
+            <element signature="e#25475#25476#0" expanded="false" />
+            <element signature="e#25518#25519#0" expanded="false" />
+            <element signature="e#26433#26434#0" expanded="false" />
+            <element signature="e#26470#26471#0" expanded="false" />
+            <element signature="e#27404#27405#0" expanded="false" />
+            <element signature="e#27446#27447#0" expanded="false" />
+            <element signature="e#28354#28355#0" expanded="false" />
+            <element signature="e#28390#28391#0" expanded="false" />
+            <element signature="e#29468#29469#0" expanded="false" />
+            <element signature="e#29511#29512#0" expanded="false" />
+            <element signature="e#30433#30434#0" expanded="false" />
+            <element signature="e#30470#30471#0" expanded="false" />
+            <element signature="e#33329#33330#0" expanded="false" />
+            <element signature="e#33374#33375#0" expanded="false" />
+            <element signature="e#33532#33533#0" expanded="false" />
+            <element signature="e#33559#33560#0" expanded="false" />
+            <element signature="e#33612#33613#0" expanded="false" />
+            <element signature="e#33667#33668#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1426,7 +1471,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-114">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1555307192953" expanded="true" signature="12035:12390" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1434,29 +1481,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1051">
-          <caret line="88" column="1" lean-forward="false" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGIReporterListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1765">
-          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="59" />
-          <folding />
+          <folding>
+            <marker date="1555311020522" expanded="true" signature="11889:12095" ph="{...}" />
+            <marker date="1555311020522" expanded="true" signature="11889:12107" ph="..." />
+            <marker date="1555311020522" expanded="true" signature="12249:12262" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="-38">
           <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1464,19 +1499,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGITestListener.java">
+    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/ChurukudanPinZheng.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="87">
+          <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/Actions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+        <state relative-caret-position="106">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/pages/CommonPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="383" column="16" lean-forward="false" selection-start-line="383" selection-start-column="16" selection-end-line="383" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGITestListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="68" column="53" lean-forward="false" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/util/ExtentTestNGIReporterListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="166" column="18" lean-forward="false" selection-start-line="166" selection-start-column="18" selection-end-line="166" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6180#6193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ATchuruku/src/main/java/com/hx/ATwuliu/exetest/BusinessManage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="82" column="39" lean-forward="true" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+          <folding>
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#955#956#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

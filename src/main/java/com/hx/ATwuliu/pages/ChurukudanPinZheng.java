@@ -5,6 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 //import org.testng.Reporter;
 //import org.junit.Assert.*;
 
@@ -128,49 +129,35 @@ public class ChurukudanPinZheng extends Actions {
 
     private String TongzhishuBianhao;
 
-
-
-    public String addRukutongzhishu(String customerName,String Pinzhong,String Amount,String Cangwei){
+    public String addTongzhishu(String customerName,String Pinzhong,String Amount,String Cangwei){
         Btn_Add.click();   //进入新增入库通知书页面
-        delay(2000);
+        delay(1000);
         this.TongzhishuBianhao=null;
         this.TongzhishuBianhao=Ipt_ZidongTongzhishuNum.getAttribute("value");    //获取新建通知书编号
-        //Reporter.log("新增的入库通知书编号为："+TongzhishuBianhao);
+        Reporter.log("新增的入库通知书编号为："+TongzhishuBianhao);
         System.out.println(this.TongzhishuBianhao);
-        //wait.until(ExpectedConditions.elementToBeClickable(Ipt_Customer));  //选择客户
-        //Ipt_Customer.click();
         safeClick(Ipt_Customer);
-        //wait.until(ExpectedConditions.elementToBeClickable(Ipt_CustomerName));
-        //Ipt_CustomerName.sendKeys(customerName);
         safeSendkeys(Ipt_CustomerName,customerName);  //搜索框输入客户名
         Btn_CustomerQuery.click();
-        delay(1500);
+        delay(1000);
         RBtn_Customer.click();
         Btn_ConfirmCustomer.click();
-        delay(1500);
-        //Ipt_PinZhong.click();   //选择品种
+        delay(1000);
         safeClick(Ipt_PinZhong);   //选择品种
         delay(1500);
         Ipt_PinZhongName.sendKeys(Pinzhong);
         Btn_PinZhongQuery.click();
-        delay(2000);
+        delay(1000);
         RBtn_Pinzhong.click();
-        //safeClick(RBtn_Pinzhong);
         Btn_ConfirmPinzhong.click();
-        //wait.until(ExpectedConditions.elementToBeClickable(Ipt_Amount));  //输入数量
-        //Ipt_Amount.sendKeys(Amount);
         safeSendkeys(Ipt_Amount,Amount);
-        //wait.until(ExpectedConditions.elementToBeClickable(Ipt_CangWei));  //输入、选择数量
-       // Ipt_CangWei.sendKeys(Cangwei);
         safeSendkeys(Ipt_CangWei,Cangwei);
-        //wait.until(ExpectedConditions.elementToBeClickable(Li_CangWei));
-        //Li_CangWei.click();
         safeClick(Li_CangWei);
         safeClick(Btn_Confirm);  //点击确认保存
     return this.TongzhishuBianhao;
     }
 
-    public void SubmitRukutongzhishu(){
+    public void SubmitTongzhishu(){
         try{
             delay(1000);
             safeSendkeys(Ipt_TongzhishuNum,this.TongzhishuBianhao); //输入并查找通知书编号
@@ -180,9 +167,9 @@ public class ChurukudanPinZheng extends Actions {
             RBtn_ChooseTongzhishu.click();
             safeClick(Btn_Submit);
         }catch(StaleElementReferenceException eo){
-          // Reporter.log("出现StaleElementReferenceException错误");
+            Reporter.log("出现StaleElementReferenceException错误");
         }catch (NoSuchElementException e1){
-           // Reporter.log("出现NoSuchElementException错误");
+            Reporter.log("出现NoSuchElementException错误");
         }
     }
     /******************************/

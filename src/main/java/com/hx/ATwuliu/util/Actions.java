@@ -10,7 +10,8 @@ import org.testng.Reporter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.concurrent.Callable;
+import java.util.function.Function;
+
 import com.hx.ATwuliu.pages.*;
 
 import static com.hx.ATwuliu.util.InitPre.driver;
@@ -35,20 +36,20 @@ public class Actions {
      * 说明：有页面跳转的时候直接用waitForPageLoad()
 //     * 编写人：吴岑龙
 //     */
-//    public Function<WebDriver, Boolean> isPageLoaded() {
-//        return new Function<WebDriver, Boolean>() {
-//            @Override
-//            public Boolean apply(WebDriver driver) {
-//                JavascriptExecutor je = (JavascriptExecutor) driver;
-//                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
-//            }
-//        };
-//    }
-//
-//    public void waitForPageLoad() {
-//        WebDriverWait wait = new WebDriverWait(driver, 20);
-//        wait.until(isPageLoaded());
-//    }
+    public Function<WebDriver, Boolean> isPageLoaded() {
+        return new Function<WebDriver, Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                JavascriptExecutor je = (JavascriptExecutor) driver;
+                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+            }
+        };
+    }
+
+    public void waitForPageLoad() {
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(isPageLoaded());
+    }
 
     /**
      * 方法：在下拉框中选择一个值
@@ -240,8 +241,9 @@ public class Actions {
     public void safeSendkeys(WebElement webElement, String value){
         int error = 0;
 
-        for(int i=0;i<3;i++){
+        for(int i=0;i<2;i++){
             try{
+                delay(1000);
                 wait.until(ExpectedConditions.visibilityOf(webElement));
                 wait.until(ExpectedConditions.elementToBeClickable(webElement));
                 System.out.println("-------------------");
