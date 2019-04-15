@@ -134,7 +134,7 @@ public class ChurukudanPinZheng extends Actions {
         delay(1000);
         this.TongzhishuBianhao=null;
         this.TongzhishuBianhao=Ipt_ZidongTongzhishuNum.getAttribute("value");    //获取新建通知书编号
-        Reporter.log("新增的入库通知书编号为："+TongzhishuBianhao);
+        Reporter.log("新增通知书/提货单编号为："+TongzhishuBianhao);
         System.out.println(this.TongzhishuBianhao);
         safeClick(Ipt_Customer);
         safeSendkeys(Ipt_CustomerName,customerName);  //搜索框输入客户名

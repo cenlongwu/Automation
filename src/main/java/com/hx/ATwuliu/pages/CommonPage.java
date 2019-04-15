@@ -379,6 +379,7 @@ public class CommonPage extends Actions{
     //封装完可执行的方法
     public void login(String expectedTitle,String username,String password) {
         waitForPageLoad();
+        delay(3000);
         safeSendkeys(Ipt_usename,username);
         Ipt_password.sendKeys(password);
         assertTitle(expectedTitle);
