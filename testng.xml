@@ -7,10 +7,15 @@
 </listeners>
   <test name="ATwuliu" preserve-order="true">
     <classes>
-      <class name="com.hx.ATwuliu.exetest.BusinessManage">
+	  <class name="com.hx.ATwuliu.exetest.LoginSystem">
 		<methods>
             <include name="login" />
-            <include name="rukuTongzhishuTest" />
+		</methods>
+	  </class>
+      <class name="com.hx.ATwuliu.exetest.BusinessManage">
+		<methods>
+            <include name="rukuTongzhishuTest" />	
+			<include name="chukuTongzhishuTest" />
             <include name="chukutihuodanTest" />
 		</methods>
 	  </class>
