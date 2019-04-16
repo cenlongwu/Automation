@@ -1,9 +1,6 @@
 package com.hx.ATwuliu.util;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,11 +10,10 @@ import org.testng.Reporter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.concurrent.Callable;
 import java.util.function.Function;
-import com.hx.ATwuliu.pages.*;
 
 import static com.hx.ATwuliu.util.InitPre.driver;
+
 
 /**
  * Created by Administrator on 2018/5/4.11
@@ -37,8 +33,8 @@ public class Actions {
     /**
      * 方法：页面跳转，等待直到JS:document.readyState=complete
      * 说明：有页面跳转的时候直接用waitForPageLoad()
-     * 编写人：吴岑龙
-     */
+//     * 编写人：吴岑龙
+//     */
     public Function<WebDriver, Boolean> isPageLoaded() {
         return new Function<WebDriver, Boolean>() {
             @Override
@@ -240,18 +236,19 @@ public class Actions {
      */
     public void safeClick(WebElement webElement){
         int error = 0;
-        wait.until(ExpectedConditions.visibilityOf(webElement));
-        wait.until(ExpectedConditions.elementToBeClickable(webElement));
+
         for(int i=0;i<3;i++){
             try{
                 error = 0;
+                wait.until(ExpectedConditions.visibilityOf(webElement));
+                wait.until(ExpectedConditions.elementToBeClickable(webElement));
                 webElement.click();
             }
-            catch (StaleElementReferenceException  e1){
+            catch (StaleElementReferenceException e1){
                 error = 1;
                 Reporter.log("按钮点击失败");
             }
-            catch (Exception e2){
+            catch (NoSuchElementException e2){
                 error = 1;
                 Reporter.log("按钮点击失败");
             }finally {
@@ -267,30 +264,31 @@ public class Actions {
      */
     public void safeSendkeys(WebElement webElement, String value){
         int error = 0;
-        wait.until(ExpectedConditions.visibilityOf(webElement));
-        wait.until(ExpectedConditions.elementToBeClickable(webElement));
-        for(int i=0;i<3;i++){
+
+        for(int i=0;i<2;i++){
             try{
+                delay(1000);
+                wait.until(ExpectedConditions.visibilityOf(webElement));
+                wait.until(ExpectedConditions.elementToBeClickable(webElement));
                 System.out.println("-------------------");
                 error = 0;
                 webElement.click();
                 webElement.sendKeys(value);
                 System.out.println("try-error = " + error);
             }
-            catch (StaleElementReferenceException  e1){
+            catch (StaleElementReferenceException e1){
                 error = 1;
                 Reporter.log("输入框输入数据失败");
                 System.out.println("StaleElementReferenceException error");
             }
-            catch (Exception e2){
+            catch (NoSuchElementException e2){
                 error = 1;
                 Reporter.log("输入框输入数据失败");
                 System.out.println("Exception error");
             }finally {
-                System.out.println("finally-error = " + error);
+                //System.out.println("finally-error = " + error);
                 if (error == 0) break;
             }
         }
     }
-
 }
