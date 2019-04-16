@@ -1,6 +1,7 @@
 package com.hx.ATwuliu.util;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,7 +12,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.function.Function;
-
 import static com.hx.ATwuliu.util.InitPre.driver;
 
 
@@ -19,7 +19,6 @@ import static com.hx.ATwuliu.util.InitPre.driver;
  * Created by Administrator on 2018/5/4.
  */
 public class Actions {
-
 
 
     //生成wait，供page页使用
@@ -212,7 +211,7 @@ public class Actions {
     public void safeClick(WebElement webElement){
         int error = 0;
 
-        for(int i=0;i<3;i++){
+        for(int i=0;i<2;i++){
             try{
                 error = 0;
                 wait.until(ExpectedConditions.visibilityOf(webElement));
@@ -266,4 +265,6 @@ public class Actions {
             }
         }
     }
+
+
 }

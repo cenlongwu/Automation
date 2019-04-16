@@ -32,4 +32,6 @@ public class LoginSystem {
     public void login(String expectedTitle,String username, String password) {
         commonPage.login(expectedTitle,username, password);
     }
+
+
 }
