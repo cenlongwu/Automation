@@ -401,6 +401,22 @@ public class CommonPage extends Actions{
         accessL3Page( Div_L1_YewuGuanli,  Div_L2_ChurukudanPingzheng,  Li_L3_ChukuTihuodan);
     }
 
+    public void accessL3Gouxiaojihua(){   //进入购销计划页面
+        accessL3Page( Div_L1_YewuGuanli,  Div_L2_JihuaGuanli,  Li_L3_GouxiaoJihua);
+    }
+
+    public void accessL3Lunhuanjihua(){   //进入轮换计划页面
+        accessL3Page( Div_L1_YewuGuanli,  Div_L2_JihuaGuanli,  Li_L3_LunhuanJihua);
+    }
+
+    public void accessL3Diaorudiaochujihua(){   //进入调入调出计划页面
+        accessL3Page( Div_L1_YewuGuanli,  Div_L2_JihuaGuanli,  Li_L3_DiaoruDiaochuJihua);
+    }
+
+    public void accessL3Hetongguanli(){   //进入合同管理页面
+        accessL3Page( Div_L1_YewuGuanli,  Div_L2_HetongGuanli,  Li_L3_HetongGuanli);
+    }
+
 
     /******************************/
     /***********仅供测试************/

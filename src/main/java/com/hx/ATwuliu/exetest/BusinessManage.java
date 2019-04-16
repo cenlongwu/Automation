@@ -43,7 +43,7 @@ public class BusinessManage {
     }
     @Test(dataProvider = "RukuTongzhishu")
     public void rukuTongzhishuTest(String customerName,String Pinzhong,String Amount,String Cangwei){
-        commonPage.accessL3Chukutongzhishu();
+        commonPage.accessL3Rukutongzhishu();
         churukudanPinZheng.addTongzhishu( customerName, Pinzhong, Amount, Cangwei);
         churukudanPinZheng.SubmitTongzhishu();
         commonPage.closeCurrentTab();
