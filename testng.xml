@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="ATchuruku">
 <listeners>
-	<!--listener class-name="com.hx.ATwuliu.util.ExtentTestNGIReporterListener" /-->
-	<listener class-name="com.hx.ATwuliu.util.ExtentTestNGITestListener" />
+	<listener class-name="com.hx.ATwuliu.util.ExtentTestNGIReporterListener" />
+	<!--listener class-name="com.hx.ATwuliu.util.ExtentTestNGITestListener" /-->
 </listeners>
-  <test name="ATwuliu">
-  	  <groups>  
-         <run>  
-            <include name="Common1"/>  
-            <exclude name="..." />  
-         </run>  
-      </groups> 
+  <test name="ATwuliu" preserve-order="true">
     <classes>
-      <class name="com.hx.ATwuliu.exetest.BusinessManage"/>
+	  <class name="com.hx.ATwuliu.exetest.LoginSystem">
+		<methods>
+            <include name="login" />
+		</methods>
+	  </class>
+      <class name="com.hx.ATwuliu.exetest.BusinessManage">
+		<methods>
+            <include name="rukuTongzhishuTest" />	
+			<include name="chukuTongzhishuTest" />
+            <include name="chukutihuodanTest" />
+		</methods>
+	  </class>
 	</classes>
   </test> <!-- HXAutomation -->
--</suite> <!-- Default Suite -->
+</suite> <!-- Default Suite -->

@@ -1,11 +1,17 @@
 package com.hx.ATwuliu.pages;
 
 import com.hx.ATwuliu.util.*;
+import com.hx.ATwuliu.util.Actions;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-//import org.junit.Assert.*;
+import org.testng.Reporter;
+import static com.hx.ATwuliu.util.InitPre.driver;
 
 
 /**
@@ -24,6 +30,10 @@ public class CommonPage extends Actions{
 
     @FindBy(tagName = "button")
     private WebElement Btn_login;     //登录按钮
+
+    @FindBy(xpath = "//div[@id=\"app\"]/p[@class=\"loading-tip\"]/span[@id=\"percent\" and text()=\"100%\"]")
+    private WebElement Txt_Percent100;  //加载100%
+
 
     /*主页面*/
     @FindBy(className = "Header_logo-2nvl7")
@@ -379,7 +389,23 @@ public class CommonPage extends Actions{
     //封装完可执行的方法
     public void login(String expectedTitle,String username,String password) {
         //waitForPageLoad();
-        safeSendkeys(Ipt_usename,username);
+        try {
+            delay(6000);
+            while (Txt_Percent100.isDisplayed()) {
+                int n = 0;
+                JavascriptExecutor je = (JavascriptExecutor) driver;
+                je.executeScript("location.reload()");
+                delay(2000);
+                n = n++;
+                Reporter.log("页面打开失败" + n + "次");
+                if(Ipt_usename.isDisplayed()){
+                    break;
+                }
+            }
+        }catch(Exception e1){
+            Reporter.log("页面一次打开即成功");
+        }
+        Ipt_usename.sendKeys(username);
         Ipt_password.sendKeys(password);
         assertTitle(expectedTitle);
         Btn_login.click();
@@ -400,6 +426,9 @@ public class CommonPage extends Actions{
         accessL3Page( Div_L1_YewuGuanli,  Div_L2_ChurukudanPingzheng,  Li_L3_ChukuTihuodan);
     }
 
+    public void accessL2DengjiManage(){   //进入登记管理页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Href_L2_DengjiGuanli,null);
+    }
 
     /*************************************************************************************/
 

@@ -1,6 +1,7 @@
 package com.hx.ATwuliu.util;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,16 +11,14 @@ import org.testng.Reporter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.concurrent.Callable;
-import com.hx.ATwuliu.pages.*;
-
+import java.util.function.Function;
 import static com.hx.ATwuliu.util.InitPre.driver;
+
 
 /**
  * Created by Administrator on 2018/5/4.
  */
 public class Actions {
-
 
 
     //生成wait，供page页使用
@@ -35,20 +34,20 @@ public class Actions {
      * 说明：有页面跳转的时候直接用waitForPageLoad()
 //     * 编写人：吴岑龙
 //     */
-//    public Function<WebDriver, Boolean> isPageLoaded() {
-//        return new Function<WebDriver, Boolean>() {
-//            @Override
-//            public Boolean apply(WebDriver driver) {
-//                JavascriptExecutor je = (JavascriptExecutor) driver;
-//                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
-//            }
-//        };
-//    }
-//
-//    public void waitForPageLoad() {
-//        WebDriverWait wait = new WebDriverWait(driver, 20);
-//        wait.until(isPageLoaded());
-//    }
+    public Function<WebDriver, Boolean> isPageLoaded() {
+        return new Function<WebDriver, Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                JavascriptExecutor je = (JavascriptExecutor) driver;
+                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+            }
+        };
+    }
+
+    public void waitForPageLoad() {
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(isPageLoaded());
+    }
 
     /**
      * 方法：在下拉框中选择一个值
@@ -164,40 +163,36 @@ public class Actions {
      * 编写人：钱舒颖
      */
     public void accessL3Page(WebElement Common_L1, WebElement Common_L2, WebElement Common_L3){
-        wait.until(ExpectedConditions.elementToBeClickable(Common_L1));
-        try{
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(Common_L1));
             String isExpanded_L01, isExpanded_L02;
             isExpanded_L01 = Common_L1.getAttribute("aria-expanded");
             System.out.println(isExpanded_L01);
-            if(isExpanded_L01.equals("false")){
+            if (isExpanded_L01.equals("false")) {
                 //点击L01
                 Common_L1.click();
                 //点击L02
                 Common_L2.click();
                 //点击L03
                 Common_L3.click();
-            }
-            else {
+            } else {
                 isExpanded_L02 = Common_L2.getAttribute("aria-expanded");
                 System.out.println(isExpanded_L02);
-                if (isExpanded_L02.equals("false")){
+                if (isExpanded_L02.equals("false")) {
                     //点击L02
                     Common_L2.click();
                     delay(1000);
                     //点击L03
                     Common_L3.click();
-                }
-                else {
+                } else {
                     //点击L03
                     Common_L3.click();
                 }
             }
+        }catch (NullPointerException e){
+          //  System.out.println("error：NullPointerException");
+            Reporter.log("L2层登入，不需要L3对象");
         }
-        catch(NullPointerException e){
-            Reporter.log("空指针异常跳过");
-
-        }
-
     }
 
 
@@ -219,7 +214,7 @@ public class Actions {
     public void safeClick(WebElement webElement){
         int error = 0;
 
-        for(int i=0;i<3;i++){
+        for(int i=0;i<2;i++){
             try{
                 error = 0;
                 wait.until(ExpectedConditions.visibilityOf(webElement));
@@ -247,8 +242,9 @@ public class Actions {
     public void safeSendkeys(WebElement webElement, String value){
         int error = 0;
 
-        for(int i=0;i<3;i++){
+        for(int i=0;i<2;i++){
             try{
+                delay(1000);
                 wait.until(ExpectedConditions.visibilityOf(webElement));
                 wait.until(ExpectedConditions.elementToBeClickable(webElement));
                 System.out.println("-------------------");
@@ -272,4 +268,6 @@ public class Actions {
             }
         }
     }
+
+
 }

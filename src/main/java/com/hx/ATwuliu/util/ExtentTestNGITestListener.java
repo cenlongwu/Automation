@@ -9,8 +9,13 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
+
 import java.io.File;
+import java.util.List;
+
 import static com.hx.ATwuliu.util.InitPre.driver;
+import static jdk.nashorn.internal.objects.NativeDate.getTime;
 
 /**
  * Created by Administrator on 2019/4/15.
@@ -62,6 +67,7 @@ public class ExtentTestNGITestListener implements ITestListener {
     @Override
     public synchronized void onTestSuccess(ITestResult result) {
         ((ExtentTest)test.get()).pass("Test passed");
+        //test.log(status, "Test " + status.toString().toLowerCase() + "ed");
     }
 
     @Override
