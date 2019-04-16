@@ -107,11 +107,6 @@ public class ChurukudanPinZheng extends Actions {
     @FindBy(id = "noticeName")
     private WebElement Ipt_DanjuMingcheng;      //单据名称输入框
 
-
-    /***************************************待定******************************************/
-    /*************************************************************************************/
-    /*************************************************************************************/
-
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]/div/form/div/div[2]/div/div[2]/div[3]/div[2]//span/div/div")
     private WebElement Div_Dengji;      //等级下拉框
 
