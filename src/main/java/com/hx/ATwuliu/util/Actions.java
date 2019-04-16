@@ -191,7 +191,7 @@ public class Actions {
             }
         }catch (NullPointerException e){
           //  System.out.println("error：NullPointerException");
-            Reporter.log("空指针异常!");
+            Reporter.log("L2层登入，不需要L3对象");
         }
     }
 
