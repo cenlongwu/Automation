@@ -54,6 +54,7 @@ public class BusinessManage {
                 {"海绵宝宝", "混合小麦", "101","0p4-保中一"}
         };
     }
+
     @Test(dataProvider = "ChukuTongzhishu")
     public void chukuTongzhishuTest(String customerName,String Pinzhong,String Amount,String Cangwei){
         commonPage.accessL3Chukutongzhishu();
