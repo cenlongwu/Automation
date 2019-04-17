@@ -98,9 +98,14 @@ public class Actions {
          je.executeScript("arguments[0].scrollIntoView(true);", element);
      }
 
-     public static void setAttrByJS(WebElement webElement,String attr,String value){
+    /**
+     * 方法：移除input标签下的 readonly属性
+     * 说明：使用该方法后可在input输入框直接sendkeys
+     * 编写人：吴岑龙
+     */
+     public static void rmReadonlyAttr(){
          JavascriptExecutor je = (JavascriptExecutor) driver;
-         je.executeScript("webElement.attr =value");
+         je.executeScript("$(\"input\").removeAttr(\"readonly\");");
      }
 
 //------------------断言和验证方法--------------------------

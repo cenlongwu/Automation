@@ -1,8 +1,11 @@
 package com.hx.ATwuliu.pages;
 
 import com.hx.ATwuliu.util.Actions;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import static com.hx.ATwuliu.util.InitPre.driver;
 
 /**
  * Created by Administrator on 2019/4/1.
@@ -304,6 +307,8 @@ public class PlanManage extends Actions {
 
     /************************************************************************************************************/
 
-    public PlanManage() {
+    public void test111() {
+        JavascriptExecutor je = (JavascriptExecutor) driver;
+        je.executeScript("$(\"input\").removeAttr(\"readonly\");");
     }
 }
