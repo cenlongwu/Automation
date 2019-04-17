@@ -1,9 +1,9 @@
 package com.hx.ATwuliu.pages;
 
 import com.hx.ATwuliu.util.Actions;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 
 import static com.hx.ATwuliu.util.InitPre.driver;
 
@@ -307,8 +307,72 @@ public class PlanManage extends Actions {
 
     /************************************************************************************************************/
 
-    public void test111() {
-        JavascriptExecutor je = (JavascriptExecutor) driver;
-        je.executeScript("$(\"input\").removeAttr(\"readonly\");");
+    public PlanManage() {
+    }
+
+    private String PlanWenhao;
+
+    public String addGouxiaojiahua(String planWenhao, String yewuType, String pinzhong, String dengji, String kucunXingzhi_1,
+                                   String kucunXingzhi_2, String getYear, String cangwei, String number){
+        Btn_1_add.click();    //进入购销计划新增页面
+        delay(1000);
+        this.PlanWenhao = planWenhao;
+        Reporter.log("新增购销计划/计划文号为："+PlanWenhao);
+        System.out.println(this.PlanWenhao);
+        Ipt_1_planNum2.click();
+        Ipt_1_planNum2.sendKeys(planWenhao);       //输入计划文号
+                                                     //选择业务类型
+        safeClick(Ipt_1_pinZhong);                 //选择品种
+        safeSendkeys(Ipt_1_pzName,pinzhong);       //搜索框输入品种
+        Ipt_1_pzCheck.click();
+        delay(1000);
+        //RBtn_Pinzhong.click();                     //单选品种
+        Ipt_1_pzConfirm.click();
+                                                     //选择等级
+                                                     //选择库存性质
+        Ipt_1_startTime.click();                   //选择开始日期
+        delay(2000);
+        WebElement startTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
+        startTime.clear();
+        startTime.sendKeys(Keys.ENTER);
+        Ipt_1_endTime.click();                     //选择截止日期
+        delay(2000);
+        WebElement endTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
+        endTime.clear();
+        endTime.sendKeys(Keys.ENTER);
+                                                     //选择收获年度
+                                                     //选择仓位
+        safeClick(Btn_1_confirm);                  //点击确认
+        return this.PlanWenhao;
+    }
+
+    public void submitGouxiaojihua(){
+        try{
+            delay(1000);
+            safeSendkeys(Ipt_1_planNum,this.PlanWenhao); //输入并查找计划文号
+            safeClick(Btn_1_check);
+            delay(1000);
+            //RBtn_ChooseTongzhishu.click();  //选中搜到的计划文号
+            safeClick(Btn_1_post);
+        }catch(StaleElementReferenceException eo){
+            Reporter.log("出现StaleElementReferenceException错误");
+        }catch (NoSuchElementException e1){
+            Reporter.log("出现NoSuchElementException错误");
+        }
+    }
+
+    public void test(){
+        Btn_1_add.click();    //进入购销计划新增页面
+        delay(1000);
+        Ipt_1_startTime.click();                   //选择开始日期
+        delay(2000);
+        WebElement startTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
+        startTime.clear();
+        startTime.sendKeys(Keys.ENTER);
+        Ipt_1_endTime.click();                     //选择截止日期
+        delay(2000);
+        WebElement endTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
+        endTime.clear();
+        endTime.sendKeys(Keys.ENTER);
     }
 }

@@ -51,20 +51,24 @@ public class Actions {
 
     /**
      * 方法：在下拉框中选择一个值
-     * 说明：第一个参数为select对象，第二个参数是要选择的值
-     * 编写人：吴岑龙
+     * 说明：第一个参数为select对象，第二个参数是要选择的值(1.为空，2.不为空&&不符合3.不为空&&符合)
+     * 编写人：钱舒颖
      */
-    public void select_DropdownBox(WebElement Sel_element, String selectValue){
+    public void select_DropdownBox(WebElement Sel_element, String selectValue, String selectedValue){
         wait.until(ExpectedConditions.elementToBeClickable(Sel_element));
-        Select select = new Select(Sel_element);
-        String currentSelectedText;
-        currentSelectedText=select.getFirstSelectedOption().getText();
-        if (selectValue.equals(currentSelectedText) ){
+        Selector select = new Selector(Sel_element);
+        if (selectedValue.equals(null)){
+            //1.查找下拉框中符合selectValue的WebElement
+            delay(2000);
+            select.selectByVisibleText(selectValue);
+        }
+        else if (selectValue.equals(selectedValue) ){
+            //3.
             Reporter.log("当前Select已选中待选值 "+selectValue+"，不必作选择操作");}
         else {
+            //2.
             select.selectByVisibleText(selectValue);
             Reporter.log("已选中"+selectValue);
-
         }
     }
 

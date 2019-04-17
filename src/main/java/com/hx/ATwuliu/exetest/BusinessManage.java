@@ -18,7 +18,9 @@ public class BusinessManage {
 
     public InitPage initPage = new InitPage();
     CommonPage commonPage = initPage.commonPage;
-    ChurukudanPinZheng churukudanPinZheng=initPage.churukudanPinZheng;
+    ChurukudanPinZheng churukudanPinZheng = initPage.churukudanPinZheng;
+    PlanManage planManage = initPage.planManage;
+    HetongManage hetongManage = initPage.hetongManage;
 
     @BeforeClass
     public void beforeClass() {
@@ -89,6 +91,23 @@ public class BusinessManage {
         commonPage.accessL3Chukutihuodan();
         churukudanPinZheng.addTongzhishu( customerName, Pinzhong, Amount, Cangwei);
         churukudanPinZheng.SubmitTongzhishu();
+        commonPage.closeCurrentTab();
+    }
+
+    @DataProvider(name="Gouxiaojihua")
+    public Object[][] gouxiaojihua() {
+        return new Object[][]{
+                {"购销201904161102", "", "",""}
+        };
+    }
+
+
+    @Test(dataProvider = "Gouxiaojihua")
+    public void gouxiaojihuaTest(String planWenhao, String yewuType, String pinzhong, String dengji, String kucunXingzhi_1,
+                                 String kucunXingzhi_2, String getYear, String cangwei, String number){
+        commonPage.accessL3Gouxiaojihua();
+        planManage.addGouxiaojiahua(planWenhao, yewuType, pinzhong, dengji, kucunXingzhi_1, kucunXingzhi_2, getYear, cangwei, number);
+        planManage.submitGouxiaojihua();
         commonPage.closeCurrentTab();
     }
 }
