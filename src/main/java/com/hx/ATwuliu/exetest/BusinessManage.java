@@ -41,6 +41,12 @@ public class BusinessManage {
                 {"海绵宝宝", "混合小麦", "100","0p4-保中一"}
         };
     }
+
+    /*********测试用例***************************
+     *  1.新增入库通知书
+     *  2.提交入库通知书
+     ********************************************/
+
     @Test(dataProvider = "RukuTongzhishu")
     public void rukuTongzhishuTest(String customerName,String Pinzhong,String Amount,String Cangwei){
         commonPage.accessL3Rukutongzhishu();
@@ -48,13 +54,17 @@ public class BusinessManage {
         churukudanPinZheng.SubmitTongzhishu();
         commonPage.closeCurrentTab();
     }
+
     @DataProvider(name="ChukuTongzhishu")
     public Object[][] churkuTongzhishu() {
         return new Object[][]{
                 {"海绵宝宝", "混合小麦", "101","0p4-保中一"}
         };
     }
-
+    /*********测试用例***************************
+     *  1.新增出库通知书
+     *  2.提交出库通知书
+     ********************************************/
     @Test(dataProvider = "ChukuTongzhishu")
     public void chukuTongzhishuTest(String customerName,String Pinzhong,String Amount,String Cangwei){
         commonPage.accessL3Chukutongzhishu();
@@ -70,7 +80,10 @@ public class BusinessManage {
                 {"海绵宝宝", "混合小麦", "102","0p4-保中一"}
         };
     }
-
+    /*********测试用例***************************
+     *  1.新增出库提货单
+     *  2.提交出库提货单
+     ********************************************/
     @Test(dataProvider = "Chukutihuodan")
     public void chukutihuodanTest(String customerName,String Pinzhong,String Amount,String Cangwei){
         commonPage.accessL3Chukutihuodan();
