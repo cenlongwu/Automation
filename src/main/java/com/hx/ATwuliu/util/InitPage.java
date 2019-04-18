@@ -12,5 +12,6 @@ public class InitPage extends InitPre{
     public ChurukudanPinZheng churukudanPinZheng=PageFactory.initElements(driver,ChurukudanPinZheng.class);
     public PlanManage planManage=PageFactory.initElements(driver,PlanManage.class);
     public HetongManage hetongManage=PageFactory.initElements(driver,HetongManage.class);
+    public ZhinengChuruku zhinengChuruku=PageFactory.initElements(driver,ZhinengChuruku.class);
 //    public VerifyResultPage verifyResultPage=PageFactory.initElements(driver,VerifyResultPage.class);
 }
