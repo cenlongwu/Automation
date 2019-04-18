@@ -167,24 +167,36 @@ public class Actions {
     }
 
     /**
-     * 方法：通过aria-expanded属性的值判断三级功能目录的打开与否，true为打开，false为关闭
+     * 方法：通过aria-expanded属性的值判断三级功能目录(是否存在三级目录)的打开与否，true为打开，false为关闭
      * 说明：参数为页面目录
      * 编写人：钱舒颖
      */
     public void accessL3Page(WebElement Common_L1, WebElement Common_L2, WebElement Common_L3){
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(Common_L1));
-            String isExpanded_L01, isExpanded_L02;
-            isExpanded_L01 = Common_L1.getAttribute("aria-expanded");
-            System.out.println(isExpanded_L01);
-            if (isExpanded_L01.equals("false")) {
-                //点击L01
-                Common_L1.click();
-                //点击L02
-                Common_L2.click();
+        wait.until(ExpectedConditions.elementToBeClickable(Common_L1));
+        String isExpanded_L01, isExpanded_L02;
+        isExpanded_L01 = Common_L1.getAttribute("aria-expanded");
+        System.out.println(isExpanded_L01);
+        if (isExpanded_L01.equals("false")) {
+            //点击L01
+            Common_L1.click();
+            //点击L02
+            Common_L2.click();
+            System.out.println("Common_L3:" + Common_L3);
+            if (Common_L3 == null) {
+                System.out.println("==========");
+                return;
+            }
+            else {
                 //点击L03
                 Common_L3.click();
-            } else {
+            }
+        }
+        else {
+            if (Common_L3 == null) {
+                Common_L2.click();
+                return;
+            }
+            else {
                 isExpanded_L02 = Common_L2.getAttribute("aria-expanded");
                 System.out.println(isExpanded_L02);
                 if (isExpanded_L02.equals("false")) {
@@ -198,9 +210,6 @@ public class Actions {
                     Common_L3.click();
                 }
             }
-        }catch (NullPointerException e){
-          //  System.out.println("error：NullPointerException");
-            Reporter.log("L2层登入，不需要L3对象");
         }
     }
 
