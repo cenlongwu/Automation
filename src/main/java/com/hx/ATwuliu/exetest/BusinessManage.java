@@ -1,13 +1,17 @@
 package com.hx.ATwuliu.exetest;
 
-
+import java.io.IOException;
 import java.lang.*;
 import com.hx.ATwuliu.util.*;
 import com.hx.ATwuliu.pages.*;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
+//import org.junit.Before;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.openqa.selenium.WebDriver;
 import com.hx.ATwuliu.util.CSVRead;
+
 import static com.hx.ATwuliu.util.CSVRead.getTestData;
 import static com.hx.ATwuliu.util.InitPre.driver;
 //import static com.hx.ATwuliu.util.ExcelRead.getTestData2;
@@ -18,12 +22,12 @@ public class BusinessManage {
 
     public InitPage initPage = new InitPage();
     CommonPage commonPage = initPage.commonPage;
-    ChurukudanPinZheng churukudanPinZheng = initPage.churukudanPinZheng;
-    PlanManage planManage = initPage.planManage;
-    HetongManage hetongManage = initPage.hetongManage;
+    ChurukudanPinZheng churukudanPinZheng=initPage.churukudanPinZheng;
+    ZhinengChuruku zhinengChuruku=initPage.zhinengChuruku;
+    //DiaoduManage diaofuManage=initPage.diaoduManage;
 
-    @BeforeClass
-    public void beforeClass() {
+    @BeforeTest
+    public void beforeTest() {
         Actions.timestamp();    //生成统一时间戳
     }
 
@@ -33,14 +37,26 @@ public class BusinessManage {
     }
 
     //读取CSV测试数据
-    //    public static Object[][] getData() throws IOException {
+    @DataProvider(name="loginInfo")
+        public Object[][] loginInfo() {
+        return new Object[][]{
+                {"德清出入库管理系统", "zhongxinku", "123456"}
+        };
+    }
+//    public static Object[][] getData() throws IOException {
 //        return getTestData("E:\\ATchuruku\\testdata\\BusinessManage.csv");
 //    }
 
+    @Test(priority = 1, groups = {"Common1"}, dataProvider = "loginInfo")
+    public void login(String expectedTitle,String username, String password) {
+        commonPage.login(expectedTitle,username, password);
+    }
+
+
     @DataProvider(name="RukuTongzhishu")
-    public Object[][] rurkuTongzhishu() {
+    public Object[][] rukuTongzhishu() {
         return new Object[][]{
-                {"海绵宝宝", "混合小麦", "100","0p4-保中一"}
+                {"海绵宝宝", "混合小麦", "5","0p5-保中一"}
         };
     }
 
@@ -48,8 +64,7 @@ public class BusinessManage {
      *  1.新增入库通知书
      *  2.提交入库通知书
      ********************************************/
-
-    @Test(dataProvider = "RukuTongzhishu")
+    @Test(priority = 2, groups = {"Common"},dataProvider = "RukuTongzhishu")
     public void rukuTongzhishuTest(String customerName,String Pinzhong,String Amount,String Cangwei){
         commonPage.accessL3Rukutongzhishu();
         churukudanPinZheng.addTongzhishu( customerName, Pinzhong, Amount, Cangwei);
@@ -60,14 +75,15 @@ public class BusinessManage {
     @DataProvider(name="ChukuTongzhishu")
     public Object[][] churkuTongzhishu() {
         return new Object[][]{
-                {"海绵宝宝", "混合小麦", "101","0p4-保中一"}
+                {"海绵宝宝", "混合小麦", "6","0p5-保中一"}
         };
     }
+
     /*********测试用例***************************
      *  1.新增出库通知书
      *  2.提交出库通知书
      ********************************************/
-    @Test(dataProvider = "ChukuTongzhishu")
+    @Test(priority = 3, groups = {"Common"},dataProvider = "ChukuTongzhishu")
     public void chukuTongzhishuTest(String customerName,String Pinzhong,String Amount,String Cangwei){
         commonPage.accessL3Chukutongzhishu();
         churukudanPinZheng.addTongzhishu( customerName, Pinzhong, Amount, Cangwei);
@@ -79,14 +95,15 @@ public class BusinessManage {
     @DataProvider(name="Chukutihuodan")
     public Object[][] chukutihuodan() {
         return new Object[][]{
-                {"海绵宝宝", "混合小麦", "102","0p4-保中一"}
+                {"海绵宝宝", "混合小麦", "7","0p5-保中一"}
         };
     }
+
     /*********测试用例***************************
      *  1.新增出库提货单
      *  2.提交出库提货单
      ********************************************/
-    @Test(dataProvider = "Chukutihuodan")
+    @Test(priority = 4, groups = {"Common"},dataProvider = "Chukutihuodan")
     public void chukutihuodanTest(String customerName,String Pinzhong,String Amount,String Cangwei){
         commonPage.accessL3Chukutihuodan();
         churukudanPinZheng.addTongzhishu( customerName, Pinzhong, Amount, Cangwei);
@@ -94,20 +111,43 @@ public class BusinessManage {
         commonPage.closeCurrentTab();
     }
 
-    @DataProvider(name="Gouxiaojihua")
-    public Object[][] gouxiaojihua() {
+    @DataProvider(name="DengjiZhika")
+    public Object[][] dengjiZhika() {
         return new Object[][]{
-                {"购销201904161102", "", "",""}
+                {"LS", "浙G","小黄huang","330724200012017789","海绵宝宝"}
         };
     }
 
+    /*********测试用例***************************
+     *  1.添加出库登记
+     *  2.调度管理
+     ********************************************/
+    @Test(priority = 5, groups = {"Common"},dataProvider = "DengjiZhika")
+    public void dengjiZhika(String idcardnum,String platenum,String chengyunren,String shenfenzheng,String Kehuming) {
+        commonPage.accessL2DengjiManage();
+        /*dengjiManage.rukuDengji();
+        dengjiManage.dengjiZhika(idcardnum, platenum,chengyunren, shenfenzheng);*/
+        zhinengChuruku.chukuDengji();
+        zhinengChuruku.dengjiZhika(idcardnum, platenum,chengyunren, shenfenzheng);
+        //commonPage.closeCurrentTab();
+        zhinengChuruku.diaoduGuanli(Kehuming);
+        commonPage.closeCurrentTab();
+    }
 
-    @Test(dataProvider = "Gouxiaojihua")
-    public void gouxiaojihuaTest(String planWenhao, String yewuType, String pinzhong, String dengji, String kucunXingzhi_1,
-                                 String kucunXingzhi_2, String getYear, String cangwei, String number){
-        commonPage.accessL3Gouxiaojihua();
-        planManage.addGouxiaojiahua(planWenhao, yewuType, pinzhong, dengji, kucunXingzhi_1, kucunXingzhi_2, getYear, cangwei, number);
-        planManage.submitGouxiaojihua();
+    @DataProvider(name="DiaoduGuanli")
+    public Object[][] diaoduGuanli() {
+        return new Object[][]{
+                {"海绵宝宝"}
+        };
+    }
+
+    /******************************************************
+     * 1.调度管理
+     * ***************************************************/
+    @Test(priority = 6, groups = {"Common"},dataProvider = "DiaoduGuanli")
+    public void diaoduGuanli(String Kehuming) {
+        commonPage.accessL2DiaoduManage();
+        zhinengChuruku.diaoduGuanli(Kehuming);
         commonPage.closeCurrentTab();
     }
 }
