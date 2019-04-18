@@ -51,20 +51,24 @@ public class Actions {
 
     /**
      * 方法：在下拉框中选择一个值
-     * 说明：第一个参数为select对象，第二个参数是要选择的值
-     * 编写人：吴岑龙
+     * 说明：第一个参数为select对象，第二个参数是要选择的值(1.为空，2.不为空&&不符合3.不为空&&符合)
+     * 编写人：钱舒颖
      */
-    public void select_DropdownBox(WebElement Sel_element, String selectValue){
+    public void select_DropdownBox(WebElement Sel_element, String selectValue, String selectedValue){
         wait.until(ExpectedConditions.elementToBeClickable(Sel_element));
-        Select select = new Select(Sel_element);
-        String currentSelectedText;
-        currentSelectedText=select.getFirstSelectedOption().getText();
-        if (selectValue.equals(currentSelectedText) ){
+        Selector select = new Selector(Sel_element);
+        if (selectedValue.equals(null)){
+            //1.查找下拉框中符合selectValue的WebElement
+            delay(2000);
+            select.selectByVisibleText(selectValue);
+        }
+        else if (selectValue.equals(selectedValue) ){
+            //3.
             Reporter.log("当前Select已选中待选值 "+selectValue+"，不必作选择操作");}
         else {
+            //2.
             select.selectByVisibleText(selectValue);
             Reporter.log("已选中"+selectValue);
-
         }
     }
 
@@ -163,24 +167,36 @@ public class Actions {
     }
 
     /**
-     * 方法：通过aria-expanded属性的值判断三级功能目录的打开与否，true为打开，false为关闭
+     * 方法：通过aria-expanded属性的值判断三级功能目录(是否存在三级目录)的打开与否，true为打开，false为关闭
      * 说明：参数为页面目录
      * 编写人：钱舒颖
      */
     public void accessL3Page(WebElement Common_L1, WebElement Common_L2, WebElement Common_L3){
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(Common_L1));
-            String isExpanded_L01, isExpanded_L02;
-            isExpanded_L01 = Common_L1.getAttribute("aria-expanded");
-            System.out.println(isExpanded_L01);
-            if (isExpanded_L01.equals("false")) {
-                //点击L01
-                Common_L1.click();
-                //点击L02
-                Common_L2.click();
+        wait.until(ExpectedConditions.elementToBeClickable(Common_L1));
+        String isExpanded_L01, isExpanded_L02;
+        isExpanded_L01 = Common_L1.getAttribute("aria-expanded");
+        System.out.println(isExpanded_L01);
+        if (isExpanded_L01.equals("false")) {
+            //点击L01
+            Common_L1.click();
+            //点击L02
+            Common_L2.click();
+            System.out.println("Common_L3:" + Common_L3);
+            if (Common_L3 == null) {
+                System.out.println("==========");
+                return;
+            }
+            else {
                 //点击L03
                 Common_L3.click();
-            } else {
+            }
+        }
+        else {
+            if (Common_L3 == null) {
+                Common_L2.click();
+                return;
+            }
+            else {
                 isExpanded_L02 = Common_L2.getAttribute("aria-expanded");
                 System.out.println(isExpanded_L02);
                 if (isExpanded_L02.equals("false")) {
@@ -194,9 +210,6 @@ public class Actions {
                     Common_L3.click();
                 }
             }
-        }catch (NullPointerException e){
-          //  System.out.println("error：NullPointerException");
-            Reporter.log("L2层登入，不需要L3对象");
         }
     }
 
