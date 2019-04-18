@@ -2,8 +2,6 @@ package com.hx.ATwuliu.pages;
 import com.hx.ATwuliu.util.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 //import org.junit.Assert.*;
 
 
@@ -45,7 +43,7 @@ public class ZhinengChuruku extends Actions{
     private WebElement Ipt_Chengyunren;     //承运人姓名输入框
 
     @FindBy(xpath = "//div[@class=\"add_leftArea-3fP4S\"]//label[@title=\"身份证号：\"]/parent::div/following::div[1]//input")
-    private WebElement Ipt_Shenfenzhenhao;     //身份证号输入框
+    private WebElement Ipt_Shenfenzhenghao;     //身份证号输入框
 
     @FindBy(xpath = "//div[@class=\"add_leftArea-3fP4S\"]//button[span=\"拍摄承运人照片\"]")
     private WebElement Btn_Zhaopian;     //上传照片按钮
@@ -123,19 +121,18 @@ public class ZhinengChuruku extends Actions{
 
     private String IDcardNum;
 
-    public void dengjiZhika(String idcardnum,String platenum,String chengyunren,String shenfenzheng){
+    public String dengjiZhika(String idcardnum, String platenum, String chengyunren, String shenfenzheng){
         delay(2000);
-        System.out.print("1");
         safeSendkeys(Ipt_DengjiIdcardnum,idcardnum+timestamp1());
         delay(1000);
         this.IDcardNum=null;
         this.IDcardNum=Ipt_DengjiIdcardnum.getAttribute("value");    //获取IDcardnum
         System.out.println(this.IDcardNum);
         safeSendkeys(Ipt_Chengyunren,chengyunren);
-        safeSendkeys(Ipt_Shenfenzhenhao,shenfenzheng);
+        safeSendkeys(Ipt_Shenfenzhenghao,shenfenzheng);
         safeClick(Btn_Save);
         safeClick(Btn_FinalSave);
-
+        return this.IDcardNum;
     }
 
 

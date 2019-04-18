@@ -24,7 +24,7 @@ public class BusinessManage {
     CommonPage commonPage = initPage.commonPage;
     ChurukudanPinZheng churukudanPinZheng=initPage.churukudanPinZheng;
     ZhinengChuruku zhinengChuruku=initPage.zhinengChuruku;
-    //DiaoduManage diaofuManage=initPage.diaoduManage;
+
 
     @BeforeTest
     public void beforeTest() {
@@ -114,7 +114,7 @@ public class BusinessManage {
     @DataProvider(name="DengjiZhika")
     public Object[][] dengjiZhika() {
         return new Object[][]{
-                {"LS", "浙G","小黄huang","330724200012017789","海绵宝宝"}
+                {"LS", "浙G","小黄huang","330724200012017789","德清粮食公司（演示）"}
         };
     }
 
@@ -129,25 +129,11 @@ public class BusinessManage {
         dengjiManage.dengjiZhika(idcardnum, platenum,chengyunren, shenfenzheng);*/
         zhinengChuruku.chukuDengji();
         zhinengChuruku.dengjiZhika(idcardnum, platenum,chengyunren, shenfenzheng);
-        //commonPage.closeCurrentTab();
-        zhinengChuruku.diaoduGuanli(Kehuming);
         commonPage.closeCurrentTab();
-    }
-
-    @DataProvider(name="DiaoduGuanli")
-    public Object[][] diaoduGuanli() {
-        return new Object[][]{
-                {"海绵宝宝"}
-        };
-    }
-
-    /******************************************************
-     * 1.调度管理
-     * ***************************************************/
-    @Test(priority = 6, groups = {"Common"},dataProvider = "DiaoduGuanli")
-    public void diaoduGuanli(String Kehuming) {
         commonPage.accessL2DiaoduManage();
         zhinengChuruku.diaoduGuanli(Kehuming);
         commonPage.closeCurrentTab();
     }
+
+
 }
