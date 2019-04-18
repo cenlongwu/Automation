@@ -33,7 +33,7 @@ public class test {
     public void login(String expectedTitle,String username, String password) {
         commonPage.login(expectedTitle, username, password);
         commonPage.test();
-        churukudanPinZheng.test();
+      //  churukudanPinZheng.test();
       //  commonPage.accessL3Gouxiaojihua();
       //  planManage.test();
     }

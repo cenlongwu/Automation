@@ -312,7 +312,7 @@ public class PlanManage extends Actions {
 
     private String PlanWenhao;
 
-    public String addGouxiaojiahua(String planWenhao, String yewuType, String pinzhong, String dengji, String kucunXingzhi_1,
+    public String addGouxiaojihua(String planWenhao, String yewuType, String pinzhong, String dengji, String kucunXingzhi_1,
                                    String kucunXingzhi_2, String getYear, String cangwei, String number){
         Btn_1_add.click();    //进入购销计划新增页面
         delay(1000);
