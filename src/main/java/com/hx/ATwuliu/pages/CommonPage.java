@@ -442,11 +442,63 @@ public class CommonPage extends Actions{
         accessL3Page( Div_L1_YewuGuanli,  Div_L2_HetongGuanli,  Li_L3_HetongGuanli);
     }
 
+    //进入智能出入库各级菜单页面
     public void accessL2DengjiManage(){   //进入登记管理页面
         accessL3Page( Div_L1_ZhinengChuruku,  Href_L2_DengjiGuanli,null);
     }
 
-    /*************************************************************************************/
+    public void accessL2DiaoduManage(){   //进入调度管理页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Href_L2_DiaoduGuanli,null);
+    }
+
+    public void accessL2QianyangManage(){   //进入扦样管理页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Href_L2_QianyangGuanli,null);
+    }
+
+    public void accessL2JianyanManage(){   //进入检验管理页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Href_L2_JianyanGuanli,null);
+    }
+
+    public void accessL2JianjinManage(){   //进入检斤管理页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Href_L2_JianjinGuanli,null);
+    }
+
+    public void accessL2ZhicangChaxun(){   //进入值仓查询页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Href_L2_ZhicangChaxun,null);
+    }
+
+    public void accessL2KuneiJiesuan(){   //进入库内结算页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Href_L2_KuneiJiesuan,null);
+    }
+
+    public void accessL3LiuchengJiankong(){   //进入实时监控-流程监控页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Div_L2_ShishiJiankong, Li_L3_LiuchengJiankong);
+    }
+
+    public void accessL3LiuchengJiankong(){   //进入实时监控-出入库作业中止页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Div_L2_ShishiJiankong, Li_L3_ChurukuZuoyeZhongzhi);
+    }
+
+    public void accessL3LiuchengJiankong(){   //进入实时监控-作业图像查询页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Div_L2_ShishiJiankong, Li_L3_ZuoyeTuxiangChaxun);
+    }
+
+    public void accessL3LiuchengJiankong(){   //进入手工录入-入库单录入页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Div_L2_ShougongLuru, Li_L3_RukudanLuru);
+    }
+
+    public void accessL3LiuchengJiankong(){   //进入手工录入-出库单录入页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Div_L2_ShougongLuru, Li_L3_ChukudanLuru);
+    }
+
+    public void accessL3LiuchengJiankong(){   //进入出入库单管理-入库单管理页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Div_L2_ChurukudanGuanli, Li_L3_RukudanGuanli);
+    }
+
+    public void accessL3LiuchengJiankong(){   //进入出入库单管理-出库单录入页面
+        accessL3Page( Div_L1_ZhinengChuruku,  Div_L2_ChurukudanGuanli, Li_L3_ChukudanGuanli);
+    }
+
 
     /***********仅供测试************/
     /******************************/
