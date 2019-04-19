@@ -212,6 +212,16 @@ public class Actions {
         return timestamp;
     }
 
+    public static String timestamp1() {
+        Date date = new Date();
+        SimpleDateFormat ft = new SimpleDateFormat ("HHmm");
+        timestamp=ft.format(date);
+        return timestamp;
+
+    }
+
+
+
     /**
      * 方法：更改URL地址，指向新的页面
      * 说明：参数为新的URL
