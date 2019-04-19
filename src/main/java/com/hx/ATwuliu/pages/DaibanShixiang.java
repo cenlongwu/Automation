@@ -61,4 +61,4 @@ public class DaibanShixiang extends Actions{
     @FindBy(xpath = "//span/button[2]")
     private WebElement Btn_ChongZhi;        //重置按钮
 
-//封装完可执行的方法
+ //封装完可执行的方法
