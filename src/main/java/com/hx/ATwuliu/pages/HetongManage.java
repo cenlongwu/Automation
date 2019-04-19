@@ -1,8 +1,12 @@
 package com.hx.ATwuliu.pages;
 
 import com.hx.ATwuliu.util.Actions;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import static com.hx.ATwuliu.util.InitPre.driver;
 
 /**
  * Created by Administrator on 2019/4/1.
@@ -61,6 +65,9 @@ public class HetongManage extends Actions {
     @FindBy(id="stockValue")
     private WebElement check_kucunxingzhi;    //库存性质选择框
 
+    @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"库存性质\"]/parent::div/following::div//input[@id=\"stockValue\"]")
+    private WebElement Ipt_1_kucunXingzhi_wenben;
+
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"合同类型\"]/parent::div/following::div[1]//i")
     private WebElement Icn_1_hetongleixing;     //合同类型下拉箭头
 
@@ -74,6 +81,9 @@ public class HetongManage extends Actions {
     @FindBy(xpath = "//div[@class=\"ant-modal-body\"]//div[@class=\"query-form\"]//button")
     private WebElement Ipt_1_kehuCheck;   //客户查询按钮
 
+    @FindBy(xpath ="//div[@class=\"ant-modal-content\"]//div[text()=\"客户\"]/parent::div/following-sibling::div[@class=\"ant-modal-body\"]//input[@type=\"radio\"]")
+    private WebElement RBtn_Customer;     // 单选按钮（选择客户）
+
     @FindBy(xpath = "//div[@class=\"ant-modal-footer\"]//button[1]")
     private WebElement Ipt_1_kehuCancel;   //客户弹框取消按钮
 
@@ -86,8 +96,38 @@ public class HetongManage extends Actions {
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]/div/div[3]//button[2]")
     private WebElement Btn_1_confirm;     //确定按钮
 
+    @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"签订日期\"]/parent::div/following::div[1]//input")
+    private WebElement Ipt_1_qiandingTime;
+
     /************************************************************************************************************/
 
-    public HetongManage() {
+    public void HetongManage(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong) {
+        Btn_1_add.click();                              //进入新增页面
+        delay(1500);
+        //合同号输入
+        Ipt_hetonghao.sendKeys(hetonghao);
+        //选择库存性质
+        String kucunXingzhiValue = Ipt_1_kucunXingzhi_wenben.getText();    //获取下拉框中原有的值对应的WebElement:Ipt_1_kucunXingzhi_wenben
+        System.out.println("kucunXingzhiValue的值：" + kucunXingzhiValue);
+        select_DropdownBox(Ipt_1_kucunXingzhi_wenben, kucunXingzhi_1, kucunXingzhi_2, kucunXingzhiValue);   //点击下拉框对应的WebElement：Ipt_1_kucunXingzhi
+        //选择合同类型
+        String hetongvalue = Icn_1_hetongleixing.getText();
+        System.out.println("hetongleixingg的值：" + hetongvalue);
+        select_DropdownBox(Icn_1_hetongleixing, hetong, hetongvalue);
+        //选择客户
+        Ipt_1_kehu.click();
+        delay(1000);
+        safeClick(Ipt_1_kehuName);
+        Ipt_1_kehuCheck.click();
+        RBtn_Customer.click();
+        safeClick(Ipt_1_kehuConfirm);
+        //签订日期
+        Ipt_1_qiandingTime.click();
+        delay(2000);
+        WebElement qingdingTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
+        qingdingTime.clear();
+        qingdingTime.sendKeys(Keys.ENTER);
+
+
     }
 }

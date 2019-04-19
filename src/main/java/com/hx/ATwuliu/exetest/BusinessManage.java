@@ -33,10 +33,17 @@ public class BusinessManage {
         driver.quit();
     }
 
-    //读取CSV测试数据
-    //    public static Object[][] getData() throws IOException {
-//        return getTestData("E:\\ATchuruku\\testdata\\BusinessManage.csv");
-//    }
+    @DataProvider(name="loginInfo")
+    protected Object[][] loginInfo() {
+        return new Object[][]{
+                {"德清出入库管理系统", "zhongxinku", "123456"}
+        };
+    }
+
+    @Test(dataProvider = "loginInfo")
+    public void login(String expectedTitle,String username, String password) {
+        commonPage.login(expectedTitle,username, password);
+    }
 
     @DataProvider(name="RukuTongzhishu")
     public Object[][] rurkuTongzhishu() {
@@ -114,17 +121,17 @@ public class BusinessManage {
         commonPage.closeCurrentTab();
     }
 
-
+/*
     @DataProvider(name="Lunhuanjihua")
     public Object[][] lunhuanjihua() {
         return new Object[][]{
                 {"购销201904181043", "粳稻谷", "三等", "商品粮", "纯贸易商品粮", "轮出", "0p6-保中一", "4.8"}
         };
     }
-    /*********测试用例***************************
+    *//*********测试用例***************************
      *  1.新增轮换计划
      *  2.提交轮换计划
-     ********************************************/
+     ********************************************//*
     @Test(dataProvider = "Lunhuanjihua")
     public void lunhuanjihuaTest(String planWenhao, String pinzhong, String dengji, String kucunXingzhi_1,
                                  String kucunXingzhi_2, String yewuType, String cangwei, String number){
@@ -140,10 +147,10 @@ public class BusinessManage {
                 {"购销201904161102", "调入", "北京", "粳稻谷", "四等", "政策性储存", "国家临时存储", "2018", "C01-称重中", "88.152"}
         };
     }
-    /*********测试用例***************************
+    *//*********测试用例***************************
      *  1.新增调入调出计划
      *  2.提交调入调出计划
-     ********************************************/
+     ********************************************//*
     @Test(dataProvider = "Diaorudiaochujihua")
     public void diaorudiaochujihuaTest(String planWenhao, String yewuType, String liangshiQuxiang, String pinzhong, String dengji, String kucunXingzhi_1,
                                        String kucunXingzhi_2, String getYear, String cangwei, String number){
@@ -159,10 +166,10 @@ public class BusinessManage {
                 {"HT201904181404", "政策性储存", "最低收购价", "收购合同", "海绵宝宝", "玉米", "20", "480"}
         };
     }
-    /*********测试用例***************************
+    *//*********测试用例***************************
      *  1.新增合同管理
      *  2.提交合同管理
-     ********************************************/
+     ********************************************//*
     @Test(dataProvider = "Hetongguanli")
     public void hetongguanliTest(String hetongHao, String kucunXingzhi_1, String kucunXingzhi_2, String hetongType, String customerName,
                                  String pingzhong, String danjia, String number){
@@ -177,7 +184,7 @@ public class BusinessManage {
         return new Object[][]{
                 {"LS", "浙G","小黄huang","330724200012017789","德清粮食公司（演示）"}
         };
-    }
+    }*/
     /*********测试用例***************************
      *  1.添加出库登记
      *  2.调度管理

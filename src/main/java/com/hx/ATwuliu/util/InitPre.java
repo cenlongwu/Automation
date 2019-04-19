@@ -21,7 +21,7 @@ public class InitPre {
     public InitPre() {
         if (driver == null) {
             String chromePath = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
-            String chromeDriverPath = "D:\\d-test\\zidonghua\\IdeaProjects\\Automation\\chromedriver.exe";
+            String chromeDriverPath = "E:\\Git\\ATchuruku\\chromedriver.exe";
 //        String IEPath="C:\\Program Files\\Internet Explorer\\iexplore.exe";
 //        String IEDriverPath="D:\\HXAutomation\\IEDriverServer.exe";
             System.setProperty("webdriver.chrome.driver", chromeDriverPath);
