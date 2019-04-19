@@ -175,12 +175,13 @@ public class ChurukudanPinZheng extends Actions {
         delay(2000);
         RBtn_Customer.click();
         safeClick(Btn_ConfirmCustomer);
+
         //选择下拉框等级
         String selectedValue = Div_Dengji.getText();    //下拉框中原有的值
-       // System.out.println("selectedValue的值：" + selectedValue);
-        safeClick(Div_Dengji);
+        System.out.println("selectedValue的值：" + selectedValue);
         String selectValue = "四等";    //要选的参数
         select_DropdownBox(Div_Dengji, selectValue, selectedValue);
+
         //点击单据名称输入框，输入信息
         safeSendkeys(Ipt_DanjuMingcheng, "单据名称test");
     }

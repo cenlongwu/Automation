@@ -32,9 +32,29 @@ public class test {
     @Test(priority = 1, groups = {"Common"}, dataProvider = "loginInfo")
     public void login(String expectedTitle,String username, String password) {
         commonPage.login(expectedTitle, username, password);
-        commonPage.test();
+       // commonPage.test();
       //  churukudanPinZheng.test();
       //  commonPage.accessL3Gouxiaojihua();
       //  planManage.test();
     }
+
+    @DataProvider(name="Gouxiaojihua")
+    public Object[][] gouxiaojihua() {
+        return new Object[][]{
+                {"购销201904161102", "销售", "粳稻谷", "二等", "中央储备", "其他储备粮", "2019", "0p7-保中一", "45"}
+        };
+    }
+    /*********测试用例***************************
+     *  1.新增购销计划
+     *  2.提交购销计划
+     ********************************************/
+    @Test(priority = 2, groups = {"Common"}, dataProvider = "Gouxiaojihua")
+    public void gouxiaojihuaTest(String planWenhao, String yewuType, String pinzhong, String dengji, String kucunXingzhi_1,
+                                 String kucunXingzhi_2, String getYear, String cangwei, String number){
+        commonPage.accessL3Gouxiaojihua();
+        planManage.addGouxiaojihua(planWenhao, yewuType, pinzhong, dengji, kucunXingzhi_1, kucunXingzhi_2, getYear, cangwei, number);
+        planManage.submitGouxiaojihua();
+        commonPage.closeCurrentTab();
+    }
+
 }

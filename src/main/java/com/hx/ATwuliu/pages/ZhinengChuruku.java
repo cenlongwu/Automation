@@ -3,12 +3,12 @@ import com.hx.ATwuliu.util.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 //import org.junit.Assert.*;
-
-
-
 /**
+
  * Created by Administrator on 2019/4/18.
+
  */
+
 public class ZhinengChuruku extends Actions{
     /*************************************************************************************/
     //页面控件
@@ -31,6 +31,7 @@ public class ZhinengChuruku extends Actions{
 
     @FindBy(xpath = "//span[@class=\"ant-form-item-children\"]/button[span=\"重 置\"]")
     private WebElement Btn_Reset;     //重置按钮
+
     /***********************
      /*出入库登记页面*/
     @FindBy(xpath = "//div[@class=\"add_leftArea-3fP4S\"]//label[@title=\"卡号：\"]/parent::div/following::div[1]//input")
@@ -66,7 +67,6 @@ public class ZhinengChuruku extends Actions{
     /***********************
      /*调度管理页面*/
 
-
     /*@FindBy(id="icCardNum")
     private WebElement Ipt_Idcardnum;     //卡号输入框-可复用
 
@@ -87,7 +87,6 @@ public class ZhinengChuruku extends Actions{
 
     @FindBy(xpath = " //span[@class=\"ant-form-item-children\"]/span/button")
     private WebElement Btn_Tongzhishu;   //入库通知书按钮
-
 
     @FindBy(xpath = "//div[@class=\"query-form\"]//label[@title=\"客户名称：\"]/parent::div/following::div[1]//input")
     private WebElement Ipt_Kehuming;  //客户名称输入框
@@ -110,8 +109,6 @@ public class ZhinengChuruku extends Actions{
     @FindBy(xpath = "//div[@class=\"ant-form-item-control\"]/span/button[span=\"保 存\"]")
     private WebElement Btn_Finalcommit;  //最终确定按钮
 
-
-
     public void rukuDengji(){
         Div_Rukudengji.click();
     }
@@ -123,7 +120,7 @@ public class ZhinengChuruku extends Actions{
 
     public String dengjiZhika(String idcardnum, String platenum, String chengyunren, String shenfenzheng){
         delay(2000);
-        safeSendkeys(Ipt_DengjiIdcardnum,idcardnum+timestamp1());
+       // safeSendkeys(Ipt_DengjiIdcardnum,idcardnum+timestamp1());
         delay(1000);
         this.IDcardNum=null;
         this.IDcardNum=Ipt_DengjiIdcardnum.getAttribute("value");    //获取IDcardnum
@@ -134,7 +131,6 @@ public class ZhinengChuruku extends Actions{
         safeClick(Btn_FinalSave);
         return this.IDcardNum;
     }
-
 
     public void diaoduGuanli(String kehuming){
         safeSendkeys(Ipt_QueryIdcardnum,this.IDcardNum);
@@ -151,5 +147,4 @@ public class ZhinengChuruku extends Actions{
         scroll_BarTo_element(Btn_Finalcommit);
         safeClick(Btn_Finalcommit);
     }
-
 }

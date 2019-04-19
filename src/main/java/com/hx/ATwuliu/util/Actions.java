@@ -3,6 +3,7 @@ package com.hx.ATwuliu.util;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Quotes;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -56,18 +57,55 @@ public class Actions {
      */
     public void select_DropdownBox(WebElement Sel_element, String selectValue, String selectedValue){
         wait.until(ExpectedConditions.elementToBeClickable(Sel_element));
-        Selector select = new Selector(Sel_element);
+      //  Selector select = new Selector(Sel_element);
         if (selectedValue.equals(null)){
             //1.查找下拉框中符合selectValue的WebElement
+            safeClick(Sel_element);
             delay(2000);
-            select.selectByVisibleText(selectValue);
+            WebElement lis = Sel_element.findElement(By.xpath("//ul[@role=\"listbox\"]/li[text() = " + Quotes.escape(selectValue) + "]"));
+            lis.click();
+          //  select.selectByVisibleText(selectValue);
         }
         else if (selectValue.equals(selectedValue) ){
             //3.
             Reporter.log("当前Select已选中待选值 "+selectValue+"，不必作选择操作");}
         else {
             //2.
-            select.selectByVisibleText(selectValue);
+            safeClick(Sel_element);
+            WebElement lis = Sel_element.findElement(By.xpath("//ul[@role=\"listbox\"]/li[text() = " + Quotes.escape(selectValue) + "]"));
+            lis.click();
+           // select.selectByVisibleText(selectValue);
+            Reporter.log("已选中"+selectValue);
+        }
+    }
+
+    /**
+     * 方法：在下拉框中选择两个值
+     * 说明：第一个参数为select对象，第二个参数是要选择的值1，第三个参数要选择的值3，第四个参数(1.为空，2.不为空&&不符合3.不为空&&符合)
+     * 编写人：钱舒颖
+     */
+    public void select_DropdownBox(WebElement Sel_element, String selectValue1, String selectValue2, String selectedValue){
+        wait.until(ExpectedConditions.elementToBeClickable(Sel_element));
+        String selectValue = selectValue1 + " / " + selectValue2;
+        if (selectedValue == null){
+            //1.查找下拉框中符合selectValue的WebElement
+            safeClick(Sel_element);
+            delay(2000);
+            WebElement li1 = Sel_element.findElement(By.xpath("//ul[@class=\"ant-cascader-menu\"]/li[text() = " + Quotes.escape(selectValue1) + "]"));
+            li1.click();
+            WebElement li2 = Sel_element.findElement(By.xpath("//ul[@class=\"ant-cascader-menu\"]/li[text() = " + Quotes.escape(selectValue2) + "]"));
+            li2.click();
+        }
+        else if (selectValue.equals(selectedValue) ){
+            //3.
+            Reporter.log("当前Select已选中待选值 "+selectValue+"，不必作选择操作");}
+        else {
+            //2.
+            safeClick(Sel_element);
+            WebElement li1 = Sel_element.findElement(By.xpath("//ul[@class=\"ant-cascader-menu\"]/li[text() = " + Quotes.escape(selectValue1) + "]"));
+            li1.click();
+            WebElement li2 = Sel_element.findElement(By.xpath("//ul[@class=\"ant-cascader-menu\"]/li[text() = " + Quotes.escape(selectValue2) + "]"));
+            li2.click();
             Reporter.log("已选中"+selectValue);
         }
     }
