@@ -145,27 +145,27 @@ public class ExtentTestNGIReporterListener implements IReporter {
             });
             treeSet.addAll(tests.getAllResults());
             for (ITestResult result : treeSet) {
-                //Object[] parameters = result.getParameters();
-//                String name="";
-////                //如果有参数，则使用参数的toString组合代替报告中的name
+                Object[] parameters = result.getParameters();
+                String name="";
+//                //如果有参数，则使用参数的toString组合代替报告中的name
 //                for(Object param:parameters){
 //                    name+=param.toString();
 //                }
-//                if(name.length()>0){
-//                    if(name.length()>50){
-//                        name= name.substring(0,49)+"...";
-//                    }
-//                }else{
-//                    name = result.getMethod().getMethodName();
-//                }
-//                if(extenttest==null){
-//                    test = extent.createTest(name);
-//                }else{
-//                    //作为子节点进行创建时，设置同父节点的标签一致，便于报告检索。
-//                    test = extenttest.createNode(name).assignCategory(categories);
-//                }
+                if(name.length()>0){
+                    if(name.length()>50){
+                        name= name.substring(0,49)+"...";
+                    }
+                }else{
+                    name = result.getMethod().getMethodName();
+                }
+                if(extenttest==null){
+                    test = extent.createTest(name);
+                }else{
+                    //作为子节点进行创建时，设置同父节点的标签一致，便于报告检索。
+                    test = extenttest.createNode(name).assignCategory(categories);
+                }
                 //test.getModel().setDescription(description.toString());
-                test = extent.createTest(result.getMethod().getMethodName());
+                //test = extent.createTest(result.getMethod().getMethodName());
                 for (String group : result.getMethod().getGroups())
                     test.assignCategory(group);
 

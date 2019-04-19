@@ -21,7 +21,7 @@ public class InitPre {
     public InitPre() {
         if (driver == null) {
             String chromePath = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
-            String chromeDriverPath = "D:\\d-test\\zidonghua\\IdeaProjects\\Automation\\chromedriver.exe";
+            String chromeDriverPath=System.getProperty("user.dir")+"\\chromedriver.exe";
 //        String IEPath="C:\\Program Files\\Internet Explorer\\iexplore.exe";
 //        String IEDriverPath="D:\\HXAutomation\\IEDriverServer.exe";
             System.setProperty("webdriver.chrome.driver", chromeDriverPath);
@@ -31,7 +31,7 @@ public class InitPre {
             chromeOptions.addArguments("disable-infobars");
             chromeOptions.addArguments();
             driver = new ChromeDriver(chromeOptions);
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //隐式等待10秒
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //隐式等待5秒
             driver.navigate().to(URL);
         }
     }
