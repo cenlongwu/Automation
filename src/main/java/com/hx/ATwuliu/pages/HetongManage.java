@@ -1,10 +1,9 @@
 package com.hx.ATwuliu.pages;
 
 import com.hx.ATwuliu.util.Actions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 
 import static com.hx.ATwuliu.util.InitPre.driver;
 
@@ -66,7 +65,7 @@ public class HetongManage extends Actions {
     private WebElement check_kucunxingzhi;    //库存性质选择框
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"库存性质\"]/parent::div/following::div//input[@id=\"stockValue\"]")
-    private WebElement Ipt_1_kucunXingzhi_wenben;
+    private WebElement Ipt_1_kucunXingzhi_wenben;   //库存性质
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"合同类型\"]/parent::div/following::div[1]//i")
     private WebElement Icn_1_hetongleixing;     //合同类型下拉箭头
@@ -101,11 +100,18 @@ public class HetongManage extends Actions {
 
     /************************************************************************************************************/
 
-    public void HetongManage(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong) {
-        Btn_1_add.click();                              //进入新增页面
+    private String Hetonghao;
+    public String HetongManage(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong,String kehumingcheng) {
+        Btn_1_add.click();                  //进入新增页面
+        delay(1000);
+        this.Hetonghao = hetonghao;
+        Reporter.log("新增合同号为："+Hetonghao);
+        System.out.println(this.Hetonghao);
+
         delay(1500);
         //合同号输入
-        Ipt_hetonghao.sendKeys(hetonghao);
+        ipt_hetonghao.click();
+        ipt_hetonghao.sendKeys(hetonghao);
         //选择库存性质
         String kucunXingzhiValue = Ipt_1_kucunXingzhi_wenben.getText();    //获取下拉框中原有的值对应的WebElement:Ipt_1_kucunXingzhi_wenben
         System.out.println("kucunXingzhiValue的值：" + kucunXingzhiValue);
@@ -117,17 +123,35 @@ public class HetongManage extends Actions {
         //选择客户
         Ipt_1_kehu.click();
         delay(1000);
-        safeClick(Ipt_1_kehuName);
-        Ipt_1_kehuCheck.click();
+        safeSendkeys(Ipt_1_kehuName,kehumingcheng);
         RBtn_Customer.click();
         safeClick(Ipt_1_kehuConfirm);
         //签订日期
-        Ipt_1_qiandingTime.click();
+       /* Ipt_1_qiandingTime.click();
         delay(2000);
-        WebElement qingdingTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
-        qingdingTime.clear();
-        qingdingTime.sendKeys(Keys.ENTER);
+        WebElement qiandingTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
+        qiandingTime.clear();
+        qiandingTime.sendKeys(Keys.ENTER);*/
+        //点击确认
+        scroll_BarTo_element(Btn_1_confirm);
+        System.out.println(Btn_1_confirm);
+        safeClick(Btn_1_confirm);
+        return this.Hetonghao;
 
+    }
 
+    public void submitHetongGuali(){
+        try{
+            delay(1000);
+            safeSendkeys(Ipt_hetonghao,this.Hetonghao); //输入并查找合同号
+            safeClick(Btn_1_check);
+            delay(1000);
+            Ipt_fuxuankuang.click();  //选中搜到的合同号
+            safeClick(Btn_1_tijiao);
+        }catch(StaleElementReferenceException eo){
+            Reporter.log("出现StaleElementReferenceException错误");
+        }catch (NoSuchElementException e1){
+            Reporter.log("出现NoSuchElementException错误");
+        }
     }
 }
