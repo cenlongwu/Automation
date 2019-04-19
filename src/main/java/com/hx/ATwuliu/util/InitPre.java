@@ -31,7 +31,7 @@ public class InitPre {
             chromeOptions.addArguments("disable-infobars");
             chromeOptions.addArguments();
             driver = new ChromeDriver(chromeOptions);
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //隐式等待5秒
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //隐式等待10秒
             driver.navigate().to(URL);
         }
     }

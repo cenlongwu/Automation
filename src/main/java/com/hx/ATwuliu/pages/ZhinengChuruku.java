@@ -26,10 +26,10 @@ public class ZhinengChuruku extends Actions{
     @FindBy(id="plateNumber")
     private WebElement Ipt_QueryPlatenum;     //车牌号输入框-可复用
 
-    @FindBy(xpath = "//span[@class=\"ant-form-item-children\"]/button[span=\"查 询\"]")
+    @FindBy(xpath = "//*[@id=\"app\"]//button[span=\"查 询\"]")
     private WebElement Btn_Query;     //查询按钮
 
-    @FindBy(xpath = "//span[@class=\"ant-form-item-children\"]/button[span=\"重 置\"]")
+    @FindBy(xpath = "//*[@id=\"app\"]//button[span=\"重 置\"]")
     private WebElement Btn_Reset;     //重置按钮
 
     /***********************
