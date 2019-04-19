@@ -33,17 +33,12 @@ public class BusinessManage {
         driver.quit();
     }
 
-    @DataProvider(name="loginInfo")
-    protected Object[][] loginInfo() {
-        return new Object[][]{
-                {"德清出入库管理系统", "zhongxinku", "123456"}
-        };
-    }
+//    //读取CSV测试数据
+////    public static Object[][] getData() throws IOException {
+////        return getTestData("E:\\ATchuruku\\testdata\\BusinessManage.csv");
+////    }
 
-    @Test(dataProvider = "loginInfo")
-    public void login(String expectedTitle,String username, String password) {
-        commonPage.login(expectedTitle,username, password);
-    }
+
 
     @DataProvider(name="RukuTongzhishu")
     public Object[][] rurkuTongzhishu() {
@@ -180,21 +175,38 @@ public class BusinessManage {
     @DataProvider(name="DengjiZhika")
     public Object[][] dengjiZhika() {
         return new Object[][]{
-                {"LS", "浙G","小黄huang","330724200012017789","德清粮食公司（演示）"}
+                {"LS", "浙G","小黄huang","330724200012017789","海绵宝宝"}
         };
     }
+
     /*********测试用例***************************
      *  1.添加出库登记
      *  2.调度管理
      ********************************************/
-    @Test(dataProvider = "DengjiZhika")
+    @Test(priority = 5, groups = {"Common"},dataProvider = "DengjiZhika")
     public void dengjiZhika(String idcardnum,String platenum,String chengyunren,String shenfenzheng,String Kehuming) {
         commonPage.accessL2DengjiManage();
         /*dengjiManage.rukuDengji();
         dengjiManage.dengjiZhika(idcardnum, platenum,chengyunren, shenfenzheng);*/
         zhinengChuruku.chukuDengji();
         zhinengChuruku.dengjiZhika(idcardnum, platenum,chengyunren, shenfenzheng);
+        //commonPage.closeCurrentTab();
+        zhinengChuruku.diaoduGuanli(Kehuming);
         commonPage.closeCurrentTab();
+    }
+
+    @DataProvider(name="DiaoduGuanli")
+    public Object[][] diaoduGuanli() {
+        return new Object[][]{
+                {"海绵宝宝"}
+        };
+    }
+
+    /******************************************************
+     * 1.调度管理
+     * ***************************************************/
+    @Test(priority = 6, groups = {"Common"},dataProvider = "DiaoduGuanli")
+    public void diaoduGuanli(String Kehuming) {
         commonPage.accessL2DiaoduManage();
         zhinengChuruku.diaoduGuanli(Kehuming);
         commonPage.closeCurrentTab();
