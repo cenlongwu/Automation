@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
  * Created by Lenovo on 2019/4/11.
  */
 public class test {
+    //111
     public InitPage initPage = new InitPage();
     CommonPage commonPage = initPage.commonPage;
     ChurukudanPinZheng churukudanPinZheng=initPage.churukudanPinZheng;

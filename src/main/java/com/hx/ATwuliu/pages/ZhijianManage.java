@@ -31,6 +31,9 @@ public class ZhijianManage extends Actions{
     @FindBy(xpath = "//div[@class=\"ant-spin-nested-loading\"]//tr[1]/td[1]//input[@type=\"checkbox\"]")
     private WebElement Cbox_Submit;     //单据编号复选框
 
+    /*************************************/
+    //质检报告单新增页面
+
 
 
 
