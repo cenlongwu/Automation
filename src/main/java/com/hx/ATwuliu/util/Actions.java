@@ -57,7 +57,6 @@ public class Actions {
      */
     public void select_DropdownBox(WebElement Sel_element, String selectValue, String selectedValue){
         wait.until(ExpectedConditions.elementToBeClickable(Sel_element));
-      //  Selector select = new Selector(Sel_element);
         if (selectedValue.equals(null)){
             //1.查找下拉框中符合selectValue的WebElement
             safeClick(Sel_element);

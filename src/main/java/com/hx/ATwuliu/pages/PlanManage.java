@@ -43,7 +43,7 @@ public class PlanManage extends Actions {
     private WebElement Btn_1_reset;   //重置按钮
 
     @FindBy(xpath = "//div[@class=\"ant-spin-nested-loading\"]//tr[1]/td[1]//input[@type=\"checkbox\"]")
-    private WebElement RBtn_ChooseTongzhishu;     //单选计划文书
+    private WebElement RBtn_1_ChooseTongzhishu;     //单选计划文书
 
     @FindBy(xpath = "//tr[@data-row-key=\"uk_2\"]//input[1]")
     private WebElement Chk_1_plan;    //列表数据复选框 第一行数据（第二行为：uk_3）
@@ -80,7 +80,7 @@ public class PlanManage extends Actions {
     private WebElement Ipt_1_pzConfirm;   //品种名称弹框确定按钮
 
     @FindBy(xpath ="//div[@class=\"ant-modal-content\"]//div[text()=\"品种\"]/parent::div/following-sibling::div[@class=\"ant-modal-body\"]//input[@type=\"radio\"]")
-    private WebElement RBtn_Pinzhong;     // 单选按钮（选择品种）
+    private WebElement RBtn_1_Pinzhong;     // 单选按钮（选择品种）
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"等级\"]/parent::div/following::div[1]//i")
     private WebElement Icn_1_grade;     //等级下拉箭头
@@ -169,6 +169,9 @@ public class PlanManage extends Actions {
     @FindBy(xpath = "//div[@class=\"ant-modal-body\"]//div[@class=\"query-form\"]//button")
     private WebElement Ipt_2_pzCheck;   //品种名称查询按钮
 
+    @FindBy(xpath ="//div[@class=\"ant-modal-content\"]//div[text()=\"品种\"]/parent::div/following-sibling::div[@class=\"ant-modal-body\"]//input[@type=\"radio\"]")
+    private WebElement RBtn_2_Pinzhong;     // 单选按钮（选择品种）
+
     @FindBy(xpath = "//div[@class=\"ant-modal-footer\"]//button[1]")
     private WebElement Ipt_2_pzCancel;   //品种名称弹框取消按钮
 
@@ -176,10 +179,13 @@ public class PlanManage extends Actions {
     private WebElement Ipt_2_pzConfirm;   //品种名称弹框确定按钮
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"等级\"]/parent::div/following::div[1]//i")
-    private WebElement Lnk_2_grade;     //等级下拉箭头
+    private WebElement Icn_2_grade;     //等级下拉箭头
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"库存性质：\"]/parent::div/following::div[1]//input")
     private WebElement Ipt_2_kucunXingzhi;    //库存性质文本框
+
+    @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"库存性质：\"]/parent::div/following::div[1]//span[@class=\"ant-cascader-picker-label\"]")
+    private WebElement Ipt_2_kucunXingzhi_wenben;    //库存性质文本框文本
 
     @FindBy(xpath = "//ul[@class=\"ant-cascader-menu\"]//li[@title=\"中央储备\"]")
     private WebElement Lst_2_first;   //库存性质下拉框：中央储备
@@ -188,12 +194,12 @@ public class PlanManage extends Actions {
     private WebElement Lst_2_firstTofirst;     //库存性质下拉框：中央储备-特种储备
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"开始日期\"]/parent::div/following::div[1]//input")
-    private WebElement Ipt_startTime;   //开始日期文本框
+    private WebElement Ipt_2_startTime;   //开始日期文本框
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"截止日期\"]/parent::div/following::div[1]//input")
-    private WebElement Ipt_endTime;     //截止日期文本框
+    private WebElement Ipt_2_endTime;     //截止日期文本框
 
-    @FindBy(xpath = "//*[@id=\"type\"]/div/span/i")
+    @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]/tr/td[2]//div[@class=\"ant-select-selection__rendered\"]")
     private WebElement Icn_2_businessType;    //业务类型下选按钮
 
     @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]//tr[@data-row-key=\"uk_17\"]//span[@class=\"ant-select-arrow\"]//i")
@@ -205,10 +211,10 @@ public class PlanManage extends Actions {
     @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]//tr[@data-row-key=\"uk_17\"]/td[7]//i[2]")
     private WebElement Lnk_2_deleteLine;         //第一行删除一行（第二行为：uk_18）
 
-    @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]//tr[@data-row-key=\"uk_17\"]/td[3]//div[@class=\"ant-select-selection__rendered\"]//input")
+    @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]/tr/td[3]/div/div/div")
     private WebElement Ipt_2_cangWei;     //第一行仓位文本框
 
-    @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]//tr[@data-row-key=\"uk_17\"]/td[4]//input")
+    @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]/tr/td[4]/input")
     private WebElement Ipt_2_num;     //第一行数量文本框
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//button[1]")
@@ -216,6 +222,9 @@ public class PlanManage extends Actions {
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//button[2]")
     private WebElement Btn_2_confirm;     //确定按钮
+
+    @FindBy(xpath = "//div[@class=\"ant-spin-nested-loading\"]//tr[1]/td[1]//input[@type=\"checkbox\"]")
+    private WebElement RBtn_2_ChooseTongzhishu;     //单选计划文书
 
 
     /************************************************************************************************************/
@@ -258,7 +267,7 @@ public class PlanManage extends Actions {
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"计划文号\"]/parent::div/following::div[1]//input")
     private WebElement Ipt_3_planNum2;        //计划文号文本框
 
-    @FindBy(xpath = "//*[@id=\"type\"]/div/span/i")
+    @FindBy(xpath = "//*[@id=\"type\"]/div")
     private WebElement Icn_3_businessType;    //业务类型下选按钮
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"粮食去向\"]/parent::div/following::div[1]//input")
@@ -273,6 +282,9 @@ public class PlanManage extends Actions {
     @FindBy(xpath = "//div[@class=\"ant-modal-body\"]//div[@class=\"query-form\"]//button")
     private WebElement Ipt_3_pzCheck;   //品种名称查询按钮
 
+    @FindBy(xpath ="//div[@class=\"ant-modal-content\"]//div[text()=\"品种\"]/parent::div/following-sibling::div[@class=\"ant-modal-body\"]//input[@type=\"radio\"]")
+    private WebElement RBtn_3_Pinzhong;     // 单选按钮（选择品种）
+
     @FindBy(xpath = "//div[@class=\"ant-modal-footer\"]//button[1]")
     private WebElement Ipt_3_pzCancel;   //品种名称弹框取消按钮
 
@@ -280,10 +292,13 @@ public class PlanManage extends Actions {
     private WebElement Ipt_3_pzConfirm;   //品种名称弹框确定按钮
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"等级\"]/parent::div/following::div[1]//i")
-    private WebElement Lnk_3_grade;     //等级下拉箭头
+    private WebElement Icn_3_grade;     //等级下拉箭头
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"库存性质：\"]/parent::div/following::div[1]//input")
     private WebElement Ipt_3_kucunXingzhi;    //库存性质文本框
+
+    @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"库存性质：\"]/parent::div/following::div[1]//span[@class=\"ant-cascader-picker-label\"]")
+    private WebElement Ipt_3_kucunXingzhi_wenben;    //库存性质文本框文本
 
     @FindBy(xpath = "//ul[@class=\"ant-cascader-menu\"]//li[@title=\"中央储备\"]")
     private WebElement Lst_3_first;   //库存性质下拉框：中央储备
@@ -297,16 +312,19 @@ public class PlanManage extends Actions {
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"截止日期\"]/parent::div/following::div[1]//input")
     private WebElement Ipt_3_endTime;     //截止日期文本框
 
+    @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//label[@title=\"收获年度\"]/parent::div/following::div[1]//i")
+    private WebElement Icn_3_harvestYear;       //收获年度下拉箭头 （下拉框选项隐藏方式如何定位）
+
     @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]//tr[@data-row-key=\"uk_31\"]/td[6]//i[1]")
     private WebElement Lnk_3_addLine;         //第一行新增一行（第二行为：uk_32）
 
     @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]//tr[@data-row-key=\"uk_31\"]/td[6]//i[2]")
     private WebElement Lnk_3_deleteLine;         //第一行删除一行（第二行为：uk_32）
 
-    @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]//tr[@data-row-key=\"uk_31\"]/td[2]//input")
+    @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]/tr/td[2]//div[@class=\"ant-select-selection__rendered\"]")
     private WebElement Ipt_3_cangWei;     //第一行仓位文本框 （第二行：uk_32）
 
-    @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]//tr[@data-row-key=\"uk_31\"]/td[3]//input")
+    @FindBy(xpath = "//tbody[@class=\"ant-table-tbody\"]/tr/td[3]/input")
     private WebElement Ipt_3_num;     //第一行数量文本框 （第二行：uk_32）
 
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//button[1]")
@@ -315,20 +333,23 @@ public class PlanManage extends Actions {
     @FindBy(xpath = "//div[@class=\"index_curtainWrap-JNFSe \"]//button[2]")
     private WebElement Btn_3_confirm;     //确定按钮
 
+    @FindBy(xpath = "//div[@class=\"ant-spin-nested-loading\"]//tr[1]/td[1]//input[@type=\"checkbox\"]")
+    private WebElement RBtn_3_ChooseTongzhishu;     //单选计划文书
+
     /************************************************************************************************************/
 
-    public PlanManage() {
-    }
+    private String PlanWenhao1;      //对应购销计划
+    private String PlanWenhao2;      //对应轮换计划
+    private String PlanWenhao3;      //对应调入调出计划
 
-    private String PlanWenhao;
-
+    //购销计划流程
     public String addGouxiaojihua(String planWenhao, String yewuType, String pinzhong, String dengji, String kucunXingzhi_1,
-                                   String kucunXingzhi_2, String getYear, String cangwei, String number){
+                                  String kucunXingzhi_2, String getYear, String cangwei, String number){
         Btn_1_add.click();    //进入购销计划新增页面
         delay(1000);
-        this.PlanWenhao = planWenhao;
-        Reporter.log("新增购销计划/计划文号为："+PlanWenhao);
-        System.out.println(this.PlanWenhao);
+        this.PlanWenhao1 = planWenhao;
+        Reporter.log("新增购销计划/计划文号为："+PlanWenhao1);
+        System.out.println(this.PlanWenhao1);
 
         //输入计划文号
         Ipt_1_planNum2.click();
@@ -345,7 +366,7 @@ public class PlanManage extends Actions {
         safeSendkeys(Ipt_1_pzName,pinzhong);
         Ipt_1_pzCheck.click();
         delay(1000);
-        RBtn_Pinzhong.click();
+        RBtn_1_Pinzhong.click();
         Ipt_1_pzConfirm.click();
 
         //选择等级
@@ -388,16 +409,17 @@ public class PlanManage extends Actions {
 
         //点击确认
         safeClick(Btn_1_confirm);
-        return this.PlanWenhao;
+        //safeClick(Btn_1_return);
+        return this.PlanWenhao1;
     }
 
     public void submitGouxiaojihua(){
         try{
             delay(1000);
-            safeSendkeys(Ipt_1_planNum,this.PlanWenhao); //输入并查找计划文号
+            safeSendkeys(Ipt_1_planNum,this.PlanWenhao1); //输入并查找计划文号
             safeClick(Btn_1_check);
             delay(1000);
-            RBtn_ChooseTongzhishu.click();  //选中搜到的计划文号
+            RBtn_1_ChooseTongzhishu.click();  //选中搜到的计划文号
             safeClick(Btn_1_post);
         }catch(StaleElementReferenceException eo){
             Reporter.log("出现StaleElementReferenceException错误");
@@ -406,13 +428,177 @@ public class PlanManage extends Actions {
         }
     }
 
+    //轮换计划流程
+    public String addLunhuanjihua(String planWenhao, String pinzhong, String dengji, String kucunXingzhi_1,
+                                  String kucunXingzhi_2, String yewuType, String cangwei, String number){
+        Btn_2_add.click();    //进入轮换计划新增页面
+        delay(1000);
+        this.PlanWenhao2 = planWenhao;
+        Reporter.log("新增购销计划/计划文号为："+PlanWenhao2);
+        System.out.println(this.PlanWenhao2);
+
+        //输入计划文号
+        Ipt_2_planNum2.click();
+        Ipt_2_planNum2.sendKeys(planWenhao);
+
+        //选择品种
+        safeClick(Ipt_2_pinZhong);
+        //搜索框输入品种
+        safeSendkeys(Ipt_2_pzName,pinzhong);
+        Ipt_2_pzCheck.click();
+        delay(1000);
+        RBtn_2_Pinzhong.click();
+        Ipt_2_pzConfirm.click();
+
+        //选择等级
+        String dengjiValue = Icn_2_grade.getText();
+        System.out.println("dengjiValue的值：" + dengjiValue);
+        select_DropdownBox(Icn_2_grade, dengji, dengjiValue);
+
+        //选择库存性质
+        String kucunXingzhiValue = Ipt_2_kucunXingzhi_wenben.getText();    //获取下拉框中原有的值对应的WebElement:Ipt_2_kucunXingzhi_wenben
+        System.out.println("kucunXingzhiValue的值：" + kucunXingzhiValue);
+        select_DropdownBox(Ipt_2_kucunXingzhi, kucunXingzhi_1, kucunXingzhi_2, kucunXingzhiValue);   //点击下拉框对应的WebElement：Ipt_1_kucunXingzhi
+
+        //选择开始日期
+        Ipt_2_startTime.click();
+        delay(2000);
+        WebElement startTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
+        startTime.clear();
+        startTime.sendKeys(Keys.ENTER);
+
+        //选择截止日期
+        Ipt_2_endTime.click();
+        delay(2000);
+        WebElement endTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
+        endTime.clear();
+        endTime.sendKeys(Keys.ENTER);
+
+        //选择业务类型
+        String yewuTypeValue = Icn_2_businessType.getText();
+        System.out.println("yewuTypeValue的值：" + yewuTypeValue);
+        select_DropdownBox(Icn_2_businessType, yewuType, yewuTypeValue);
+
+        //选择仓位
+        String cangweiValue = Ipt_2_cangWei.getText();
+        System.out.println("cangweiValue的值：" + cangweiValue);
+        select_DropdownBox(Ipt_2_cangWei, cangwei, cangweiValue);
+
+        //填写数量
+        Ipt_2_num.click();
+        Ipt_2_num.sendKeys(number);
+
+        //点击确认
+        safeClick(Btn_2_confirm);
+        //safeClick(Btn_2_return);
+        return this.PlanWenhao2;
+    }
+
+    public void submitLunhuanjihua(){
+        try{
+            delay(1000);
+            safeSendkeys(Ipt_2_planNum,this.PlanWenhao2); //输入并查找计划文号
+            safeClick(Btn_2_check);
+            delay(1000);
+            RBtn_2_ChooseTongzhishu.click();  //选中搜到的计划文号
+            safeClick(Btn_2_post);
+        }catch(StaleElementReferenceException eo){
+            Reporter.log("出现StaleElementReferenceException错误");
+        }catch (NoSuchElementException e1){
+            Reporter.log("出现NoSuchElementException错误");
+        }
+    }
+
+    //调入调出计划流程
+    public String addDiaorudiaochujihua(String planWenhao, String yewuType, String liangshiQuxiang, String pinzhong, String dengji, String kucunXingzhi_1,
+                                        String kucunXingzhi_2, String getYear, String cangwei, String number){
+        Btn_3_add.click();    //进入购销计划新增页面
+        delay(1000);
+        this.PlanWenhao3 = planWenhao;
+        Reporter.log("新增购销计划/计划文号为："+PlanWenhao3);
+        System.out.println(this.PlanWenhao3);
+
+        //输入计划文号
+        Ipt_3_planNum2.click();
+        Ipt_3_planNum2.sendKeys(planWenhao);
+
+        //选择业务类型
+        String yewuTypeValue = Icn_3_businessType.getText();
+        System.out.println("yewuTypeValue的值：" + yewuTypeValue);
+        select_DropdownBox(Icn_3_businessType, yewuType, yewuTypeValue);
+
+        //输入粮食去向
+        Ipt_3_foodDestination.click();
+        Ipt_3_foodDestination.sendKeys(liangshiQuxiang);
+
+        //选择品种
+        safeClick(Ipt_3_pinZhong);
+        //搜索框输入品种
+        safeSendkeys(Ipt_3_pzName,pinzhong);
+        Ipt_3_pzCheck.click();
+        delay(1000);
+        RBtn_3_Pinzhong.click();
+        Ipt_3_pzConfirm.click();
+
+        //选择等级
+        String dengjiValue = Icn_3_grade.getText();
+        System.out.println("dengjiValue的值：" + dengjiValue);
+        select_DropdownBox(Icn_3_grade, dengji, dengjiValue);
+
+        //选择库存性质
+        String kucunXingzhiValue = Ipt_3_kucunXingzhi_wenben.getText();    //获取下拉框中原有的值对应的WebElement:Ipt_3_kucunXingzhi_wenben
+        System.out.println("kucunXingzhiValue的值：" + kucunXingzhiValue);
+        select_DropdownBox(Ipt_3_kucunXingzhi, kucunXingzhi_1, kucunXingzhi_2, kucunXingzhiValue);   //点击下拉框对应的WebElement：Ipt_1_kucunXingzhi
+
+        //选择开始日期
+        Ipt_3_startTime.click();
+        delay(2000);
+        WebElement startTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
+        startTime.clear();
+        startTime.sendKeys(Keys.ENTER);
+
+        //选择截止日期
+        Ipt_3_endTime.click();
+        delay(2000);
+        WebElement endTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
+        endTime.clear();
+        endTime.sendKeys(Keys.ENTER);
+
+        //选择收获年度
+        String shouhuoNianduValue = Icn_3_harvestYear.getText();
+        System.out.println("shouhuoNianduValue的值：" + shouhuoNianduValue);
+        select_DropdownBox(Icn_3_harvestYear, getYear, shouhuoNianduValue);
+
+        //选择仓位
+        String cangweiValue = Ipt_3_cangWei.getText();
+        System.out.println("cangweiValue的值：" + cangweiValue);
+        select_DropdownBox(Ipt_3_cangWei, cangwei, cangweiValue);
+
+        //填写数量
+        Ipt_3_num.click();
+        Ipt_3_num.sendKeys(number);
+
+        //点击确认
+        safeClick(Btn_3_confirm);
+        //safeClick(Btn_3_return);
+        return this.PlanWenhao3;
+    }
+
+    public void submitDiaorudiaochujihua(){
+        try{
+            delay(1000);
+            safeSendkeys(Ipt_3_planNum,this.PlanWenhao3); //输入并查找计划文号
+            safeClick(Btn_3_check);
+            delay(1000);
+            RBtn_3_ChooseTongzhishu.click();  //选中搜到的计划文号
+            safeClick(Btn_3_post);
+        }catch(StaleElementReferenceException eo){
+            Reporter.log("出现StaleElementReferenceException错误");
+        }catch (NoSuchElementException e1){
+            Reporter.log("出现NoSuchElementException错误");
+        }
+    }
     /******************************************/
-    public void addLunhuanjihua(String planWenhao, String pinzhong, String dengji, String kucunXingzhi_1,
-                                String kucunXingzhi_2, String yewuType, String cangwei, String number){}
-    public void submitLunhuanjihua(){}
-    public void addDiaorudiaochujihua(String planWenhao, String yewuType, String liangshiQuxiang, String pinzhong, String dengji, String kucunXingzhi_1,
-                                      String kucunXingzhi_2, String getYear, String cangwei, String number){}
-    public void submitDiaorudiaochujihua(){}
     public void addHetongguanli(String hetongHao, String kucunXingzhi_1, String kucunXingzhi_2, String hetongType, String customerName,
                                 String pingzhong, String danjia, String number){}
     public void submitHetongguanli(){}
