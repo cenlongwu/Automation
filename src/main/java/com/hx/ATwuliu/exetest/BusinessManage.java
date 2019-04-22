@@ -21,7 +21,6 @@ public class BusinessManage {
     ChurukudanPinZheng churukudanPinZheng = initPage.churukudanPinZheng;
     PlanManage planManage = initPage.planManage;
     HetongManage hetongManage = initPage.hetongManage;
-    ZhinengChuruku zhinengChuruku=initPage.zhinengChuruku;
 
     @BeforeClass
     public void beforeClass() {
@@ -178,44 +177,5 @@ public class BusinessManage {
         commonPage.closeCurrentTab();
     }
 
-    @DataProvider(name="DengjiZhika")
-    public Object[][] dengjiZhika() {
-        return new Object[][]{
-                {"LS", "浙G","小黄huang","330724200012017789","海绵宝宝"}
-        };
-    }
 
-    /*********测试用例***************************
-     *  1.添加出库登记
-     *  2.调度管理
-     ********************************************/
-    @Test(priority = 5, groups = {"Common"},dataProvider = "DengjiZhika")
-    public void dengjiZhika(String idcardnum,String platenum,String chengyunren,String shenfenzheng,String Kehuming) {
-        commonPage.accessL2DengjiManage();
-        /*dengjiManage.rukuDengji();
-        dengjiManage.dengjiZhika(idcardnum, platenum,chengyunren, shenfenzheng);*/
-        zhinengChuruku.chukuDengji();
-        zhinengChuruku.dengjiZhika(idcardnum, platenum,chengyunren, shenfenzheng);
-        //commonPage.closeCurrentTab();
-        zhinengChuruku.diaoduGuanli(Kehuming);
-        commonPage.closeCurrentTab();
-    }
-
-    @DataProvider(name="DiaoduGuanli")
-    public Object[][] diaoduGuanli() {
-        return new Object[][]{
-                {"海绵宝宝"}
-        };
-    }
-
-    /******************************************************
-     * 1.调度管理
-     * ***************************************************/
-    @Test(priority = 6, groups = {"Common"},dataProvider = "DiaoduGuanli")
-    public void diaoduGuanli(String Kehuming) {
-        commonPage.accessL2DiaoduManage();
-        zhinengChuruku.diaoduGuanli(Kehuming);
-        commonPage.closeCurrentTab();
-
-    }
 }

@@ -119,8 +119,8 @@ public class ZhinengChuruku extends Actions{
     private String IDcardNum;
 
     public String dengjiZhika(String idcardnum, String platenum, String chengyunren, String shenfenzheng){
-        delay(2000);
-       // safeSendkeys(Ipt_DengjiIdcardnum,idcardnum+timestamp1());
+        delay(1500);
+        safeSendkeys(Ipt_DengjiIdcardnum,idcardnum+timestamp1());
         delay(1000);
         this.IDcardNum=null;
         this.IDcardNum=Ipt_DengjiIdcardnum.getAttribute("value");    //获取IDcardnum
@@ -129,10 +129,12 @@ public class ZhinengChuruku extends Actions{
         safeSendkeys(Ipt_Shenfenzhenghao,shenfenzheng);
         safeClick(Btn_Save);
         safeClick(Btn_FinalSave);
+        delay(1500);
         return this.IDcardNum;
     }
 
     public void diaoduGuanli(String kehuming){
+        delay(2000);
         safeSendkeys(Ipt_QueryIdcardnum,this.IDcardNum);
         safeClick(Btn_Query);
         delay(2000);

@@ -23,6 +23,13 @@
 			<include name="hetongguanliTest" />
 		</methods>
 	  </class>
+	  <class name="com.hx.ATwuliu.exetest.ZhinengChurukuM">
+		<methods>
+		<include name="dengjiZhika" />
+		<include name="diaoduGuanli" />
+		
+		</methods>
+	  </class>
 	</classes>
   </test> <!-- HXAutomation -->
 </suite> <!-- Default Suite -->
