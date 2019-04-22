@@ -119,7 +119,7 @@ public class BusinessManage {
     @DataProvider(name="Lunhuanjihua")
     public Object[][] lunhuanjihua() {
         return new Object[][]{
-                {"购销201904181043", "粳稻谷", "三等", "商品粮", "纯贸易商品粮", "轮出", "0p6-保中一", "4.8"}
+                {"轮换201904161100", "粳稻谷", "三等", "商品粮", "纯贸易商品粮", "轮出", "0p6-保中一", "4.8"}
         };
     }
     /********测试用例***************************
@@ -138,7 +138,7 @@ public class BusinessManage {
     @DataProvider(name="Diaoruiaochujihua")
     public Object[][] diaorudiaochujihua() {
         return new Object[][]{
-                {"购销201904161102", "调入", "北京", "粳稻谷", "四等", "政策性储存", "国家临时存储", "2018", "C01-称重中", "88.152"}
+                {"调入调出201904161100", "调入", "北京", "粳稻谷", "四等", "政策性储存", "国家临时存储", "2018", "C01-称重中", "88.152"}
         };
     }
     /********测试用例***************************
