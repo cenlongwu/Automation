@@ -21,7 +21,6 @@ public class BusinessManage {
     ChurukudanPinZheng churukudanPinZheng = initPage.churukudanPinZheng;
     PlanManage planManage = initPage.planManage;
     HetongManage hetongManage = initPage.hetongManage;
-    ZhinengChuruku zhinengChuruku=initPage.zhinengChuruku;
 
     @BeforeClass
     public void beforeClass() {
@@ -43,13 +42,14 @@ public class BusinessManage {
     @DataProvider(name="RukuTongzhishu")
     public Object[][] rurkuTongzhishu() {
         return new Object[][]{
-                {"海绵宝宝", "混合小麦", "100","0p4-保中一"}
+                {"海绵宝宝", "混合小麦", "100","0p5-保中一"}
         };
     }
 
     /*********测试用例***************************
-     *  1.新增入库通知书
-     *  2.提交入库通知书
+     1.新增入库通知书
+     2.查询入库通知书
+     3.提交入库通知书
      ********************************************/
 
     @Test(dataProvider = "RukuTongzhishu")
@@ -63,12 +63,13 @@ public class BusinessManage {
     @DataProvider(name="ChukuTongzhishu")
     public Object[][] churkuTongzhishu() {
         return new Object[][]{
-                {"海绵宝宝", "混合小麦", "101","0p4-保中一"}
+                {"海绵宝宝", "混合小麦", "101","0p5-保中一"}
         };
     }
     /*********测试用例***************************
-     *  1.新增出库通知书
-     *  2.提交出库通知书
+     1.新增出库通知书
+     2.查询出库通知书
+     3.提交出库通知书
      ********************************************/
     @Test(dataProvider = "ChukuTongzhishu")
     public void chukuTongzhishuTest(String customerName,String Pinzhong,String Amount,String Cangwei){
@@ -82,12 +83,13 @@ public class BusinessManage {
     @DataProvider(name="Chukutihuodan")
     public Object[][] chukutihuodan() {
         return new Object[][]{
-                {"海绵宝宝", "混合小麦", "102","0p4-保中一"}
+                {"海绵宝宝", "混合小麦", "102","0p5-保中一"}
         };
     }
     /*********测试用例***************************
-     *  1.新增出库提货单
-     *  2.提交出库提货单
+     1.新增出库提货单
+     2.查询出库提货单
+     3.提交出库提货单
      ********************************************/
     @Test(dataProvider = "Chukutihuodan")
     public void chukutihuodanTest(String customerName,String Pinzhong,String Amount,String Cangwei){
@@ -104,8 +106,9 @@ public class BusinessManage {
         };
     }
     /*********测试用例***************************
-     *  1.新增购销计划
-     *  2.提交购销计划
+     1、新增购销计划
+     2、提交审核购销计划
+     3、购销计划条件查询
      ********************************************/
     @Test(dataProvider = "Gouxiaojihua")
     public void gouxiaojihuaTest(String planWenhao, String yewuType, String pinzhong, String dengji, String kucunXingzhi_1,
@@ -123,8 +126,9 @@ public class BusinessManage {
         };
     }
     /********测试用例***************************
-     *  1.新增轮换计划
-     *  2.提交轮换计划
+     1、新增轮换计划
+     2、提交审核轮换计划
+     3、轮换计划条件查询
      *******************************************/
     @Test(dataProvider = "Lunhuanjihua")
     public void lunhuanjihuaTest(String planWenhao, String pinzhong, String dengji, String kucunXingzhi_1,
@@ -142,8 +146,9 @@ public class BusinessManage {
         };
     }
     /********测试用例***************************
-     *  1.新增调入调出计划
-     *  2.提交调入调出计划
+     1、新增调入调出计划
+     2、提交审核调入调出计划
+     3、调入调出计划条件查询
      *******************************************/
     @Test(dataProvider = "Diaorudiaochujihua")
     public void diaorudiaochujihuaTest(String planWenhao, String yewuType, String liangshiQuxiang, String pinzhong, String dengji, String kucunXingzhi_1,
@@ -165,51 +170,12 @@ public class BusinessManage {
      *  2.提交合同管理
      *******************************************/
     @Test(dataProvider = "Hetongguanli")
-    public void hetongguanli(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong,String kehumingcheng){
+    public void hetongguanliTest(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong,String kehumingcheng){
         commonPage.accessL3Hetongguanli();
         hetongManage.HetongManage(hetonghao, kucunXingzhi_1, kucunXingzhi_2,hetong , kehumingcheng);
         hetongManage.submitHetongGuali();
         commonPage.closeCurrentTab();
     }
 
-    @DataProvider(name="DengjiZhika")
-    public Object[][] dengjiZhika() {
-        return new Object[][]{
-                {"LS", "浙G","小黄huang","330724200012017789","海绵宝宝"}
-        };
-    }
 
-    /*********测试用例***************************
-     *  1.添加出库登记
-     *  2.调度管理
-     ********************************************/
-    @Test(priority = 5, groups = {"Common"},dataProvider = "DengjiZhika")
-    public void dengjiZhika(String idcardnum,String platenum,String chengyunren,String shenfenzheng,String Kehuming) {
-        commonPage.accessL2DengjiManage();
-        /*dengjiManage.rukuDengji();
-        dengjiManage.dengjiZhika(idcardnum, platenum,chengyunren, shenfenzheng);*/
-        zhinengChuruku.chukuDengji();
-        zhinengChuruku.dengjiZhika(idcardnum, platenum,chengyunren, shenfenzheng);
-        //commonPage.closeCurrentTab();
-        zhinengChuruku.diaoduGuanli(Kehuming);
-        commonPage.closeCurrentTab();
-    }
-
-    @DataProvider(name="DiaoduGuanli")
-    public Object[][] diaoduGuanli() {
-        return new Object[][]{
-                {"海绵宝宝"}
-        };
-    }
-
-    /******************************************************
-     * 1.调度管理
-     * ***************************************************/
-    @Test(priority = 6, groups = {"Common"},dataProvider = "DiaoduGuanli")
-    public void diaoduGuanli(String Kehuming) {
-        commonPage.accessL2DiaoduManage();
-        zhinengChuruku.diaoduGuanli(Kehuming);
-        commonPage.closeCurrentTab();
-
-    }
 }
