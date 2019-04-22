@@ -42,7 +42,7 @@ public class BusinessManage {
     @DataProvider(name="RukuTongzhishu")
     public Object[][] rurkuTongzhishu() {
         return new Object[][]{
-                {"海绵宝宝", "混合小麦", "100","0p4-保中一"}
+                {"海绵宝宝", "混合小麦", "100","0p5-保中一"}
         };
     }
 
@@ -63,7 +63,7 @@ public class BusinessManage {
     @DataProvider(name="ChukuTongzhishu")
     public Object[][] churkuTongzhishu() {
         return new Object[][]{
-                {"海绵宝宝", "混合小麦", "101","0p4-保中一"}
+                {"海绵宝宝", "混合小麦", "101","0p5-保中一"}
         };
     }
     /*********测试用例***************************
@@ -83,7 +83,7 @@ public class BusinessManage {
     @DataProvider(name="Chukutihuodan")
     public Object[][] chukutihuodan() {
         return new Object[][]{
-                {"海绵宝宝", "混合小麦", "102","0p4-保中一"}
+                {"海绵宝宝", "混合小麦", "102","0p5-保中一"}
         };
     }
     /*********测试用例***************************
