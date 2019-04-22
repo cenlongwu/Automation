@@ -48,8 +48,9 @@ public class BusinessManage {
     }
 
     /*********测试用例***************************
-     *  1.新增入库通知书
-     *  2.提交入库通知书
+     1.新增入库通知书
+     2.查询入库通知书
+     3.提交入库通知书
      ********************************************/
 
     @Test(dataProvider = "RukuTongzhishu")
@@ -67,8 +68,9 @@ public class BusinessManage {
         };
     }
     /*********测试用例***************************
-     *  1.新增出库通知书
-     *  2.提交出库通知书
+     1.新增出库通知书
+     2.查询出库通知书
+     3.提交出库通知书
      ********************************************/
     @Test(dataProvider = "ChukuTongzhishu")
     public void chukuTongzhishuTest(String customerName,String Pinzhong,String Amount,String Cangwei){
@@ -86,8 +88,9 @@ public class BusinessManage {
         };
     }
     /*********测试用例***************************
-     *  1.新增出库提货单
-     *  2.提交出库提货单
+     1.新增出库提货单
+     2.查询出库提货单
+     3.提交出库提货单
      ********************************************/
     @Test(dataProvider = "Chukutihuodan")
     public void chukutihuodanTest(String customerName,String Pinzhong,String Amount,String Cangwei){
@@ -104,8 +107,9 @@ public class BusinessManage {
         };
     }
     /*********测试用例***************************
-     *  1.新增购销计划
-     *  2.提交购销计划
+     1、新增购销计划
+     2、提交审核购销计划
+     3、购销计划条件查询
      ********************************************/
     @Test(dataProvider = "Gouxiaojihua")
     public void gouxiaojihuaTest(String planWenhao, String yewuType, String pinzhong, String dengji, String kucunXingzhi_1,
@@ -123,8 +127,9 @@ public class BusinessManage {
         };
     }
     /********测试用例***************************
-     *  1.新增轮换计划
-     *  2.提交轮换计划
+     1、新增轮换计划
+     2、提交审核轮换计划
+     3、轮换计划条件查询
      *******************************************/
     @Test(dataProvider = "Lunhuanjihua")
     public void lunhuanjihuaTest(String planWenhao, String pinzhong, String dengji, String kucunXingzhi_1,
@@ -142,8 +147,9 @@ public class BusinessManage {
         };
     }
     /********测试用例***************************
-     *  1.新增调入调出计划
-     *  2.提交调入调出计划
+     1、新增调入调出计划
+     2、提交审核调入调出计划
+     3、调入调出计划条件查询
      *******************************************/
     @Test(dataProvider = "Diaorudiaochujihua")
     public void diaorudiaochujihuaTest(String planWenhao, String yewuType, String liangshiQuxiang, String pinzhong, String dengji, String kucunXingzhi_1,
@@ -165,7 +171,7 @@ public class BusinessManage {
      *  2.提交合同管理
      *******************************************/
     @Test(dataProvider = "Hetongguanli")
-    public void hetongguanli(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong,String kehumingcheng){
+    public void hetongguanliTest(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong,String kehumingcheng){
         commonPage.accessL3Hetongguanli();
         hetongManage.HetongManage(hetonghao, kucunXingzhi_1, kucunXingzhi_2,hetong , kehumingcheng);
         hetongManage.submitHetongGuali();

@@ -17,6 +17,10 @@
             <include name="rukuTongzhishuTest" />	
 			<include name="chukuTongzhishuTest" />
             <include name="chukutihuodanTest" />
+			<include name="gouxiaojihuaTest" />
+			<include name="lunhuanjihuaTest" />
+			<include name="diaorudiaochujihuaTest" />
+			<include name="hetongguanliTest" />
 		</methods>
 	  </class>
 	</classes>
