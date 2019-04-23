@@ -14,7 +14,6 @@ import org.testng.annotations.Test;
  */
 public class test {
     //111
-    ///xxxxxxxx
     public InitPage initPage = new InitPage();
     CommonPage commonPage = initPage.commonPage;
     ChurukudanPinZheng churukudanPinZheng=initPage.churukudanPinZheng;
