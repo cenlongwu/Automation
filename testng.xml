@@ -3,6 +3,7 @@
 <suite name="ATchuruku">
 <listeners>
 	<listener class-name="com.hx.ATwuliu.util.ExtentTestNGIReporterListener" />
+	<listener class-name="com.hx.ATwuliu.util.OverrideIAnnotationTransformer" />
 	<!--listener class-name="com.hx.ATwuliu.util.ExtentTestNGITestListener" /-->
 </listeners>
   <test name="ATwuliu" preserve-order="true">
