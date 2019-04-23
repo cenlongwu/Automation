@@ -23,13 +23,10 @@ public class BusinessManage {
     HetongManage hetongManage = initPage.hetongManage;
 
     @BeforeClass
-    public void beforeClass() {
-        Actions.timestamp();    //生成统一时间戳
-    }
-
+    public void beforeClass() {}
     @AfterClass
     public void afterClass(){
-        driver.quit();
+        //driver.quit();
     }
 
 //    //读取CSV测试数据

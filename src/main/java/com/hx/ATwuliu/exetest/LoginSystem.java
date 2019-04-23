@@ -1,6 +1,7 @@
 package com.hx.ATwuliu.exetest;
 
 import com.hx.ATwuliu.pages.CommonPage;
+import com.hx.ATwuliu.util.Actions;
 import com.hx.ATwuliu.util.InitPage;
 import com.hx.ATwuliu.util.InitPre;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,6 +21,12 @@ public class LoginSystem {
     public InitPage initPage = new InitPage();
     CommonPage commonPage = initPage.commonPage;
 
+    @BeforeClass
+    public void beforeClass() {
+        Actions.timestampMM();    //生成统一时间戳
+        Actions.timestampHH();
+        Actions.timestampYYYY();
+    }
 
     @DataProvider(name="loginInfo")
     protected Object[][] loginInfo() {
