@@ -204,19 +204,26 @@ public class Actions {
      * 编写人：吴岑龙
      */
 
-    public static String timestamp() {
+    public static String timestampMM() {
         Date date = new Date();
         SimpleDateFormat ft = new SimpleDateFormat ("MMddHHmm");
         timestamp=ft.format(date);
         return timestamp;
     }
 
-    public static String timestamp1() {
+    public static String timestampHH() {
         Date date = new Date();
         SimpleDateFormat ft = new SimpleDateFormat ("HHmm");
         timestamp=ft.format(date);
         return timestamp;
 
+    }
+
+    public static String timestampYYYY() {
+        Date date = new Date();
+        SimpleDateFormat ft = new SimpleDateFormat ("YYYYMMddHHmm");
+        timestamp=ft.format(date);
+        return timestamp;
     }
 
 

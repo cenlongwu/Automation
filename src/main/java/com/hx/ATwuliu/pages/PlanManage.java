@@ -584,26 +584,20 @@ public class PlanManage extends Actions {
         return this.PlanWenhao3;
     }
 
-    public void submitDiaorudiaochujihua(){
-        try{
+    public void submitDiaorudiaochujihua() {
+        try {
             delay(1000);
-            safeSendkeys(Ipt_3_planNum,this.PlanWenhao3); //输入并查找计划文号
+            safeSendkeys(Ipt_3_planNum, this.PlanWenhao3); //输入并查找计划文号
             safeClick(Btn_3_check);
             delay(1000);
             RBtn_3_ChooseTongzhishu.click();  //选中搜到的计划文号
             safeClick(Btn_3_post);
-        }catch(StaleElementReferenceException eo){
+        } catch (StaleElementReferenceException eo) {
             Reporter.log("出现StaleElementReferenceException错误");
-        }catch (NoSuchElementException e1){
+        } catch (NoSuchElementException e1) {
             Reporter.log("出现NoSuchElementException错误");
         }
     }
-    /******************************************/
-    public void addHetongguanli(String hetongHao, String kucunXingzhi_1, String kucunXingzhi_2, String hetongType, String customerName,
-                                String pingzhong, String danjia, String number){}
-    public void submitHetongguanli(){}
-    /******************************************/
-
 
     public void test(){
         Btn_1_add.click();    //进入购销计划新增页面

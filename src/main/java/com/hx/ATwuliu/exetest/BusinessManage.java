@@ -99,7 +99,7 @@ public class BusinessManage {
     @DataProvider(name="Gouxiaojihua")
     public Object[][] gouxiaojihua() {
         return new Object[][]{
-                {"购销201904161102", "销售", "粳稻谷", "二等", "中央储备", "其他储备粮", "2019", "0p7-保中一", "45"}
+                {"购销" + Actions.timestampYYYY(), "销售", "粳稻谷", "二等", "中央储备", "其他储备粮", "2019", "0p7-保中一", "45"}
         };
     }
     /*********测试用例***************************
@@ -119,7 +119,7 @@ public class BusinessManage {
     @DataProvider(name="Lunhuanjihua")
     public Object[][] lunhuanjihua() {
         return new Object[][]{
-                {"轮换201904161100", "粳稻谷", "三等", "商品粮", "纯贸易商品粮", "轮出", "0p6-保中一", "4.8"}
+                {"轮换" + Actions.timestampYYYY(), "粳稻谷", "三等", "商品粮", "纯贸易商品粮", "轮出", "0p6-保中一", "4.8"}
         };
     }
     /********测试用例***************************
@@ -139,7 +139,7 @@ public class BusinessManage {
     @DataProvider(name="Diaoruiaochujihua")
     public Object[][] diaorudiaochujihua() {
         return new Object[][]{
-                {"调入调出201904161100", "调入", "北京", "粳稻谷", "四等", "政策性储存", "国家临时存储", "2018", "C01-称重中", "88.152"}
+                {"调入调出" + Actions.timestampYYYY(), "调入", "北京", "粳稻谷", "四等", "政策性储存", "国家临时存储", "2018", "C01-称重中", "88.152"}
         };
     }
     /********测试用例***************************
@@ -159,7 +159,7 @@ public class BusinessManage {
     @DataProvider(name="Hetongguanli")
     public Object[][] hetongguanli() {
         return new Object[][]{
-                {"合同201904161102", "中央储备", "其他储备粮", "收购合同","海绵宝宝"}
+                {"合同" + Actions.timestampYYYY(), "中央储备", "其他储备粮", "收购合同","海绵宝宝"}
         };
     }
     /********测试用例***************************

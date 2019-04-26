@@ -120,7 +120,7 @@ public class ZhinengChuruku extends Actions{
 
     public String dengjiZhika(String idcardnum, String platenum, String chengyunren, String shenfenzheng){
         delay(1500);
-        safeSendkeys(Ipt_DengjiIdcardnum,idcardnum+timestamp1());
+        safeSendkeys(Ipt_DengjiIdcardnum,idcardnum+timestampMM());
         delay(1000);
         this.IDcardNum=null;
         this.IDcardNum=Ipt_DengjiIdcardnum.getAttribute("value");    //获取IDcardnum
