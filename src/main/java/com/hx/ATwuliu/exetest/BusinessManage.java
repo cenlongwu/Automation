@@ -136,7 +136,7 @@ public class BusinessManage {
         commonPage.closeCurrentTab();
     }
 
-    @DataProvider(name="Diaoruiaochujihua")
+    @DataProvider(name="Diaorudiaochujihua")
     public Object[][] diaorudiaochujihua() {
         return new Object[][]{
                 {"调入调出" + Actions.timestampYYYY(), "调入", "北京", "粳稻谷", "四等", "政策性储存", "国家临时存储", "2018", "C01-称重中", "88.152"}
