@@ -6,6 +6,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
+import static org.assertj.core.api.Assertions.*;
 //import org.testng.Reporter;
 //import org.junit.Assert.*;
 
@@ -145,6 +146,7 @@ public class ChurukudanPinZheng extends Actions {
         safeSendkeys(Ipt_CangWei,Cangwei);
         safeClick(Li_CangWei);
         safeClick(Btn_Confirm);  //点击确认保存
+        assertThat("wucenlong").startsWith("w");
     return this.TongzhishuBianhao;
     }
 
