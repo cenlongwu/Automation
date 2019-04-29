@@ -149,4 +149,7 @@ public class ZhinengChuruku extends Actions{
         scroll_BarTo_element(Btn_Finalcommit);
         safeClick(Btn_Finalcommit);
     }
+
+    public void qiaoyangGuanli(){}
+
 }

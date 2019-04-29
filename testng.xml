@@ -26,7 +26,7 @@
 	  </class>
 	  <class name="com.hx.ATwuliu.exetest.ZhinengChurukuM">
 		<methods>
-		<include name="dengjiZhika" />
+		<include name="churuDengji" />
 		<include name="diaoduGuanli" />
 		
 		</methods>
