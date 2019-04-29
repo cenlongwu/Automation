@@ -15,10 +15,10 @@ public class ZhinengChuruku extends Actions{
     /***********************
      /*登记管理页面*/
     @FindBy(xpath = "//div[@class=\"index_carWrap-2oN3Y\"]/div[1]/div")
-    private WebElement Div_Rukudengji;     //入库登记制卡
+    private WebElement Btn_Rukudengji;     //入库登记制卡
 
     @FindBy(xpath = "//div[@class=\"index_carWrap-2oN3Y\"]/div[2]/div")
-    private WebElement Div_Chukudengji;     //出库登记制卡
+    private WebElement Btn_Chukudengji;     //出库登记制卡
 
     @FindBy(id="icCardNum")
     private WebElement Ipt_QueryIdcardnum;     //卡号输入框-可复用
@@ -109,18 +109,24 @@ public class ZhinengChuruku extends Actions{
     @FindBy(xpath = "//div[@class=\"ant-form-item-control\"]/span/button[span=\"保 存\"]")
     private WebElement Btn_Finalcommit;  //最终确定按钮
 
-    public void rukuDengji(){
+   /* public void rukuDengji(){
         Div_Rukudengji.click();
     }
     public void chukuDengji(){
         Div_Chukudengji.click();
-    }
+    }*/
 
     private String IDcardNum;
 
-    public String dengjiZhika(String idcardnum, String platenum, String chengyunren, String shenfenzheng){
+    public String dengjiZhika(String dengjitype,String idcardnum, String platenum, String chengyunren, String shenfenzheng){
         delay(1500);
-        safeSendkeys(Ipt_DengjiIdcardnum,idcardnum+timestampHH());
+        if(dengjitype=="粮仓入库"){
+            Btn_Rukudengji.click();
+        }
+        else if(dengjitype=="粮仓出库"){
+            Btn_Chukudengji.click();
+        }
+        safeSendkeys(Ipt_DengjiIdcardnum,idcardnum);
         delay(1000);
         this.IDcardNum=null;
         this.IDcardNum=Ipt_DengjiIdcardnum.getAttribute("value");    //获取IDcardnum
@@ -133,9 +139,9 @@ public class ZhinengChuruku extends Actions{
         return this.IDcardNum;
     }
 
-    public void diaoduGuanli(String kehuming){
+    public void diaoduGuanli(String idcardnum,String kehuming){
         delay(2000);
-        safeSendkeys(Ipt_QueryIdcardnum,this.IDcardNum);
+        safeSendkeys(Ipt_QueryIdcardnum,idcardnum);
         safeClick(Btn_Query);
         delay(2000);
         safeClick(Td_Cardnum);
