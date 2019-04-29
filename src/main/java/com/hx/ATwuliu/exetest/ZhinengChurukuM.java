@@ -43,6 +43,7 @@ public class ZhinengChurukuM {
 
     /*********测试用例***************************
      *  1.添加出库登记
+     *  
      ********************************************/
     @Test(dataProvider = "ChukuDengji")
     public void chukuDengji(String idcardnum,String platenum,String chengyunren,String shenfenzheng) {
