@@ -11,7 +11,7 @@ import org.testng.log4testng.Logger;
 public class OverrideIReTry implements IRetryAnalyzer {
     public static Logger logger=Logger.getLogger(OverrideIReTry.class);
     public int initReTryNum=1;
-    public int maxReTryNum=2;
+    public int maxReTryNum=1;
     @Override
     public boolean retry(ITestResult iTestResult) {
         if(initReTryNum<=maxReTryNum){
