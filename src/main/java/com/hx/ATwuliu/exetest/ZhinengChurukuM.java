@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
- * Created by Administrator on 2019/4/22.
+ * Created by Administrator on 2019/4/30.
  */
 public class ZhinengChurukuM {
 
@@ -62,5 +62,85 @@ public class ZhinengChurukuM {
         zhinengChuruku.diaoduGuanli(idcardnum,kehuming);
         commonPage.closeCurrentTab();
 
+    }
+
+
+    @DataProvider(name="RukudanLuru")
+    public Object[][] rukudanluru() {
+        return new Object[][]{
+                {}
+        };
+    }
+    /********测试用例***************************
+     1、新增新增入库单
+     2、入库单列表条件查询
+     3、入库单提交审核
+     *******************************************/
+    @Test(dataProvider = "RukudanLuru")
+    public void rukudanluruTest(String kehuName, String kucunXingzhi_1, String kucunXingzhi_2, String chandi,
+                                String jianchaYijian, String maozhong, String pizhong, String cangfang){
+        commonPage.accessL3RukudanLuru();
+        String danjuBianhao = zhinengChuruku.addRukudanLuru(kehuName, kucunXingzhi_1, kucunXingzhi_2, chandi,jianchaYijian, maozhong, pizhong, cangfang);
+        zhinengChuruku.submitRukudanLuru(danjuBianhao);
+        commonPage.closeCurrentTab();
+    }
+
+    @DataProvider(name="ChukudanLuru")
+    public Object[][] chukudanluru() {
+        return new Object[][]{
+                {}
+        };
+    }
+    /********测试用例***************************
+     1、新增新增入库单
+     2、入库单列表条件查询
+     3、入库单提交审核
+     *******************************************/
+    @Test(dataProvider = "ChukudanLuru")
+    public void chukudanluruTest(String kehuName, String chandi, String maozhong, String pizhong, String cangfang){
+        commonPage.accessL3ChukudanLuru();
+        String danjuBianhao = zhinengChuruku.addChukudanLuru(kehuName, chandi, maozhong, pizhong, cangfang);
+        zhinengChuruku.submitChukudanLuru(danjuBianhao);
+        commonPage.closeCurrentTab();
+    }
+
+
+    @DataProvider(name="RukudanGuanli")
+    public Object[][] rukudanguanli() {
+        return new Object[][]{
+                {}
+        };
+    }
+    /********测试用例***************************
+     1、入库单列表数据查询
+     2、入库单数据调整
+     3、入库单作废
+     *******************************************/
+    @Test(dataProvider = "RukudanGuanli")
+    public void rukudanguanliTest(String cardID, String kouliang){
+        commonPage.accessL3RukudanManage();
+        zhinengChuruku.updateRukudanGuanli(cardID, kouliang);
+        zhinengChuruku.deleteRukudanGuanli();
+        commonPage.closeCurrentTab();
+    }
+
+
+    @DataProvider(name="ChukudanGuanli")
+    public Object[][] chukudanguanli() {
+        return new Object[][]{
+                {}
+        };
+    }
+    /********测试用例***************************
+     1、出库单列表数据查询
+     2、出库单数据调整
+     3、出库单作废
+     *******************************************/
+    @Test(dataProvider = "ChukudanGuanli")
+    public void chukudanguanliTest(String cardID, String kouliang){
+        commonPage.accessL3ChukudanManage();
+        zhinengChuruku.updateChukudanGuanli(cardID, kouliang);
+        zhinengChuruku.deleteChukudanGuanli();
+        commonPage.closeCurrentTab();
     }
 }
