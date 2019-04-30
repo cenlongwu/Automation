@@ -21,9 +21,12 @@ public class BusinessManage {
     ChurukudanPinZheng churukudanPinZheng = initPage.churukudanPinZheng;
     PlanManage planManage = initPage.planManage;
     HetongManage hetongManage = initPage.hetongManage;
+    DaibanShixiang daibanShixiang=initPage.daibanShixiang;
 
     @BeforeClass
-    public void beforeClass() {}
+    public void beforeClass() {
+
+    }
     @AfterClass
     public void afterClass(){
         //driver.quit();
@@ -174,5 +177,25 @@ public class BusinessManage {
         commonPage.closeCurrentTab();
     }
 
+    @DataProvider(name="Daibanshixiang")
+    public Object [][] daibanshixiang(){
+        return new Object[][]{
+                {planManage.getGouxiaojihuawenhao()},
+                {planManage.getLunhuanjihuawenhao()},
+                {planManage.getDiaorudiaochujihuawenhao()},
+                {hetongManage.getHetonghao()}
+        };
+    }
+    /********测试用例***************************
+     【合同数据审批（通过、驳回）】
+
+     *******************************************/
+
+    @Test(dataProvider = "Daibanshixiang")
+    public void shenpiTest(String shenpibianhao){
+        commonPage.accessL3Shenpichul();
+        daibanShixiang.processShenpi(shenpibianhao);
+        commonPage.closeCurrentTab();
+    }
 
 }
