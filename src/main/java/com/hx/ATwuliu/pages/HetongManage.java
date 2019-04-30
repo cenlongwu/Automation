@@ -101,7 +101,11 @@ public class HetongManage extends Actions {
     /************************************************************************************************************/
 
     private String Hetonghao;
-    public String HetongManage(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong,String kehumingcheng) {
+
+    public String getHetonghao(){
+        return Hetonghao;
+    }
+    public String addHetong(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong,String kehumingcheng) {
         Btn_1_add.click();                  //进入新增页面
         delay(1000);
         this.Hetonghao = hetonghao;
@@ -136,11 +140,12 @@ public class HetongManage extends Actions {
         scroll_BarTo_element(Btn_1_confirm);
         System.out.println(Btn_1_confirm);
         safeClick(Btn_1_confirm);
+        Reporter.log("新增合同号为："+Hetonghao+"成功！");
         return this.Hetonghao;
 
     }
 
-    public void submitHetongGuali(){
+    public void submitHetong(){
         try{
             delay(1000);
             safeSendkeys(Ipt_hetonghao,this.Hetonghao); //输入并查找合同号
@@ -148,6 +153,7 @@ public class HetongManage extends Actions {
             delay(1000);
             Ipt_fuxuankuang.click();  //选中搜到的合同号
             safeClick(Btn_1_tijiao);
+            Reporter.log("提交合同号："+Hetonghao+"成功！");
         }catch(StaleElementReferenceException eo){
             Reporter.log("出现StaleElementReferenceException错误");
         }catch (NoSuchElementException e1){

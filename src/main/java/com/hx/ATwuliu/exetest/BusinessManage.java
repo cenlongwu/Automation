@@ -21,9 +21,12 @@ public class BusinessManage {
     ChurukudanPinZheng churukudanPinZheng = initPage.churukudanPinZheng;
     PlanManage planManage = initPage.planManage;
     HetongManage hetongManage = initPage.hetongManage;
+    DaibanShixiang daibanShixiang=initPage.daibanShixiang;
 
     @BeforeClass
-    public void beforeClass() {}
+    public void beforeClass() {
+
+    }
     @AfterClass
     public void afterClass(){
         //driver.quit();
@@ -169,10 +172,30 @@ public class BusinessManage {
     @Test(dataProvider = "Hetongguanli")
     public void hetongguanliTest(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong,String kehumingcheng){
         commonPage.accessL3Hetongguanli();
-        hetongManage.HetongManage(hetonghao, kucunXingzhi_1, kucunXingzhi_2,hetong , kehumingcheng);
-        hetongManage.submitHetongGuali();
+        hetongManage.addHetong(hetonghao, kucunXingzhi_1, kucunXingzhi_2,hetong , kehumingcheng);
+        hetongManage.submitHetong();
         commonPage.closeCurrentTab();
     }
 
+    @DataProvider(name="Daibanshixiang")
+    public Object [][] daibanshixiang(){
+        return new Object[][]{
+                {planManage.getGouxiaojihuawenhao()},
+                {planManage.getLunhuanjihuawenhao()},
+                {planManage.getDiaorudiaochujihuawenhao()},
+                {hetongManage.getHetonghao()}
+        };
+    }
+    /********测试用例***************************
+     【合同数据审批（通过、驳回）】
+
+     *******************************************/
+
+    @Test(dataProvider = "Daibanshixiang")
+    public void shenpiTest(String shenpibianhao){
+        commonPage.accessL3Shenpichul();
+        daibanShixiang.processShenpi(shenpibianhao);
+        commonPage.closeCurrentTab();
+    }
 
 }

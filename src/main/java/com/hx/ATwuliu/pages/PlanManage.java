@@ -342,6 +342,19 @@ public class PlanManage extends Actions {
     private String PlanWenhao2;      //对应轮换计划
     private String PlanWenhao3;      //对应调入调出计划
 
+    //封装Getter方法，取planWenhao1,2,3
+    public String getGouxiaojihuawenhao(){
+        return PlanWenhao1;
+    }
+
+    public String getLunhuanjihuawenhao(){
+        return PlanWenhao1;
+    }
+
+    public String getDiaorudiaochujihuawenhao(){
+        return PlanWenhao1;
+    }
+
     //购销计划流程
     public String addGouxiaojihua(String planWenhao, String yewuType, String pinzhong, String dengji, String kucunXingzhi_1,
                                   String kucunXingzhi_2, String getYear, String cangwei, String number){

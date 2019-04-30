@@ -442,6 +442,10 @@ public class CommonPage extends Actions{
         accessL3Page( Div_L1_YewuGuanli,  Div_L2_HetongGuanli,  Li_L3_HetongGuanli);
     }
 
+    public void accessL3Shenpichul(){   //进入审批处理页面
+        accessL3Page( Div_L1_YewuGuanli,  Div_L2_DaibanShixiang,  Li_L3_ShenpiChuli);
+    }
+
     //进入智能出入库各级菜单页面
     public void accessL2DengjiManage(){   //进入登记管理页面
         accessL3Page( Div_L1_ZhinengChuruku,  Href_L2_DengjiGuanli,null);
