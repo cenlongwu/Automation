@@ -15,7 +15,7 @@ import static com.hx.ATwuliu.util.InitPre.driver;
 
 
 /**
- * Created by Administrator on 2019/3/29.
+ * Created by Administrator on 2019/3/30.
  */
 public class CommonPage extends Actions{
     /*************************************************************************************/

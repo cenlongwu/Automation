@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
- * Created by Administrator on 2019/4/22.
+ * Created by Administrator on 2019/4/30.
  */
 public class ZhinengChurukuM {
 
