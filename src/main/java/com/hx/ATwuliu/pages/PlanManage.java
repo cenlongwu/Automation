@@ -368,6 +368,7 @@ public class PlanManage extends Actions {
         delay(1000);
         RBtn_1_Pinzhong.click();
         Ipt_1_pzConfirm.click();
+        Reporter.log("已选中品种：" + pinzhong);
 
         //选择等级
         String dengjiValue = Icn_1_grade.getText();
@@ -406,9 +407,11 @@ public class PlanManage extends Actions {
         //填写数量
         Ipt_1_num.click();
         Ipt_1_num.sendKeys(number);
+        Reporter.log("已填写数量：" + number);
 
         //点击确认
         safeClick(Btn_1_confirm);
+        Reporter.log("保存成功！");
         //safeClick(Btn_1_return);
         return this.PlanWenhao1;
     }
@@ -421,6 +424,7 @@ public class PlanManage extends Actions {
             delay(1000);
             RBtn_1_ChooseTongzhishu.click();  //选中搜到的计划文号
             safeClick(Btn_1_post);
+            Reporter.log("提交购销计划：" + PlanWenhao1 + "成功!");
         }catch(StaleElementReferenceException eo){
             Reporter.log("出现StaleElementReferenceException错误");
         }catch (NoSuchElementException e1){
@@ -449,6 +453,7 @@ public class PlanManage extends Actions {
         delay(1000);
         RBtn_2_Pinzhong.click();
         Ipt_2_pzConfirm.click();
+        Reporter.log("已选中品种：" + pinzhong);
 
         //选择等级
         String dengjiValue = Icn_2_grade.getText();
@@ -487,9 +492,11 @@ public class PlanManage extends Actions {
         //填写数量
         Ipt_2_num.click();
         Ipt_2_num.sendKeys(number);
+        Reporter.log("已填写数量：" + number);
 
         //点击确认
         safeClick(Btn_2_confirm);
+        Reporter.log("保存成功！");
         //safeClick(Btn_2_return);
         return this.PlanWenhao2;
     }
@@ -502,6 +509,7 @@ public class PlanManage extends Actions {
             delay(1000);
             RBtn_2_ChooseTongzhishu.click();  //选中搜到的计划文号
             safeClick(Btn_2_post);
+            Reporter.log("提交轮换计划：" + PlanWenhao2 + "成功!");
         }catch(StaleElementReferenceException eo){
             Reporter.log("出现StaleElementReferenceException错误");
         }catch (NoSuchElementException e1){
@@ -530,6 +538,7 @@ public class PlanManage extends Actions {
         //输入粮食去向
         Ipt_3_foodDestination.click();
         Ipt_3_foodDestination.sendKeys(liangshiQuxiang);
+        Reporter.log("已填写粮食去向：" + liangshiQuxiang);
 
         //选择品种
         safeClick(Ipt_3_pinZhong);
@@ -539,6 +548,7 @@ public class PlanManage extends Actions {
         delay(1000);
         RBtn_3_Pinzhong.click();
         Ipt_3_pzConfirm.click();
+        Reporter.log("已选中品种：" + pinzhong);
 
         //选择等级
         String dengjiValue = Icn_3_grade.getText();
@@ -577,9 +587,11 @@ public class PlanManage extends Actions {
         //填写数量
         Ipt_3_num.click();
         Ipt_3_num.sendKeys(number);
+        Reporter.log("已填写数量：" + number);
 
         //点击确认
         safeClick(Btn_3_confirm);
+        Reporter.log("保存成功！");
         //safeClick(Btn_3_return);
         return this.PlanWenhao3;
     }
@@ -592,6 +604,7 @@ public class PlanManage extends Actions {
             delay(1000);
             RBtn_3_ChooseTongzhishu.click();  //选中搜到的计划文号
             safeClick(Btn_3_post);
+            Reporter.log("提交调入调出计划：" + PlanWenhao3 + "成功!");
         } catch (StaleElementReferenceException eo) {
             Reporter.log("出现StaleElementReferenceException错误");
         } catch (NoSuchElementException e1) {

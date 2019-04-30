@@ -134,6 +134,7 @@ public class ChurukudanPinZheng extends Actions {
         delay(1000);
         RBtn_Customer.click();
         Btn_ConfirmCustomer.click();
+        Reporter.log("已选中客户：" + customerName);
         delay(1000);
         safeClick(Ipt_PinZhong);   //选择品种
         delay(1500);
@@ -142,10 +143,14 @@ public class ChurukudanPinZheng extends Actions {
         delay(1000);
         RBtn_Pinzhong.click();
         Btn_ConfirmPinzhong.click();
+        Reporter.log("已选中品种：" + Pinzhong);
         safeSendkeys(Ipt_Amount,Amount);
+        Reporter.log("已填写数量：" + Amount);
         safeSendkeys(Ipt_CangWei,Cangwei);
         safeClick(Li_CangWei);
+        Reporter.log("已选中仓位：" + Cangwei);
         safeClick(Btn_Confirm);  //点击确认保存
+        Reporter.log("保存成功！");
         assertThat("wucenlong").startsWith("w");
     return this.TongzhishuBianhao;
     }
@@ -159,6 +164,7 @@ public class ChurukudanPinZheng extends Actions {
             delay(1000);
             RBtn_ChooseTongzhishu.click();
             safeClick(Btn_Submit);
+            Reporter.log("提交通知书：" + TongzhishuBianhao + "成功!");
         }catch(StaleElementReferenceException eo){
             Reporter.log("出现StaleElementReferenceException错误");
         }catch (NoSuchElementException e1){

@@ -57,15 +57,7 @@ public class Actions {
      */
     public void select_DropdownBox(WebElement Sel_element, String selectValue, String selectedValue){
         wait.until(ExpectedConditions.elementToBeClickable(Sel_element));
-        if (selectedValue.equals(null)){
-            //1.查找下拉框中符合selectValue的WebElement
-            safeClick(Sel_element);
-            delay(2000);
-            WebElement lis = Sel_element.findElement(By.xpath("//ul[@role=\"listbox\"]/li[text() = " + Quotes.escape(selectValue) + "]"));
-            lis.click();
-          //  select.selectByVisibleText(selectValue);
-        }
-        else if (selectValue.equals(selectedValue) ){
+        if (selectValue.equals(selectedValue) ){
             //3.
             Reporter.log("当前Select已选中待选值 "+selectValue+"，不必作选择操作");}
         else {
@@ -86,16 +78,7 @@ public class Actions {
     public void select_DropdownBox(WebElement Sel_element, String selectValue1, String selectValue2, String selectedValue){
         wait.until(ExpectedConditions.elementToBeClickable(Sel_element));
         String selectValue = selectValue1 + " / " + selectValue2;
-        if (selectedValue == null){
-            //1.查找下拉框中符合selectValue的WebElement
-            safeClick(Sel_element);
-            delay(2000);
-            WebElement li1 = Sel_element.findElement(By.xpath("//ul[@class=\"ant-cascader-menu\"]/li[text() = " + Quotes.escape(selectValue1) + "]"));
-            li1.click();
-            WebElement li2 = Sel_element.findElement(By.xpath("//ul[@class=\"ant-cascader-menu\"]/li[text() = " + Quotes.escape(selectValue2) + "]"));
-            li2.click();
-        }
-        else if (selectValue.equals(selectedValue) ){
+        if (selectValue.equals(selectedValue) ){
             //3.
             Reporter.log("当前Select已选中待选值 "+selectValue+"，不必作选择操作");}
         else {
