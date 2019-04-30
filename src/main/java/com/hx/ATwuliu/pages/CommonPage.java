@@ -471,7 +471,7 @@ public class CommonPage extends Actions{
         accessL3Page( Div_L1_ZhinengChuruku,  Href_L2_KuneiJiesuan,null);
     }
 
-   /* public void accessL3LiuchengJiankong(){   //进入实时监控-流程监控页面
+    public void accessL3LiuchengJiankong(){   //进入实时监控-流程监控页面
         accessL3Page( Div_L1_ZhinengChuruku,  Div_L2_ShishiJiankong, Li_L3_LiuchengJiankong);
     }
 
@@ -491,13 +491,13 @@ public class CommonPage extends Actions{
         accessL3Page( Div_L1_ZhinengChuruku,  Div_L2_ShougongLuru, Li_L3_ChukudanLuru);
     }
 
-    public void accessL3RukudanManange(){   //进入出入库单管理-入库单管理页面
+    public void accessL3RukudanManage(){   //进入出入库单管理-入库单管理页面
         accessL3Page( Div_L1_ZhinengChuruku,  Div_L2_ChurukudanGuanli, Li_L3_RukudanGuanli);
     }
 
     public void accessL3ChukudanManage(){   //进入出入库单管理-出库单录入页面
         accessL3Page( Div_L1_ZhinengChuruku,  Div_L2_ChurukudanGuanli, Li_L3_ChukudanGuanli);
-    }*/
+    }
 
 
     /***********仅供测试************/
