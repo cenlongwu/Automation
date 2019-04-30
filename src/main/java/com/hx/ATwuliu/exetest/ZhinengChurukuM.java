@@ -36,7 +36,7 @@ public class ZhinengChurukuM {
      2、新增出库入门登记
      ********************************************/
     @Test(dataProvider = "RukuDengji")
-    public void rukuDengjiTest(String dengjiType,String idcardnum,String platenum,String chengyunren,String shenfenzheng) {
+    public void churukuDengjiTest(String dengjiType,String idcardnum,String platenum,String chengyunren,String shenfenzheng) {
         commonPage.accessL2DengjiManage();
         zhinengChuruku.dengjiZhika(dengjiType,idcardnum, platenum,chengyunren, shenfenzheng);
         commonPage.closeCurrentTab();

@@ -110,8 +110,6 @@ public class HetongManage extends Actions {
         delay(1000);
         this.Hetonghao = hetonghao;
         Reporter.log("新增合同号为："+Hetonghao);
-        System.out.println(this.Hetonghao);
-
         delay(1500);
         //合同号输入
         ipt_hetonghao.click();
@@ -130,13 +128,6 @@ public class HetongManage extends Actions {
         safeSendkeys(Ipt_1_kehuName,kehumingcheng);
         RBtn_Customer.click();
         safeClick(Ipt_1_kehuConfirm);
-        //签订日期
-       /* Ipt_1_qiandingTime.click();
-        delay(2000);
-        WebElement qiandingTime = driver.findElement(By.xpath("//input[@class=\"ant-calendar-input \"]"));
-        qiandingTime.clear();
-        qiandingTime.sendKeys(Keys.ENTER);*/
-        //点击确认
         scroll_BarTo_element(Btn_1_confirm);
         System.out.println(Btn_1_confirm);
         safeClick(Btn_1_confirm);

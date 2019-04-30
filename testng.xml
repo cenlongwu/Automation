@@ -23,14 +23,12 @@
 			<include name="diaorudiaochujihuaTest" />
 			<include name="hetongguanliTest" />
 			<include name="shenpiTest" />
-
 		</methods>
 	  </class>
 	  <class name="com.hx.ATwuliu.exetest.ZhinengChurukuM">
 		<methods>
-		<include name="rukuDengjiTest" />
-		<include name="diaoduGuanliTest" />
-		
+			<include name="churukuDengjiTest" />
+			<include name="diaoduGuanliTest" />
 		</methods>
 	  </class>
 	</classes>

@@ -34,11 +34,15 @@ public class DaibanShixiang extends Actions {
     @FindBy(xpath = "//*[@id=\"app\"]//div/button[2]")
     private WebElement Btn_BoHui;      //驳回按钮
 
-    @FindBy(xpath = "/html/body/div[6]/div/div[2]/div/div[2]/div/div/div[2]/button[2]")
-    private WebElement Btn_QueRen;      //确认按钮
+    @FindBy(xpath = "//div[@class=\"ant-modal-confirm-btns\"]/button[span=\"确 定\"]")
+    private WebElement Btn_Conform;      //确定按钮
 
     @FindBy(xpath = "/html/body/div[6]/div/div[2]/div/div[2]/div/div/div[2]/button[1]")
     private WebElement Btn_QuXiao;      //取消按钮
+
+    @FindBy(className= "ant-modal-confirm-body")
+    private WebElement Div_Comformbody;      //确认信息
+
 
     //审核处理里的明细
     @FindBy(xpath = "//*[@id=\"app\"]//div[2]/button[1]")
@@ -77,7 +81,8 @@ public class DaibanShixiang extends Actions {
             Btn_GouXuan.click();
             Btn_ShenPi.click();
             delay(1000);
-            Btn_QueRen.sendKeys(Keys.ENTER);
+            Btn_Conform.sendKeys(Keys.ENTER);
+            delay(2000);
             Reporter.log("【"+shenpibianhao+"】审批成功！");
         }catch(StaleElementReferenceException eo){
             Reporter.log("出现StaleElementReferenceException错误");
