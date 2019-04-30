@@ -101,7 +101,7 @@ public class HetongManage extends Actions {
     /************************************************************************************************************/
 
     private String Hetonghao;
-    public String HetongManage(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong,String kehumingcheng) {
+    public String addHetong(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong,String kehumingcheng) {
         Btn_1_add.click();                  //进入新增页面
         delay(1000);
         this.Hetonghao = hetonghao;
@@ -140,7 +140,7 @@ public class HetongManage extends Actions {
 
     }
 
-    public void submitHetongGuali(){
+    public void submitHetong(){
         try{
             delay(1000);
             safeSendkeys(Ipt_hetonghao,this.Hetonghao); //输入并查找合同号

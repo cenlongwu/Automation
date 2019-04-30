@@ -1,8 +1,12 @@
 package com.hx.ATwuliu.pages;
 
 import com.hx.ATwuliu.util.Actions;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
+
 /**
  * Created by Administrator on 2019/4/1.
  */
@@ -63,5 +67,19 @@ public class DaibanShixiang extends Actions {
 
     //封装完可执行的方法
 
-
+    public void processShenpi(String shenpimingmu){
+        try{
+            delay(1000);
+            Ipt_ShenPiBianHao.clear();
+            safeSendkeys(Ipt_ShenPiBianHao,shenpimingmu);
+            delay(1000);
+            Btn_GouXuan.click();
+            Btn_ShenPi.click();
+        }catch(StaleElementReferenceException eo){
+            Reporter.log("出现StaleElementReferenceException错误");
+        }catch (NoSuchElementException e1){
+            Reporter.log("出现NoSuchElementException错误");
+        }
+    }
+    
 }

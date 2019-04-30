@@ -32,12 +32,12 @@ public class ZhinengChurukuM {
     }
 
     /*********测试用例***************************
-     *  1.添加入库登记
+     1、新增入库入门登记
+     2、新增出库入门登记
      ********************************************/
     @Test(dataProvider = "RukuDengji")
-    public void rukuDengji(String dengjiType,String idcardnum,String platenum,String chengyunren,String shenfenzheng) {
+    public void rukuDengjiTest(String dengjiType,String idcardnum,String platenum,String chengyunren,String shenfenzheng) {
         commonPage.accessL2DengjiManage();
-        //zhinengChuruku.rukuDengji();
         zhinengChuruku.dengjiZhika(dengjiType,idcardnum, platenum,chengyunren, shenfenzheng);
         commonPage.closeCurrentTab();
 
@@ -53,10 +53,11 @@ public class ZhinengChurukuM {
     }
 
     /******************************************************
-     * 1.调度管理
+     1、调度管理列表数据查询
+     2、调度分配
      * ***************************************************/
     @Test(dataProvider = "DiaoduGuanli")
-    public void diaoduGuanli(String idcardnum, String kehuming) {
+    public void diaoduGuanliTest(String idcardnum, String kehuming) {
         commonPage.accessL2DiaoduManage();
         zhinengChuruku.diaoduGuanli(idcardnum,kehuming);
         commonPage.closeCurrentTab();

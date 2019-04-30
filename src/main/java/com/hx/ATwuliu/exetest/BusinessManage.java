@@ -169,8 +169,8 @@ public class BusinessManage {
     @Test(dataProvider = "Hetongguanli")
     public void hetongguanliTest(String hetonghao,String kucunXingzhi_1,String kucunXingzhi_2,String hetong,String kehumingcheng){
         commonPage.accessL3Hetongguanli();
-        hetongManage.HetongManage(hetonghao, kucunXingzhi_1, kucunXingzhi_2,hetong , kehumingcheng);
-        hetongManage.submitHetongGuali();
+        hetongManage.addHetong(hetonghao, kucunXingzhi_1, kucunXingzhi_2,hetong , kehumingcheng);
+        hetongManage.submitHetong();
         commonPage.closeCurrentTab();
     }
 

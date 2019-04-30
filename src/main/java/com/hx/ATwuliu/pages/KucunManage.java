@@ -140,7 +140,7 @@ public class KucunManage extends Actions{
     //新增仓房初期库存，参数为：品种名称、国家名称、初期库存数量、当前库存数量
     public String addChuqikucun(String pinzhongName, String countryName, String earlyStock, String currentStock){
         //点击新增按钮进入初期库存数据页面
-        Btn_add.click();
+        //Btn_add.click();
         delay(1000);
 
         //获取新增数据时自动生成的单据编号
