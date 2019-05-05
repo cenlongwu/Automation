@@ -25,10 +25,12 @@
 			<include name="shenpiTest" />
 		</methods>
 	  </class>
-	  <class name="com.hx.ATwuliu.exetest.ZhinengChurukuM">
+		<class name="com.hx.ATwuliu.exetest.ZhinengChurukuM">
 		<methods>
-			<include name="churukuDengjiTest" />
-			<include name="diaoduGuanliTest" />
+			<include name="rukuDengjiTest" />
+			<include name="rukuDiaoduTest" />
+			<include name="chukuDengjiTest" />
+			<include name="chukuDiaoduTest" />
 		</methods>
 	  </class>
 	</classes>

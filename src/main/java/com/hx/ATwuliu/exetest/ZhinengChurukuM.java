@@ -24,31 +24,27 @@ public class ZhinengChurukuM {
     }
 
     @DataProvider(name="RukuDengji")
-    public Object[][] rukuDengji() {
+    public Object[][] rukuDengjiTest() {
         return new Object[][]{
-                {"粮仓入库","LS1103", "浙G","sx","330724200012017789"},
-                {"粮仓出库","LS1104", "浙G","sx","330724200012017789"}
+                {"粮仓入库","LS", "浙G","sx","330724200012017789"}
         };
     }
 
     /*********测试用例***************************
      1、新增入库入门登记
-     2、新增出库入门登记
      ********************************************/
     @Test(dataProvider = "RukuDengji")
-    public void churukuDengjiTest(String dengjiType,String idcardnum,String platenum,String chengyunren,String shenfenzheng) {
+    public void rukuDengjiTest(String dengjiType,String idcardnum,String platenum,String chengyunren,String shenfenzheng) {
         commonPage.accessL2DengjiManage();
         zhinengChuruku.dengjiZhika(dengjiType,idcardnum, platenum,chengyunren, shenfenzheng);
         commonPage.closeCurrentTab();
-
     }
 
 
-    @DataProvider(name="DiaoduGuanli")
-    public Object[][] diaoduGuanli() {
+    @DataProvider(name="RukuDiaodu")
+    public Object[][] rukuDiaoduTest() {
         return new Object[][]{
-                {"LS1103","海绵宝宝"},
-                {"LS1104","海绵宝宝"}
+                {"海绵宝宝"},
         };
     }
 
@@ -56,10 +52,47 @@ public class ZhinengChurukuM {
      1、调度管理列表数据查询
      2、调度分配
      * ***************************************************/
-    @Test(dataProvider = "DiaoduGuanli")
-    public void diaoduGuanliTest(String idcardnum, String kehuming) {
+    @Test(dataProvider = "RukuDiaodu")
+    public void rukuDiaoduTest(String kehuming) {
         commonPage.accessL2DiaoduManage();
-        zhinengChuruku.diaoduGuanli(idcardnum,kehuming);
+        zhinengChuruku.diaoduGuanli(kehuming);
+        commonPage.closeCurrentTab();
+
+    }
+
+    @DataProvider(name="ChukuDengji")
+    public Object[][] chukuDengjiTest() {
+        return new Object[][]{
+                {"粮仓出库","LS", "浙G","sx","330724200012017789"}
+        };
+    }
+
+    /*********测试用例***************************
+     1、新增出库入门登记
+     ********************************************/
+    @Test(dataProvider = "ChukuDengji")
+    public void chukuDengjiTest(String dengjiType,String idcardnum,String platenum,String chengyunren,String shenfenzheng) {
+        commonPage.accessL2DengjiManage();
+        zhinengChuruku.dengjiZhika(dengjiType,idcardnum, platenum,chengyunren, shenfenzheng);
+        commonPage.closeCurrentTab();
+    }
+
+
+    @DataProvider(name="ChukuDiaodu")
+    public Object[][] chukuDiaoduTest() {
+        return new Object[][]{
+                {"德清粮食公司（演示）"},
+        };
+    }
+
+    /******************************************************
+     1、调度管理列表数据查询
+     2、调度分配
+     * ***************************************************/
+    @Test(dataProvider = "ChukuDiaodu")
+    public void chukuDiaoduTest(String kehuming) {
+        commonPage.accessL2DiaoduManage();
+        zhinengChuruku.diaoduGuanli(kehuming);
         commonPage.closeCurrentTab();
 
     }
