@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import javax.script.ScriptException;
 import java.util.concurrent.TimeUnit;
 
 
@@ -36,8 +37,9 @@ public class LoginSystem {
     }
 
     @Test(dataProvider = "loginInfo")
-    public void login(String expectedTitle,String username, String password) {
+    public void login(String expectedTitle,String username, String password) throws ScriptException {
         commonPage.login(expectedTitle,username, password);
+        commonPage.fetchTabName();
     }
 
 

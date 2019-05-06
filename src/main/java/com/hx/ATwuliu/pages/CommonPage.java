@@ -11,6 +11,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Reporter;
+import sun.font.Script;
+
+import javax.script.ScriptContext;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+
 import static com.hx.ATwuliu.util.InitPre.driver;
 
 
@@ -387,7 +394,27 @@ public class CommonPage extends Actions{
 
     /*************************************************************************************/
     //封装完可执行的方法
-    public void login(String expectedTitle,String username,String password) {
+    String tabname;
+    private static ScriptEngine javaScriptEngine;
+    public void fetchTabName()throws ScriptException {
+        JavascriptExecutor je = (JavascriptExecutor) driver;
+            ScriptEngineManager manager = new ScriptEngineManager();
+            ScriptEngine scriptEngine = manager.getEngineByName("js");
+            javaScriptEngine = scriptEngine;
+        //tabname=(String)scriptEngine.eval("document.getElementsByClassName(\"Header_logo-2nvl7\").innerHTML");
+        javaScriptEngine.eval("var XX=XXX");
+        tabname=(String) javaScriptEngine.getContext().getAttribute("XX");
+        //ScriptContext context = scriptEngine.getContext();
+        //tabname=context.toString();
+
+        //tabname=(String)je.executeScript("$(\"[aria-selected=true]\").children(\"div\").text()");
+        //tabname=(String)je.executeScript("$(\".ant-tabs-nav-wrap .ant-tabs-tab-active\").text()");
+        System.out.println(tabname);
+        //Reporter.log(tabname);
+        //return tabname;
+    }
+
+    public void login(String expectedTitle,String username,String password){
         //waitForPageLoad();
         try {
             delay(6000);
