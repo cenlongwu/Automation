@@ -432,7 +432,7 @@ public class CommonPage extends Actions{
         }catch(Exception e1){
             Reporter.log("页面一次打开即成功");
         }
-        Ipt_usename.sendKeys(username);
+        safeSendkeys(Ipt_usename,username);
         Ipt_password.sendKeys(password);
         assertTitle(expectedTitle);
         Btn_login.click();

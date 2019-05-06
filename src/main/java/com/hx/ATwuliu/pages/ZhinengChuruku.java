@@ -227,6 +227,7 @@ public class ZhinengChuruku extends Actions{
         Reporter.log("已填写身份证号："+shenfenzheng);
         safeClick(Btn_Save);
         safeClick(Btn_FinalSave);
+        delay(2000);
         Reporter.log("新增卡号："+"成功！");
         return this.IDcardNum;
     }
@@ -247,6 +248,7 @@ public class ZhinengChuruku extends Actions{
         scroll_BarTo_element(Btn_Finalcommit);
         safeClick(Btn_Finalcommit);
         Reporter.log("卡号："+IDcardNum+"调度成功！");
+        delay(2000);
     }
 
     public void qiaoyangGuanli(){}
