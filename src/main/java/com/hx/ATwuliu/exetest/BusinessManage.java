@@ -180,14 +180,29 @@ public class BusinessManage {
     @DataProvider(name="Daibanshixiang")
     public Object [][] daibanshixiang(){
         return new Object[][]{
-                {planManage.getGouxiaojihuawenhao()},
-                {planManage.getLunhuanjihuawenhao()},
-                {planManage.getDiaorudiaochujihuawenhao()},
-                {hetongManage.getHetonghao()}
+                {planManage.getGouxiaojihuawenhao()},  //购销计划编号
+                {planManage.getLunhuanjihuawenhao()},  //轮换计划编号
+                {planManage.getDiaorudiaochujihuawenhao()},    //调入调出计划编号
+                {hetongManage.getHetonghao()}           //合同编号
         };
     }
     /********测试用例***************************
-     【合同数据审批（通过、驳回）】
+     1、待审数据条件查询
+     2、数据审核通过（审核名目）
+     【合同数据审批】
+     【购销计划数据审批】
+     【轮换计划数据审批】
+     【调入调出计划数据审批】
+     【入库通知书数据审批】
+     【出库通知书数据审批】
+     【出库提货单数据审批】
+     【入库单录入数据审批】
+     【出库单录入数据审批】
+     【质检报告单数据审批】
+     【初期库存数据审批】
+     【库存属性调整数据审批】
+     【损溢管理数据审批】
+     【倒仓作业数据审批】
 
      *******************************************/
 

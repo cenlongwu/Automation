@@ -196,7 +196,15 @@ public class Actions {
 
     public static String timestampHH() {
         Date date = new Date();
-        SimpleDateFormat ft = new SimpleDateFormat ("HHmm");
+        SimpleDateFormat ft = new SimpleDateFormat ("mmHH");
+        timestamp=ft.format(date);
+        return timestamp;
+
+    }
+
+    public static String timestampSSS() {
+        Date date = new Date();
+        SimpleDateFormat ft = new SimpleDateFormat ("ssSSS");
         timestamp=ft.format(date);
         return timestamp;
 

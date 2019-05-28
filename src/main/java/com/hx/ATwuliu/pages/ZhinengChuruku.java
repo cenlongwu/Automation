@@ -207,26 +207,34 @@ public class ZhinengChuruku extends Actions{
         delay(1500);
         if(dengjitype=="粮仓入库"){
             Btn_Rukudengji.click();
+            Reporter.log("进行入库登记");
         }
         else if(dengjitype=="粮仓出库"){
             Btn_Chukudengji.click();
+            Reporter.log("进行出库登记");
         }
-        safeSendkeys(Ipt_DengjiIdcardnum,idcardnum);
+        String idcardnum_real;
+        idcardnum_real=(idcardnum+timestampSSS()).substring(0,6);
+        safeSendkeys(Ipt_DengjiIdcardnum,idcardnum_real);
         delay(1000);
         this.IDcardNum=null;
         this.IDcardNum=Ipt_DengjiIdcardnum.getAttribute("value");    //获取IDcardnum
         System.out.println(this.IDcardNum);
+        Reporter.log("新增卡号："+IDcardNum);
         safeSendkeys(Ipt_Chengyunren,chengyunren);
+        Reporter.log("已填写承运人："+chengyunren);
         safeSendkeys(Ipt_Shenfenzhenghao,shenfenzheng);
+        Reporter.log("已填写身份证号："+shenfenzheng);
         safeClick(Btn_Save);
         safeClick(Btn_FinalSave);
-        delay(1500);
+        delay(2000);
+        Reporter.log("新增卡号："+"成功！");
         return this.IDcardNum;
     }
 
-    public void diaoduGuanli(String idcardnum,String kehuming){
+    public void diaoduGuanli(String kehuming){
         delay(2000);
-        safeSendkeys(Ipt_QueryIdcardnum,idcardnum);
+        safeSendkeys(Ipt_QueryIdcardnum,IDcardNum);
         safeClick(Btn_Query);
         delay(2000);
         safeClick(Td_Cardnum);
@@ -239,6 +247,8 @@ public class ZhinengChuruku extends Actions{
         delay(2000);
         scroll_BarTo_element(Btn_Finalcommit);
         safeClick(Btn_Finalcommit);
+        Reporter.log("卡号："+IDcardNum+"调度成功！");
+        delay(2000);
     }
 
     public void qiaoyangGuanli(){}

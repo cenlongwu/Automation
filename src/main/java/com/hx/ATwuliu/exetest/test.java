@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import javax.script.ScriptException;
+
 /**
  * Created by Lenovo on 2019/4/11.
  */
@@ -21,7 +23,7 @@ public class test {
     PlanManage planManage = initPage.planManage;
     @BeforeTest
     public void beforeTest() {
-        Actions.timestamp();    //生成统一时间戳
+        //Actions.timestamp();    //生成统一时间戳
     }
 
     //登录
@@ -32,9 +34,11 @@ public class test {
         };
     }
     @Test(priority = 1, groups = {"Common"}, dataProvider = "loginInfo")
-    public void login(String expectedTitle,String username, String password) {
+    public void login(String expectedTitle,String username, String password) throws ScriptException {
         commonPage.login(expectedTitle, username, password);
-       // commonPage.test();
+        Actions.delay(3000);
+        commonPage.fetchTabName();
+        // commonPage.test();
       //  churukudanPinZheng.test();
       //  commonPage.accessL3Gouxiaojihua();
       //  planManage.test();
