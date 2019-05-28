@@ -25,7 +25,6 @@
 			<include name="hetongguanliTest" />
 			<include name="shenpiTest" />
 			-->
-
 		</methods>
 	  </class>
 	  <!--
