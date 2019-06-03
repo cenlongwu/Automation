@@ -13,21 +13,22 @@
             <include name="login" />
 		</methods>
 	  </class>
-      <class name="com.hx.ATwuliu.exetest.BusinessManage">
-		<methods>
-            <include name="rukuTongzhishuTest" />
-			<!--
-			<include name="chukuTongzhishuTest" />
-            <include name="chukutihuodanTest" />
-			<include name="gouxiaojihuaTest" />
-			<include name="lunhuanjihuaTest" />
-			<include name="diaorudiaochujihuaTest" />
-			<include name="hetongguanliTest" />
-			<include name="shenpiTest" />
-			-->
+		<!--
+          <class name="com.hx.ATwuliu.exetest.BusinessManage">
+          <methods>
+              <include name="rukuTongzhishuTest" />
+
+              <include name="chukuTongzhishuTest" />
+              <include name="chukutihuodanTest" />
+              <include name="gouxiaojihuaTest" />
+              <include name="lunhuanjihuaTest" />
+              <include name="diaorudiaochujihuaTest" />
+              <include name="hetongguanliTest" />
+              <include name="shenpiTest" />
+
 		</methods>
 	  </class>
-	  <!--
+
 	  <class name="com.hx.ATwuliu.exetest.ZhinengChurukuM">
 		<methods>
 		<include name="rukuDengjiTest" />
