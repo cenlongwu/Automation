@@ -22,7 +22,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.11</version>
-			<!--scope>Test</scope-->
+			<scope>test</scope>
 		</dependency>
 
 		<!-- 依赖Selenium -->
