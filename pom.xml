@@ -17,7 +17,7 @@
 
 	<dependencies>
 
-		<!-- 依赖testNg -->
+		<!-- 依赖testNg .-->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
