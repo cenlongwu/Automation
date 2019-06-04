@@ -13,26 +13,31 @@
             <include name="login" />
 		</methods>
 	  </class>
-      <class name="com.hx.ATwuliu.exetest.BusinessManage">
-		<methods>
-            <include name="rukuTongzhishuTest" />	
-			<include name="chukuTongzhishuTest" />
-            <include name="chukutihuodanTest" />
-			<include name="gouxiaojihuaTest" />
-			<include name="lunhuanjihuaTest" />
-			<include name="diaorudiaochujihuaTest" />
-			<include name="hetongguanliTest" />
-			<include name="shenpiTest" />
+		<!--
+          <class name="com.hx.ATwuliu.exetest.BusinessManage">
+          <methods>
+              <include name="rukuTongzhishuTest" />
+
+              <include name="chukuTongzhishuTest" />
+              <include name="chukutihuodanTest" />
+              <include name="gouxiaojihuaTest" />
+              <include name="lunhuanjihuaTest" />
+              <include name="diaorudiaochujihuaTest" />
+              <include name="hetongguanliTest" />
+              <include name="shenpiTest" />
+
 		</methods>
 	  </class>
-		<class name="com.hx.ATwuliu.exetest.ZhinengChurukuM">
+
+	  <class name="com.hx.ATwuliu.exetest.ZhinengChurukuM">
 		<methods>
-			<include name="rukuDengjiTest" />
-			<include name="rukuDiaoduTest" />
-			<include name="chukuDengjiTest" />
-			<include name="chukuDiaoduTest" />
+		<include name="rukuDengjiTest" />
+		<include name="diaoduGuanliTest" />
+		<include name="chukuDengjiTest" />
+		<include name="chukuDiaoduTest" />
 		</methods>
 	  </class>
+	  -->
 	</classes>
   </test> <!-- HXAutomation -->
 </suite> <!-- Default Suite -->
