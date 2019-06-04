@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.Reporter;
 import sun.font.Script;
 
@@ -19,6 +20,7 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 import static com.hx.ATwuliu.util.InitPre.driver;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 /**
@@ -437,6 +439,7 @@ public class CommonPage extends Actions{
         assertTitle(expectedTitle);
         Btn_login.click();
     }
+
     public void closeCurrentTab(){    //关闭当前标签页
         safeClick(I_close);
     }
@@ -541,6 +544,18 @@ public class CommonPage extends Actions{
        // accessL3Page(Div_L1_ZhinengChuruku, Href_L2_DengjiGuanli, null);
        // accessL3Page(Div_L1_ZhinengChuruku, Href_L2_DiaoduGuanli, null);
        // accessL3Page(Div_L1_ZhinengChuruku, Href_L2_QianyangGuanli, null);
+        // 字符串断言
+        assertThat("test").isNotBlank() // 是否为" "字符串
+                .as("字符串断言描述").isSubstringOf("test1") // 是否为test1的一部分
+                .isSameAs("test") // 对象内元素是否相等
+                .isNotEmpty() // 是否为空字符串
+                .isEqualTo("test");// 是否相等
+
+String ExpectedResult="";
+
+        Assert.assertEquals("test",ExpectedResult);
+        Assert.assertNotNull("test");
+
     }
 
 }
