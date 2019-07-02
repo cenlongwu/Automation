@@ -39,7 +39,6 @@ public class LoginSystem {
     @Test(dataProvider = "loginInfo")
     public void login(String expectedTitle,String username, String password) throws ScriptException {
         commonPage.login(expectedTitle,username, password);
-        commonPage.fetchTabName();
     }
 
 
